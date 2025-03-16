@@ -1,7 +1,6 @@
 {
   "homepage": "https://marpechurch.github.io/",
   "name": "marpe",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
