@@ -1,9 +1,9 @@
 .appHeader {
   border-bottom: 1px solid black;
   display: flex;
-  height: 40px;
+  min-height: 40px;
   justify-content: space-between;
-  padding: 0 8px 8px 8px;
+  padding: 8px;
 }
 
 .appMenuButton {

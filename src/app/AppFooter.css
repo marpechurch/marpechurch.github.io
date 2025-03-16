@@ -1,0 +1,7 @@
+.appFooter {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  min-height: 20px;
+  padding: 8px;
+}
