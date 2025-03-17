@@ -1,10 +1,10 @@
 import "react";
 
-import "./Footer.css";
+import "./AppFooter.css";
 
-function Footer() {
+function AppFooter() {
   return (
-    <div className="footer">
+    <div className="AppFooter">
       <ul className="footerContent">
         <li>주소: 212 School St, Somerville, MA 02145</li>
         <li>전화: 123-456-7890</li>
@@ -14,4 +14,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default AppFooter;
