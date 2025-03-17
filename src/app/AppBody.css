@@ -1,16 +1,5 @@
 .appBody {
   display: flex;
   flex-direction: column;
-}
-
-.card {
-  padding: 2em;
-}
-
-.church {
-  width: -webkit-fill-available;
-}
-
-.read-the-docs {
-  color: #888;
+  height: 100%;
 }
