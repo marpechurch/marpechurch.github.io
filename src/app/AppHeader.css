@@ -6,6 +6,13 @@
   padding: 8px;
 }
 
+.appHeaderLink {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  gap: 8px;
+}
+
 .appMenu {
   background: white;
   width: 25%;

@@ -14,7 +14,10 @@ import "./AppHeader.css";
 function AppHeader() {
   return (
     <div className="appHeader">
-      <img alt="Marpe Logo" className="marpeLogo" src={marpeLogo} />
+      <a className="appHeaderLink" href="/">
+        <img alt="Marpe Logo" className="marpeLogo" src={marpeLogo} />
+        <span className="">마르페(Marpe)</span>
+      </a>
       <MenuTrigger>
         <Button aria-label="Menu" className="appMenuButton">
           ☰
