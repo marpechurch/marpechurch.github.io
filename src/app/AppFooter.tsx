@@ -2,7 +2,7 @@ import "react";
 
 import "./AppFooter.css";
 
-function AppFooter() {
+export default function AppFooter() {
   return (
     <div className="AppFooter">
       <ul className="footerContent">
@@ -13,5 +13,3 @@ function AppFooter() {
     </div>
   );
 }
-
-export default AppFooter;
