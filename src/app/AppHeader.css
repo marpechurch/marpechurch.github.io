@@ -6,6 +6,11 @@
   padding: 8px;
 }
 
+.appMenu {
+  background: white;
+  width: 25%;
+}
+
 .appMenuButton {
   align-items: center;
   display: flex;

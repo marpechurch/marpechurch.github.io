@@ -19,13 +19,12 @@ function AppHeader() {
         <Button aria-label="Menu" className="appMenuButton">
           ☰
         </Button>
-        <Popover>
+        <Popover className="appMenu">
           <Menu>
-            <MenuItem onAction={() => alert("open")}>Open</MenuItem>
-            <MenuItem onAction={() => alert("rename")}>Rename…</MenuItem>
-            <MenuItem onAction={() => alert("duplicate")}>Duplicate</MenuItem>
-            <MenuItem onAction={() => alert("share")}>Share…</MenuItem>
-            <MenuItem onAction={() => alert("delete")}>Delete…</MenuItem>
+            <MenuItem onAction={() => alert("open")}>교회 소개</MenuItem>
+            <MenuItem onAction={() => alert("open")}>예배 안내</MenuItem>
+            <MenuItem onAction={() => alert("open")}>설교 영상</MenuItem>
+            <MenuItem onAction={() => alert("open")}>섬기는 이들</MenuItem>
           </Menu>
         </Popover>
       </MenuTrigger>
