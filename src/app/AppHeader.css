@@ -1,9 +1,12 @@
 .appHeader {
+  background-color: #ffffff;
   border-bottom: 1px solid black;
   display: flex;
-  min-height: 40px;
   justify-content: space-between;
+  min-height: 40px;
   padding: 8px;
+  position: sticky;
+  top: 0;
 }
 
 .link {
@@ -21,6 +24,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .appHeader {
+    background-color: #242424;
+  }
+
   .link {
     color: rgba(255, 255, 255, 0.87);
   }
