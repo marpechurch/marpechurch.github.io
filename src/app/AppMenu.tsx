@@ -20,11 +20,15 @@ function AppMenu() {
         <Popover>
           <Menu className="menu">
             <MenuItem>
-              <Link className="link" to="welcome">
+              <Link className="link" to="introduction">
                 교회 소개
               </Link>
             </MenuItem>
-            <MenuItem>예배 안내</MenuItem>
+            <MenuItem>
+              <Link className="link" to="service">
+                예배 안내
+              </Link>
+            </MenuItem>
             <MenuItem>설교 영상</MenuItem>
             <MenuItem>섬기는 이들</MenuItem>
           </Menu>
