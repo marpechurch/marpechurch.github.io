@@ -1,0 +1,27 @@
+.link {
+  color: #213547;
+}
+
+.menu {
+  background-color: #f9f9f9;
+}
+
+.menuButton {
+  align-items: center;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  max-height: 40px;
+  max-width: 40px;
+  width: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .link {
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .menu {
+    background-color: #242424;
+  }
+}

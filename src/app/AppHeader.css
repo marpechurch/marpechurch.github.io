@@ -1,7 +1,3 @@
-.link {
-  color: black;
-}
-
 .appHeader {
   border-bottom: 1px solid black;
   display: flex;
@@ -10,32 +6,22 @@
   padding: 8px;
 }
 
-.appHeaderLink {
+.link {
   align-items: center;
-  /* color: inherit; */
-  color: black;
+  color: #213547;
   display: flex;
   gap: 8px;
 }
 
-.appMenu {
-  background: white;
-  width: 25%;
-}
-
-.appMenuButton {
-  align-items: center;
-  display: flex;
+.logo {
   height: auto;
-  justify-content: center;
   max-height: 40px;
   max-width: 40px;
   width: auto;
 }
 
-.marpeLogo {
-  height: auto;
-  max-height: 40px;
-  max-width: 40px;
-  width: auto;
+@media (prefers-color-scheme: dark) {
+  .link {
+    color: rgba(255, 255, 255, 0.87);
+  }
 }
