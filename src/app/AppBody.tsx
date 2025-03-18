@@ -9,7 +9,7 @@ function AppHeader() {
   return (
     <div className="appBody">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index path="/" element={<Home />} />
         <Route path="introduction" element={<Introduction />} />
         <Route path="service" element={<Service />} />
       </Routes>

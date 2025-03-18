@@ -2,10 +2,6 @@ h1 {
   text-align: center;
 }
 
-img {
-  width: -webkit-fill-available;
-}
-
 p {
   padding: 0 8px;
   text-align: left;
