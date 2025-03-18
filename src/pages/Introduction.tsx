@@ -1,14 +1,13 @@
 import "react";
 
+import welcome from "../assets/welcome.avif";
+
 import "./Introduction.css";
 
 export default function Introduction() {
   return (
     <>
-      <img
-        src="https://images.unsplash.com/photo-1600577916048-804c9191e36c?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Introduction"
-      />
+      <img src={welcome} alt="Introduction" />
       <h1>교회 소개</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie

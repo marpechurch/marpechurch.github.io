@@ -1,9 +1,9 @@
-.card {
-  padding: 2em;
+img {
+  width: -webkit-fill-available;
 }
 
-.church {
-  width: -webkit-fill-available;
+.card {
+  padding: 2em;
 }
 
 .read-the-docs {
