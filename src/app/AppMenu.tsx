@@ -29,7 +29,11 @@ function AppMenu() {
                 예배 안내
               </Link>
             </MenuItem>
-            <MenuItem>설교 영상</MenuItem>
+            <MenuItem>
+              <Link className="link" to="videos">
+                설교 영상
+              </Link>
+            </MenuItem>
             <MenuItem>섬기는 이들</MenuItem>
           </Menu>
         </Popover>

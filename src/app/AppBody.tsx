@@ -1,18 +1,13 @@
 import "react";
-import { Routes, Route } from "react-router";
 
-import { Home, Introduction, Service } from "../pages/index.tsx";
+import AppRoutes from "./AppRoutes.tsx";
 
 import "./AppBody.css";
 
 function AppHeader() {
   return (
     <div className="appBody">
-      <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="introduction" element={<Introduction />} />
-        <Route path="service" element={<Service />} />
-      </Routes>
+      <AppRoutes />
     </div>
   );
 }
