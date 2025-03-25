@@ -6,7 +6,7 @@ export default function Service() {
   return (
     <>
       <img
-        src="https://images.stockcake.com/public/3/4/3/34385439-65c6-4aca-9d84-ffac1d10555f_large/church-service-gathering-stockcake.jpg"
+        src="https://files.oaiusercontent.com/file-KQVDgEBuNQ9taB5bzZMZxv?se=2025-03-25T01%3A23%3A34Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D9de7e9f4-1b12-4d39-823b-8f24a818934e.webp&sig=mp6mgLrfop6vWhehY8m6SdcYw1mc8inmyX/Ge4aF1Yw%3D"
         alt="Service"
       />
       <h1>예배 안내</h1>
