@@ -2,10 +2,6 @@
   color: #213547;
 }
 
-.menu {
-  background-color: #f9f9f9;
-}
-
 .menuButton {
   align-items: center;
   display: flex;
@@ -16,12 +12,19 @@
   width: auto;
 }
 
+.menu {
+  background-color: #f9f9f9;
+  position: fixed;
+  right: 0px;
+  width: 80px;
+}
+
 @media (prefers-color-scheme: dark) {
   .link {
     color: rgba(255, 255, 255, 0.87);
   }
 
   .menu {
-    background-color: #242424;
+    background-color: #34495e;
   }
 }
