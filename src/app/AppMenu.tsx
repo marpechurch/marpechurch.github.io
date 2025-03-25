@@ -39,6 +39,11 @@ function AppMenu() {
                 설교 영상
               </Link>
             </MenuItem>
+            <MenuItem>
+              <Link className="link" to="offering">
+                헌금 안내
+              </Link>
+            </MenuItem>
           </Menu>
         </Popover>
       </MenuTrigger>
