@@ -50,7 +50,7 @@ export default function AppMenu() {
   function DrawerList() {
     return (
       <Box
-        sx={{ width: 250 }}
+        sx={{ width: 200 }}
         role="presentation"
         onClick={toggleDrawer(false)}
       >
@@ -72,7 +72,7 @@ export default function AppMenu() {
   return (
     <>
       <Button onClick={toggleDrawer(true)}>☰</Button>
-      <Drawer open={open} onClose={toggleDrawer(false)}>
+      <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
         <DrawerList />
       </Drawer>
     </>
