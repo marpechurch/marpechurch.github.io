@@ -1,13 +1,13 @@
 import "react";
 
-import church from "../assets/church.webp";
+import worshipImg from "../assets/worship.png";
 
 import "./Worship.css";
 
 export default function Worship() {
   return (
     <>
-      <img src={church} alt="Worship test" />
+      <img src={worshipImg} alt="Worship test" />
       <h1>찬양 플레이리스트</h1>
       <iframe
         src="https://www.youtube.com/embed/videoseries?si=jcbM7u0rPSMCORTw&amp;list=PL6VO8u2Zpfdfs9VLqEHkNvq0ICxdXN3j7"
