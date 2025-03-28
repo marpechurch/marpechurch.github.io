@@ -8,6 +8,7 @@ import {
   Offering,
   Service,
   Videos,
+  Worship,
 } from "../pages/index.tsx";
 
 function AppHeader() {
@@ -18,6 +19,7 @@ function AppHeader() {
       <Route path="community" element={<Community />} />
       <Route path="service" element={<Service />} />
       <Route path="videos" element={<Videos />} />
+      <Route path="worship" element={<Worship />} />
       <Route path="offering" element={<Offering />} />
     </Routes>
   );

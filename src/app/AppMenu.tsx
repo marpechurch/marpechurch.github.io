@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   Church as ChurchIcon,
   MenuBook as ServiceIcon,
+  MusicNote as WorshipIcon,
   People as CommunityIcon,
   VolunteerActivism as OfferingIcon,
   YouTube as VideosIcon,
@@ -63,6 +64,7 @@ export default function AppMenu() {
           />
           <ListItemLink to="service" primary="예배" icon={<ServiceIcon />} />
           <ListItemLink to="videos" primary="설교" icon={<VideosIcon />} />
+          <ListItemLink to="worship" primary="찬양" icon={<WorshipIcon />} />
           <ListItemLink to="offering" primary="헌금" icon={<OfferingIcon />} />
         </List>
       </Box>
