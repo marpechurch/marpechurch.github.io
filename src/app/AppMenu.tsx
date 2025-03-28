@@ -32,10 +32,12 @@ export default function AppMenu() {
     const { icon, primary, to } = props;
 
     return (
-      <ListItemButton component={Link} to={to}>
-        {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
-        <ListItemText primary={primary} />
-      </ListItemButton>
+      <ListItem disablePadding>
+        <ListItemButton component={Link} to={to}>
+          {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
+          <ListItemText primary={primary} />
+        </ListItemButton>
+      </ListItem>
     );
   }
 
@@ -47,105 +49,22 @@ export default function AppMenu() {
         onClick={toggleDrawer(false)}
       >
         <List>
-          <ListItem disablePadding>
-            <ListItemLink to="church" primary="Church" icon={<InboxIcon />} />
-          </ListItem>
+          <ListItemLink to="church" primary="교회" icon={<InboxIcon />} />
+          <ListItemLink to="community" primary="공동체" icon={<InboxIcon />} />
+          <ListItemLink to="service" primary="예배" icon={<InboxIcon />} />
+          <ListItemLink to="videos" primary="설교" icon={<InboxIcon />} />
+          <ListItemLink to="offering" primary="헌금" icon={<InboxIcon />} />
         </List>
       </Box>
     );
   }
 
   return (
-    <div className="appMenu">
+    <>
       <Button onClick={toggleDrawer(true)}>☰</Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         <DrawerList />
       </Drawer>
-      {
-        <ul className="menu">
-          <li>
-            <Link className="link" to="church">
-              교회 소개
-            </Link>
-          </li>
-          <li>
-            <Link className="link" to="community">
-              공동체 소개
-            </Link>
-          </li>
-          <li>
-            <Link className="link" to="service">
-              예배 안내
-            </Link>
-          </li>
-          <li>
-            <Link className="link" to="videos">
-              설교 영상
-            </Link>
-          </li>
-          <li>
-            <Link className="link" to="offering">
-              헌금 안내
-            </Link>
-          </li>
-        </ul>
-      }
-      {/* <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Info</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav> */}
-      {/* <MenuTrigger> */}
-      {/* <Button aria-label="Menu" className="menuButton">
-          ☰
-        </Button> */}
-      {/* <Popover>
-          <Menu className="menu">
-            <MenuItem>
-              <Link className="link" to="church">
-                교회 소개
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link className="link" to="community">
-                공동체 소개
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link className="link" to="service">
-                예배 안내
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link className="link" to="videos">
-                설교 영상
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link className="link" to="offering">
-                헌금 안내
-              </Link>
-            </MenuItem>
-          </Menu>
-        </Popover> */}
-      {/* </MenuTrigger> */}
-    </div>
+    </>
   );
 }

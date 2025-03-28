@@ -1,6 +1,5 @@
 .appHeader {
   background-color: #ffffff;
-  border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
   min-height: 40px;
