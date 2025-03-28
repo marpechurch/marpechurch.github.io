@@ -11,7 +11,7 @@ export default function Videos() {
       />
       <h1>예배 영상</h1>
       <iframe
-        src="https://www.youtube.com/embed/y0pBkGR5mqI?si=NvYTGDY5-_Y0Um61"
+        src="https://www.youtube.com/embed/videoseries?si=J8eppjocREgMC-JL&amp;list=PL6VO8u2Zpfdf_UzfAjmyCaPLCiDK-XviS"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
