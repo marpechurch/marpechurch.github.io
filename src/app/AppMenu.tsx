@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { MoveToInbox as InboxIcon } from "@mui/icons-material";
+import {
+  Church as ChurchIcon,
+  MenuBook as ServiceIcon,
+  People as CommunityIcon,
+  VolunteerActivism as OfferingIcon,
+  YouTube as VideosIcon,
+} from "@mui/icons-material";
 import {
   Box,
   Button,
@@ -49,11 +55,15 @@ export default function AppMenu() {
         onClick={toggleDrawer(false)}
       >
         <List>
-          <ListItemLink to="church" primary="교회" icon={<InboxIcon />} />
-          <ListItemLink to="community" primary="공동체" icon={<InboxIcon />} />
-          <ListItemLink to="service" primary="예배" icon={<InboxIcon />} />
-          <ListItemLink to="videos" primary="설교" icon={<InboxIcon />} />
-          <ListItemLink to="offering" primary="헌금" icon={<InboxIcon />} />
+          <ListItemLink to="church" primary="교회" icon={<ChurchIcon />} />
+          <ListItemLink
+            to="community"
+            primary="공동체"
+            icon={<CommunityIcon />}
+          />
+          <ListItemLink to="service" primary="예배" icon={<ServiceIcon />} />
+          <ListItemLink to="videos" primary="설교" icon={<VideosIcon />} />
+          <ListItemLink to="offering" primary="헌금" icon={<OfferingIcon />} />
         </List>
       </Box>
     );
