@@ -1,12 +1,8 @@
 import { useState } from "react";
-import {
-  Mail as MailIcon,
-  MoveToInbox as InboxIcon,
-} from "@mui/icons-material";
+import { MoveToInbox as InboxIcon } from "@mui/icons-material";
 import {
   Box,
   Button,
-  Divider,
   Drawer,
   List,
   ListItem,
@@ -26,41 +22,44 @@ export default function AppMenu() {
     setOpen(newOpen);
   };
 
-  const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
+  interface ListItemLinkProps {
+    icon?: React.ReactElement<unknown>;
+    primary: string;
+    to: string;
+  }
+
+  function ListItemLink(props: ListItemLinkProps) {
+    const { icon, primary, to } = props;
+
+    return (
+      <ListItemButton component={Link} to={to}>
+        {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
+        <ListItemText primary={primary} />
+      </ListItemButton>
+    );
+  }
+
+  function DrawerList() {
+    return (
+      <Box
+        sx={{ width: 250 }}
+        role="presentation"
+        onClick={toggleDrawer(false)}
+      >
+        <List>
+          <ListItem disablePadding>
+            <ListItemLink to="church" primary="Church" icon={<InboxIcon />} />
           </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+        </List>
+      </Box>
+    );
+  }
 
   return (
     <div className="appMenu">
       <Button onClick={toggleDrawer(true)}>☰</Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
-        {DrawerList}
+        <DrawerList />
       </Drawer>
       {
         <ul className="menu">
