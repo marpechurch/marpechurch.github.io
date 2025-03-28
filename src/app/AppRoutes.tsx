@@ -14,7 +14,7 @@ import {
 function AppHeader() {
   return (
     <Routes>
-      <Route path="" element={<Home />} />
+      <Route path="*" element={<Home />} />
       <Route path="/church" element={<Church />} />
       <Route path="/community" element={<Community />} />
       <Route path="/service" element={<Service />} />

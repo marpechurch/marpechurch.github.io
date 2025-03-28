@@ -63,7 +63,7 @@ export default function AppMenu() {
             icon={<CommunityIcon />}
           />
           <ListItemLink to="service" primary="예배" icon={<ServiceIcon />} />
-          <ListItemLink to="videos" primary="설교" icon={<VideosIcon />} />
+          <ListItemLink to="videos" primary="영상" icon={<VideosIcon />} />
           <ListItemLink to="worship" primary="찬양" icon={<WorshipIcon />} />
           <ListItemLink to="offering" primary="헌금" icon={<OfferingIcon />} />
         </List>

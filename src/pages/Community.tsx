@@ -1,11 +1,13 @@
 import "react";
 
+import communityImg from "../assets/community.webp";
+
 import "./Community.css";
 
 export default function Community() {
   return (
     <>
-      <img src="https://files.oaiusercontent.com/file-PAszDoVTxQ81vJ3PTrXy7P?se=2025-03-25T01%3A22%3A22Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D8fda755e-b2fb-4da7-bda1-d27ff7dfdb12.webp&sig=yx2qw3mcp2oklk2jKoLYzVqEqMgOI9SsL%2BtpF/Kf344%3D" alt="Community" />
+      <img src={communityImg} alt="Community" />
       <h1>공동체 소개</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie

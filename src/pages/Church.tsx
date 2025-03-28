@@ -1,14 +1,13 @@
 import "react";
 
+import churchImg from "../assets/church.webp";
+
 import "./Church.css";
 
 export default function Church() {
   return (
     <>
-      <img
-        src="https://files.oaiusercontent.com/file-JJBuARL69vyb19Um8QSvZk?se=2025-03-25T01%3A21%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D1be1e093-2dbb-4bca-999d-00338697a84b.webp&sig=0VqxLM1oqU1A9YjQhv5u5THU4qI7pABcg6ElpT5E%2BnM%3D"
-        alt="Church"
-      />
+      <img src={churchImg} alt="Church" />
       <h1>교회 소개</h1>
       <p>
         "마르페"는 히브리어로 "건강, 치유, 회복"을 뜻합니다. 보스턴에 복음과
