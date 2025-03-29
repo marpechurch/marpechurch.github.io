@@ -6,6 +6,7 @@ import {
   Community,
   Directions,
   Home,
+  Instagram,
   Offering,
   Videos,
   Worship,
@@ -20,6 +21,7 @@ function AppHeader() {
       <Route path="directions" element={<Directions />} />
       <Route path="videos" element={<Videos />} />
       <Route path="worship" element={<Worship />} />
+      <Route path="instagram" element={<Instagram />} />
       <Route path="offering" element={<Offering />} />
     </Routes>
   );
