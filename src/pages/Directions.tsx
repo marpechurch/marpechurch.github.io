@@ -1,10 +1,40 @@
-import "react";
+import { useEffect } from "react";
+
+// Extend the Window interface to include the 'instgrm' property
+declare global {
+  interface Window {
+    instgrm?: {
+      Embeds: {
+        process: () => void;
+      };
+    };
+  }
+}
 
 import directionsImg from "../assets/directions.webp";
 
 import "./Directions.css";
 
 export default function Directions() {
+  useEffect(() => {
+    // Dynamically load the Instagram embed script
+    const script = document.createElement("script");
+    script.src = "//www.instagram.com/embed.js";
+    script.async = true;
+    script.onload = () => {
+      // Ensure Instagram embeds are processed after the script loads
+      if (window.instgrm && window.instgrm.Embeds) {
+        window.instgrm.Embeds.process();
+      }
+    };
+    document.body.appendChild(script);
+
+    // Cleanup: Remove the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []); // Empty dependency array ensures this runs only on mount
+
   return (
     <>
       <img src={directionsImg} alt="Directions" />
@@ -30,25 +60,25 @@ export default function Directions() {
           title="Directions to Church"
         ></iframe>
         <li>📩 라이드 문의는 마르페 교회 인스타 DM으로 주세요!</li>
-        <div className="instagram">
-          <blockquote
-            className="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/marpechurch/"
-            data-instgrm-version="14"
+        <blockquote
+          className="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/marpechurch/?utm_source=ig_embed&amp;utm_campaign=loading"
+          data-instgrm-version="14"
+        >
+          <div
+            className="instagram-embed-placeholder"
+            style={{
+              height: "600px", // Reserve space for the embed
+            }}
           >
-            <div className="instagram-embed-placeholder">
-              <a
-                href="https://www.instagram.com/marpechurch/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View this profile on Instagram
-              </a>
-            </div>
-          </blockquote>
-        </div>
+            <a
+              href="https://www.instagram.com/marpechurch/?utm_source=ig_embed&amp;utm_campaign=loading"
+              target="_blank"
+              rel="noopener noreferrer"
+            />
+          </div>
+        </blockquote>
       </ul>
-      <script async src="//www.instagram.com/embed.js"></script>
     </>
   );
 }
