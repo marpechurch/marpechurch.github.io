@@ -8,7 +8,7 @@ export default function Community() {
   return (
     <>
       <img src={communityImg} alt="Community" />
-      <h1>공동체 소개</h1>
+      <h1>공동체</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie
         suscipit nunc, ut iaculis nunc lobortis vitae. Sed malesuada eleifend

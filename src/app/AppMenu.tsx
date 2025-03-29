@@ -56,15 +56,15 @@ export default function AppMenu() {
         onClick={toggleDrawer(false)}
       >
         <List>
-          <ListItemLink to="church" primary="교회" icon={<ChurchIcon />} />
+          <ListItemLink to="church" primary="교회 소개" icon={<ChurchIcon />} />
           <ListItemLink
             to="community"
             primary="공동체"
             icon={<CommunityIcon />}
           />
           <ListItemLink to="directions" primary="찾아오시는 길" icon={<DirectionsIcon />} />
-          <ListItemLink to="videos" primary="영상" icon={<VideosIcon />} />
-          <ListItemLink to="worship" primary="찬양" icon={<WorshipIcon />} />
+          <ListItemLink to="videos" primary="설교 영상" icon={<VideosIcon />} />
+          <ListItemLink to="worship" primary="찬양 리스트" icon={<WorshipIcon />} />
           <ListItemLink to="offering" primary="헌금" icon={<OfferingIcon />} />
         </List>
       </Box>

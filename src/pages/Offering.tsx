@@ -1,6 +1,7 @@
 import "react";
 
 import offeringImg from "../assets/offering.webp";
+import zelleImg from "../assets/zelle.png";
 
 import "./Offering.css";
 
@@ -8,23 +9,11 @@ export default function Offering() {
   return (
     <>
       <img src={offeringImg} alt="Offering" />
-      <h1>헌금 안내</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie
-        suscipit nunc, ut iaculis nunc lobortis vitae. Sed malesuada eleifend
-        erat, vel congue dolor sollicitudin vel. Aliquam cursus mattis massa.
-        Nam elementum ex aliquet eros auctor, eu placerat nisi sagittis. Etiam
-        varius, nulla ac aliquet porttitor, augue mi eleifend felis, ut tempus
-        ipsum lectus in metus. Nam elementum semper sagittis. Morbi lacinia
-        condimentum diam sed blandit. Integer elementum lectus eu vestibulum
-        sollicitudin. Suspendisse potenti. Praesent ac nisi sit amet libero
-        interdum facilisis lacinia non neque. Mauris egestas venenatis eros, a
-        iaculis arcu mollis in. Donec odio purus, tristique at feugiat quis,
-        vulputate non orci. Praesent quis ante eu lectus lacinia volutpat
-        placerat at diam. Phasellus molestie pharetra ultrices. Phasellus
-        finibus tortor lacinia neque efficitur molestie. Duis lobortis sit amet
-        tellus vitae pellentesque.
-      </p>
+      <h1>헌금</h1>
+      <div className="zelle">
+        <img src={zelleImg} alt="Zelle QR code" className="zelleQRCode" />
+        <p>Zelle 온라인 헌금 QR 코드: marpechurch@gmail.com</p>
+      </div>
     </>
   );
 }
