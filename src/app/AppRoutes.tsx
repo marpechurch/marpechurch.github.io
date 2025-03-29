@@ -4,9 +4,9 @@ import { Routes, Route } from "react-router";
 import {
   Church,
   Community,
+  Directions,
   Home,
   Offering,
-  Service,
   Videos,
   Worship,
 } from "../pages/index.tsx";
@@ -17,7 +17,7 @@ function AppHeader() {
       <Route path="" element={<Home />} />
       <Route path="church" element={<Church />} />
       <Route path="community" element={<Community />} />
-      <Route path="service" element={<Service />} />
+      <Route path="directions" element={<Directions />} />
       <Route path="videos" element={<Videos />} />
       <Route path="worship" element={<Worship />} />
       <Route path="offering" element={<Offering />} />

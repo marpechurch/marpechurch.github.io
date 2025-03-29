@@ -1,14 +1,14 @@
 import "react";
 
-import serviceImg from "../assets/service.webp";
+import directionsImg from "../assets/directions.webp";
 
-import "./Service.css";
+import "./Directions.css";
 
-export default function Service() {
+export default function Directions() {
   return (
     <>
-      <img src={serviceImg} alt="Service Banner" />
-      <h1>예배 안내</h1>
+      <img src={directionsImg} alt="Directions" />
+      <h1>찾아오시는 길</h1>
       <ul>
         <li>⏰ 예배시간: 주일 오후 2:00PM</li>
         <li>📍 예배장소: Igreja Presbiteriana de Boston</li>
