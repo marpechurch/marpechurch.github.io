@@ -1,9 +1,10 @@
 import { useState } from "react";
 import {
   Church as ChurchIcon,
+  LocationCity as DenominationIcon,
   Map as DirectionsIcon,
   MusicNote as WorshipIcon,
-  Instagram as InstagramIcon,
+  // Instagram as InstagramIcon,
   People as CommunityIcon,
   VolunteerActivism as OfferingIcon,
   YouTube as VideosIcon,
@@ -58,6 +59,7 @@ export default function AppMenu() {
       >
         <List>
           <ListItemLink to="church" primary="교회 소개" icon={<ChurchIcon />} />
+          <ListItemLink to="denomination" primary="교단 소개" icon={<DenominationIcon />} />
           <ListItemLink
             to="community"
             primary="공동체"
@@ -66,7 +68,7 @@ export default function AppMenu() {
           <ListItemLink to="directions" primary="찾아오시는 길" icon={<DirectionsIcon />} />
           <ListItemLink to="videos" primary="설교 영상" icon={<VideosIcon />} />
           <ListItemLink to="worship" primary="찬양 리스트" icon={<WorshipIcon />} />
-          <ListItemLink to="instagram" primary="인스타그램" icon={<InstagramIcon />} />
+          {/* <ListItemLink to="instagram" primary="인스타그램" icon={<InstagramIcon />} /> */}
           <ListItemLink to="offering" primary="헌금" icon={<OfferingIcon />} />
         </List>
       </Box>

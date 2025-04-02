@@ -1,5 +1,6 @@
 export { default as Church } from "./Church";
 export { default as Community } from "./Community";
+export { default as Denomination } from "./Denomination";
 export { default as Home } from "./Home";
 export { default as Instagram } from "./Instagram";
 export { default as Offering } from "./Offering";
