@@ -9,6 +9,7 @@ import {
   Home,
   Instagram,
   Offering,
+  Pastor,
   Videos,
   Worship,
 } from "../pages/index.tsx";
@@ -18,6 +19,7 @@ function AppHeader() {
     <Routes>
       <Route path="" element={<Home />} />
       <Route path="church" element={<Church />} />
+      <Route path="pastor" element={<Pastor />} />
       <Route path="denomination" element={<Denomination />} />
       <Route path="community" element={<Community />} />
       <Route path="directions" element={<Directions />} />
