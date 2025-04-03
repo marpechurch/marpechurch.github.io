@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+  AutoAwesome as VisionIcon,
   Church as ChurchIcon,
   LocationCity as DenominationIcon,
   Man4 as PastorIcon,
@@ -62,6 +63,7 @@ export default function AppMenu() {
           <ListItemLink to="church" primary="교회 소개" icon={<ChurchIcon />} />
           <ListItemLink to="pastor" primary="목사님 소개" icon={<PastorIcon />} />
           <ListItemLink to="denomination" primary="교단 소개" icon={<DenominationIcon />} />
+          <ListItemLink to="vision" primary="비전 소개" icon={<VisionIcon />} />
           <ListItemLink
             to="community"
             primary="공동체"
