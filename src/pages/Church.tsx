@@ -49,7 +49,7 @@ export default function Church() {
             src={churchImg}
             alt="Church"
             sx={{
-              height: "fit-content",
+              height: "min-content",
               maxWidth: 300,
             }}
           />
