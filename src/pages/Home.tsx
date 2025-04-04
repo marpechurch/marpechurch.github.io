@@ -4,7 +4,7 @@ import { Box, Typography } from "@mui/material";
 export default function Home() {
   return (
     <Box>
-      <Typography variant="h1" sx={{ wordBreak: "keep-all" }}>
+      <Typography variant="h1">
         마르페 교회로 환영합니다!
       </Typography>
     </Box>

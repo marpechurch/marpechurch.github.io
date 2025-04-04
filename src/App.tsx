@@ -6,8 +6,6 @@ import {
   ThemeProvider,
 } from "@mui/material/styles";
 
-import "./App.css";
-
 import AppBody from "./app/AppBody";
 import AppFooter from "./app/AppFooter";
 import AppHeader from "./app/AppHeader";
@@ -21,11 +19,13 @@ export default function App() {
   return (
     <Container
       disableGutters
+      maxWidth={false}
       sx={{
         display: "flex",
         flexDirection: "column",
         height: "100vh",
         width: "100vw",
+        wordBreak: "keep-all",
       }}
     >
       <ThemeProvider theme={theme}>
