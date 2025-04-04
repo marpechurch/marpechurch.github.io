@@ -6,8 +6,14 @@ import churchImg from "../assets/church.webp";
 export default function Church() {
   return (
     <Box>
-      <Typography variant="h1">교회 소개</Typography>
-      <Grid2 container direction={{ md: "row", xs: "column-reverse" }} spacing={2}>
+      <Typography variant="h1" sx={{ paddingBottom: 2 }}>
+        교회 소개
+      </Typography>
+      <Grid2
+        container
+        direction={{ md: "row", xs: "column-reverse" }}
+        spacing={2}
+      >
         <Grid2 size={{ xs: 12, md: 8 }}>
           <Typography>
             "마르페"는 히브리어로 "건강, 치유, 회복"을 뜻합니다. 보스턴에 복음과
@@ -39,15 +45,11 @@ export default function Church() {
             제자를 만드는 교회, 우리가 꿈꾸는 교회입니다.
           </Typography>
         </Grid2>
-        <Grid2
-          display="flex"
-          justifyContent="center"
-          size={{ xs: 12, md: 4 }}
-        >
+        <Grid2 display="flex" justifyContent="center" size={{ xs: 12, md: 4 }}>
           <Box
+            alt="Church"
             component="img"
             src={churchImg}
-            alt="Church"
             sx={{
               height: "min-content",
               maxWidth: 300,
