@@ -1,24 +1,38 @@
 import "react";
+import { Container } from "@mui/material";
+import {
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@mui/material/styles";
 
 import "./App.css";
-
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
 
 import AppBody from "./app/AppBody";
 import AppFooter from "./app/AppFooter";
 import AppHeader from "./app/AppHeader";
 
-function App() {
+export default function App() {
+  // Create a theme instance
+  let theme = createTheme();
+  // Make all typography responsive
+  theme = responsiveFontSizes(theme);
+
   return (
-    <div className="app">
-      <AppHeader />
-      <AppBody />
-      <AppFooter />
-    </div>
+    <Container
+      disableGutters
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100vh",
+        width: "100vw",
+      }}
+    >
+      <ThemeProvider theme={theme}>
+        <AppHeader />
+        <AppBody />
+        <AppFooter />
+      </ThemeProvider>
+    </Container>
   );
 }
-
-export default App;
