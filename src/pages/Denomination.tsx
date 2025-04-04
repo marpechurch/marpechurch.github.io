@@ -2,6 +2,7 @@ import "react";
 import { Typography } from "@mui/material";
 
 import denominationImg from "../assets/denomination.png";
+
 import Page from "../components/Page";
 
 export default function Denomination() {
