@@ -1,8 +1,8 @@
 import "react";
+import { Typography } from "@mui/material";
 
 import pastorImg from "../assets/pastor.jpg";
 import Page from "../components/Page";
-import { Typography } from "@mui/material";
 
 export default function Pastor() {
   const content = (
