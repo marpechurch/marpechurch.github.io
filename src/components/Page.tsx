@@ -30,8 +30,9 @@ export default function Page({ content, image, title }: PageProps) {
               src={image}
               alt={`${title}`}
               sx={{
-                height: "min-content",
-                maxWidth: 300,
+                height: "auto", // Automatically adjust height to maintain aspect ratio
+                maxWidth: "100%", // Ensure the image does not exceed the container width
+                objectFit: "contain", // Maintain aspect ratio
               }}
             />
           </Grid2>
