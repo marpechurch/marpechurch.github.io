@@ -3,8 +3,6 @@ import "react";
 import Page from "../components/Page";
 import YouTube from "../components/YouTube";
 
-import "./Worship.css";
-
 export default function Worship() {
   const content = (
     <YouTube

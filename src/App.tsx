@@ -11,8 +11,19 @@ import AppFooter from "./app/AppFooter";
 import AppHeader from "./app/AppHeader";
 
 export default function App() {
-  // Create a theme instance
-  let theme = createTheme();
+  // Create a single theme instance
+  let theme = createTheme({
+    typography: {
+      h1: {
+        textAlign: "left", // Default alignment for larger screens
+        // Use breakpoints directly within the theme definition
+        "@media (max-width:600px)": {
+          textAlign: "center", // Center alignment for small screens (xs and sm)
+        },
+      },
+    },
+  });
+
   // Make all typography responsive
   theme = responsiveFontSizes(theme);
 
