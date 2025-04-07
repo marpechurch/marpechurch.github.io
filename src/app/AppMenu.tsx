@@ -10,19 +10,20 @@ import {
   People as CommunityIcon,
   VolunteerActivism as OfferingIcon,
   YouTube as VideosIcon,
+  Menu as MenuIcon,
 } from "@mui/icons-material";
 import {
   Box,
-  Button,
   Drawer,
   List,
   ListItem,
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  IconButton,
 } from "@mui/material";
 
-import { Link } from "react-router";
+import { Link as RouterLink } from "react-router";
 
 import "./AppMenu.css";
 
@@ -44,7 +45,7 @@ export default function AppMenu() {
 
     return (
       <ListItem disablePadding>
-        <ListItemButton component={Link} to={to}>
+        <ListItemButton component={RouterLink} to={to}>
           {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
           <ListItemText primary={primary} />
         </ListItemButton>
@@ -61,17 +62,33 @@ export default function AppMenu() {
       >
         <List>
           <ListItemLink to="church" primary="교회 소개" icon={<ChurchIcon />} />
-          <ListItemLink to="pastor" primary="목사님 소개" icon={<PastorIcon />} />
-          <ListItemLink to="denomination" primary="교단 소개" icon={<DenominationIcon />} />
+          <ListItemLink
+            to="pastor"
+            primary="목사님 소개"
+            icon={<PastorIcon />}
+          />
+          <ListItemLink
+            to="denomination"
+            primary="교단 소개"
+            icon={<DenominationIcon />}
+          />
           <ListItemLink to="vision" primary="비전 소개" icon={<VisionIcon />} />
           <ListItemLink
             to="community"
             primary="공동체"
             icon={<CommunityIcon />}
           />
-          <ListItemLink to="directions" primary="찾아오시는 길" icon={<DirectionsIcon />} />
+          <ListItemLink
+            to="directions"
+            primary="찾아오시는 길"
+            icon={<DirectionsIcon />}
+          />
           <ListItemLink to="videos" primary="설교 영상" icon={<VideosIcon />} />
-          <ListItemLink to="worship" primary="찬양 리스트" icon={<WorshipIcon />} />
+          <ListItemLink
+            to="worship"
+            primary="찬양 리스트"
+            icon={<WorshipIcon />}
+          />
           {/* <ListItemLink to="instagram" primary="인스타그램" icon={<InstagramIcon />} /> */}
           <ListItemLink to="offering" primary="헌금" icon={<OfferingIcon />} />
         </List>
@@ -81,8 +98,15 @@ export default function AppMenu() {
 
   return (
     <>
-      <Button onClick={toggleDrawer(true)}>☰</Button>
-      <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
+      <IconButton
+        aria-label="menu"
+        color="inherit"
+        onClick={toggleDrawer(true)}
+        size="large"
+      >
+        <MenuIcon />
+      </IconButton>
+      <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
         <DrawerList />
       </Drawer>
     </>

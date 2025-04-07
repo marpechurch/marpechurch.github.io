@@ -13,6 +13,11 @@ import AppHeader from "./app/AppHeader";
 export default function App() {
   // Create a single theme instance
   let theme = createTheme({
+    palette: {
+      primary: {
+        main: "#4ebb7e",
+      },
+    },
     typography: {
       h1: {
         textAlign: "left", // Default alignment for larger screens

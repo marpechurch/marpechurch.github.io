@@ -1,6 +1,6 @@
 import "react";
 
-import marpeLogo from "../assets/marpe-logo.png";
+import marpeLogo from "../assets/marpe-logo-color.png";
 import Page from "../components/Page";
 
 export default function Home() {
