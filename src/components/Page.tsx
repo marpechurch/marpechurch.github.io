@@ -10,7 +10,10 @@ interface PageProps {
 export default function Page({ content, image, title }: PageProps) {
   return (
     <Box>
-      <Typography variant="h1" sx={{ paddingBottom: 2 }}>
+      <Typography
+        variant="h1"
+        sx={{ paddingBottom: 2, textAlign: { xs: "center", md: "left" } }}
+      >
         {title}
       </Typography>
       <Grid2
