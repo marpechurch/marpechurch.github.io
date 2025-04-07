@@ -1,19 +1,13 @@
 import "react";
+import { Typography } from "@mui/material";
 
-import offeringImg from "../assets/offering.webp";
 import zelleImg from "../assets/zelle.png";
-
-import "./Offering.css";
+import Page from "../components/Page";
 
 export default function Offering() {
-  return (
-    <>
-      <img src={offeringImg} alt="Offering" />
-      <h1>헌금</h1>
-      <div className="zelle">
-        <img src={zelleImg} alt="Zelle QR code" className="zelleQRCode" />
-        <p>Zelle 온라인 헌금 QR 코드: marpechurch@gmail.com</p>
-      </div>
-    </>
+  const content = (
+    <Typography>Zelle 온라인 헌금 QR 코드: marpechurch@gmail.com</Typography>
   );
+
+  return <Page content={content} image={zelleImg} title="헌금" />;
 }
