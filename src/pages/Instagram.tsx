@@ -13,8 +13,6 @@ declare global {
 
 import directionsImg from "../assets/directions.webp";
 
-import "./Instagram.css";
-
 export default function Instagram() {
   useEffect(() => {
     // Dynamically load the Instagram embed script
