@@ -2,7 +2,7 @@ import "react";
 import { Box, Grid2, Typography } from "@mui/material";
 
 interface PageProps {
-  content: React.ReactNode;
+  content?: React.ReactNode;
   image?: string;
   title: string;
 }
@@ -10,20 +10,25 @@ interface PageProps {
 export default function Page({ content, image, title }: PageProps) {
   return (
     <Box>
-      <Typography variant="h1" sx={{ paddingBottom: 2 }}>
+      <Typography
+        variant="h1"
+        sx={{ paddingBottom: 2, textAlign: content ? "left" : "center" }}
+      >
         {title}
       </Typography>
       <Grid2
         container
-        direction={{ md: "row", xs: "column-reverse" }}
+        direction={{ md: "row", xs: content ? "column-reverse" : "row" }}
         spacing={2}
       >
-        <Grid2 size={{ xs: 12, md: image ? 8 : 12 }}>{content}</Grid2>
+        {content && (
+          <Grid2 size={{ xs: 12, md: image ? 8 : 12 }}>{content}</Grid2>
+        )}
         {image && (
           <Grid2
             display="flex"
             justifyContent="center"
-            size={{ xs: 12, md: 4 }}
+            size={{ xs: 12, md: content ? 4 : 12 }}
           >
             <Box
               component="img"
