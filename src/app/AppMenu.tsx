@@ -6,7 +6,7 @@ import {
   Man4 as PastorIcon,
   Map as DirectionsIcon,
   MusicNote as WorshipIcon,
-  Instagram as InstagramIcon,
+  Instagram as SocialIcon,
   People as CommunityIcon,
   VolunteerActivism as OfferingIcon,
   YouTube as SermonsIcon,
@@ -89,9 +89,9 @@ export default function AppMenu() {
             icon={<SermonsIcon />}
           />
           <ListItemLink
-            to="instagram"
+            to="Social"
             primary="인스타그램"
-            icon={<InstagramIcon />}
+            icon={<SocialIcon />}
           />
           <ListItemLink
             to="worship"

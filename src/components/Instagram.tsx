@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Box } from "@mui/material";
 
 // Extend the Window interface to include the 'instgrm' property
 declare global {
@@ -10,14 +11,12 @@ declare global {
     };
   }
 }
-import { Box } from "@mui/material";
 
-import Page from "../components/Page";
+interface InstagramProps {
+  url: string;
+}
 
-const INSTAGRAM_URL =
-  "https://www.instagram.com/marpechurch/?utm_source=ig_embed&utm_campaign=loading";
-
-export default function Instagram() {
+export default function Instagram({ url }: InstagramProps) {
   useEffect(() => {
     // Dynamically load the Instagram embed script
     const script = document.createElement("script");
@@ -36,7 +35,7 @@ export default function Instagram() {
     };
   }, []);
 
-  const content = (
+  return (
     <Box
       sx={{
         display: "flex",
@@ -53,7 +52,7 @@ export default function Instagram() {
     >
       <blockquote
         className="instagram-media"
-        data-instgrm-permalink={INSTAGRAM_URL}
+        data-instgrm-permalink={url}
         data-instgrm-version="14"
         style={{
           background: "#FFF",
@@ -68,7 +67,7 @@ export default function Instagram() {
         }}
       >
         <a
-          href={INSTAGRAM_URL}
+          href={url}
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -81,6 +80,4 @@ export default function Instagram() {
       </blockquote>
     </Box>
   );
-
-  return <Page content={content} title="인스타그램" />;
 }
