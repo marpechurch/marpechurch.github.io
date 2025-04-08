@@ -32,8 +32,8 @@ export default function Page({ content, image, title }: PageProps) {
               src={image}
               alt={`${title}`}
               sx={{
-                height: "auto", // Automatically adjust height to maintain aspect ratio
-                maxWidth: "100%", // Ensure the image does not exceed the container width
+                maxHeight: "60vh",
+                width: "100%",
                 objectFit: "contain", // Maintain aspect ratio
               }}
             />
