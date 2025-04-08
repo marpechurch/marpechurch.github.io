@@ -6,6 +6,7 @@ import {
   Man4 as PastorIcon,
   Map as DirectionsIcon,
   MusicNote as WorshipIcon,
+  HistoryEdu as RegisterIcon,
   Instagram as SocialIcon,
   People as CommunityIcon,
   VolunteerActivism as OfferingIcon,
@@ -99,6 +100,11 @@ export default function AppMenu() {
             icon={<WorshipIcon />}
           />
           <ListItemLink to="offering" primary="헌금" icon={<OfferingIcon />} />
+          <ListItemLink
+            to="register"
+            primary="교인 등록"
+            icon={<RegisterIcon />}
+          />
         </List>
       </Box>
     );

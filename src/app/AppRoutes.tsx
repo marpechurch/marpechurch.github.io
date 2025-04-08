@@ -10,6 +10,7 @@ import {
   Social,
   Offering,
   Pastor,
+  Register,
   Sermons,
   Vision,
   Worship,
@@ -29,6 +30,7 @@ function AppHeader() {
       <Route path="social" element={<Social />} />
       <Route path="worship" element={<Worship />} />
       <Route path="offering" element={<Offering />} />
+      <Route path="register" element={<Register />} />
     </Routes>
   );
 }
