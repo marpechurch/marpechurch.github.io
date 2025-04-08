@@ -1,15 +1,10 @@
 import "react";
 
-import Page from "../components/Page";
-import YouTube from "../components/YouTube";
+import { Page, YouTube } from "../components";
+import { SERMONS_URL } from "../utils/constants";
 
 export default function Sermons() {
-  const content = (
-    <YouTube
-      src="https://www.youtube.com/embed/videoseries?si=J8eppjocREgMC-JL&amp;list=PL6VO8u2Zpfdf_UzfAjmyCaPLCiDK-XviS"
-      title="설교 영상"
-    />
-  );
+  const content = <YouTube src={SERMONS_URL} title="설교 영상" />;
 
   return <Page content={content} title="설교 영상" />;
 }

@@ -2,7 +2,7 @@ import "react";
 import { Typography } from "@mui/material";
 
 import communityImg from "../assets/community.webp";
-import Page from "../components/Page";
+import { Page } from "../components";
 
 export default function Community() {
   const content = (

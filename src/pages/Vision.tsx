@@ -2,7 +2,7 @@ import "react";
 import { Typography } from "@mui/material";
 
 import visionImg from "../assets/vision.png";
-import Page from "../components/Page";
+import { Page } from "../components";
 
 export default function Vision() {
   const content = (

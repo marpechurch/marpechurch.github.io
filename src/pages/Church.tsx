@@ -2,7 +2,7 @@ import "react";
 import { List, ListItem, Typography } from "@mui/material";
 
 import churchImg from "../assets/church.webp";
-import Page from "../components/Page";
+import { Page } from "../components";
 
 export default function Church() {
   const content = (

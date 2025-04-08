@@ -2,7 +2,7 @@ import "react";
 import { Typography } from "@mui/material";
 
 import zelleImg from "../assets/zelle.png";
-import Page from "../components/Page";
+import { Page } from "../components";
 
 export default function Offering() {
   const content = (
