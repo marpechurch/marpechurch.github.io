@@ -6,10 +6,10 @@ import {
   Man4 as PastorIcon,
   Map as DirectionsIcon,
   MusicNote as WorshipIcon,
-  // Instagram as InstagramIcon,
+  Instagram as InstagramIcon,
   People as CommunityIcon,
   VolunteerActivism as OfferingIcon,
-  YouTube as VideosIcon,
+  YouTube as SermonsIcon,
   Menu as MenuIcon,
 } from "@mui/icons-material";
 import {
@@ -83,13 +83,21 @@ export default function AppMenu() {
             primary="찾아오시는 길"
             icon={<DirectionsIcon />}
           />
-          <ListItemLink to="videos" primary="설교 영상" icon={<VideosIcon />} />
+          <ListItemLink
+            to="sermons"
+            primary="설교 영상"
+            icon={<SermonsIcon />}
+          />
+          <ListItemLink
+            to="instagram"
+            primary="인스타그램"
+            icon={<InstagramIcon />}
+          />
           <ListItemLink
             to="worship"
             primary="찬양 리스트"
             icon={<WorshipIcon />}
           />
-          {/* <ListItemLink to="instagram" primary="인스타그램" icon={<InstagramIcon />} /> */}
           <ListItemLink to="offering" primary="헌금" icon={<OfferingIcon />} />
         </List>
       </Box>

@@ -10,7 +10,7 @@ import {
   Instagram,
   Offering,
   Pastor,
-  Videos,
+  Sermons,
   Vision,
   Worship,
 } from "../pages/index.tsx";
@@ -25,9 +25,9 @@ function AppHeader() {
       <Route path="vision" element={<Vision />} />
       <Route path="community" element={<Community />} />
       <Route path="directions" element={<Directions />} />
-      <Route path="videos" element={<Videos />} />
-      <Route path="worship" element={<Worship />} />
+      <Route path="sermons" element={<Sermons />} />
       <Route path="instagram" element={<Instagram />} />
+      <Route path="worship" element={<Worship />} />
       <Route path="offering" element={<Offering />} />
     </Routes>
   );

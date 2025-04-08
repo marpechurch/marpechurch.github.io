@@ -10,14 +10,18 @@ declare global {
     };
   }
 }
+import { Box } from "@mui/material";
 
-import directionsImg from "../assets/directions.webp";
+import Page from "../components/Page";
+
+const INSTAGRAM_URL =
+  "https://www.instagram.com/marpechurch/?utm_source=ig_embed&utm_campaign=loading";
 
 export default function Instagram() {
   useEffect(() => {
     // Dynamically load the Instagram embed script
     const script = document.createElement("script");
-    script.src = "//www.instagram.com/embed.js";
+    script.src = "https://www.instagram.com/embed.js"; // Use full URL
     script.async = true;
     script.onload = () => {
       // Ensure Instagram embeds are processed after the script loads
@@ -27,36 +31,56 @@ export default function Instagram() {
     };
     document.body.appendChild(script);
 
-    // Cleanup: Remove the script when the component unmounts
     return () => {
       document.body.removeChild(script);
     };
-  }, []); // Empty dependency array ensures this runs only on mount
+  }, []);
 
-  return (
-    <div className="instagram-page">
-      <img src={directionsImg} alt="Instagram" />
-      <h1>인스타그램</h1>
-      <div className="instagram-embed-wrapper">
-        <blockquote
-          className="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/marpechurch/?utm_source=ig_embed&amp;utm_campaign=loading"
-          data-instgrm-version="14"
+  const content = (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 2,
+        padding: 2,
+        backgroundColor: "#FFF",
+        borderRadius: 2,
+        boxShadow: "0 0 1px rgba(0,0,0,0.5), 0 1px 10px rgba(0,0,0,0.15)",
+        maxWidth: 500,
+        margin: "0 auto",
+      }}
+    >
+      <blockquote
+        className="instagram-media"
+        data-instgrm-permalink={INSTAGRAM_URL}
+        data-instgrm-version="14"
+        style={{
+          background: "#FFF",
+          border: "0",
+          borderRadius: "3px",
+          boxShadow: "0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)",
+          margin: "1px",
+          maxWidth: "540px",
+          minWidth: "326px",
+          padding: "0",
+          width: "calc(100% - 2px)",
+        }}
+      >
+        <a
+          href={INSTAGRAM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "#c9c8cd",
+            textDecoration: "none",
+          }}
         >
-          <div
-            className="instagram-embed-placeholder"
-            style={{
-              height: "1000px", // Reserve space for the embed
-            }}
-          >
-            <a
-              href="https://www.instagram.com/marpechurch/?utm_source=ig_embed&amp;utm_campaign=loading"
-              target="_blank"
-              rel="noopener noreferrer"
-            />
-          </div>
-        </blockquote>
-      </div>
-    </div>
+          View this post on Instagram
+        </a>
+      </blockquote>
+    </Box>
   );
+
+  return <Page content={content} title="인스타그램" />;
 }
