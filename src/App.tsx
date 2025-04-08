@@ -36,7 +36,7 @@ export default function App() {
         display: "flex",
         flexDirection: "column",
         height: "100vh",
-        width: "100vw",
+        minWidth: "100vw",
         wordBreak: "keep-all",
       }}
     >
