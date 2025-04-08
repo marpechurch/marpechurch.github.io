@@ -15,6 +15,7 @@ export default function Directions() {
           title="Church Location"
         />
       </ListItem>
+      <ListItem>🚘 주차: 주일에는 Street Parking이 모두 무료입니다.</ListItem>
       <ListItem>🚆 교통: Gilman Square 역에서 도보 5분</ListItem>
       <ListItem>
         <GoogleMaps

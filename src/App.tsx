@@ -20,11 +20,7 @@ export default function App() {
     },
     typography: {
       h1: {
-        textAlign: "left", // Default alignment for larger screens
-        // Use breakpoints directly within the theme definition
-        "@media (max-width:600px)": {
-          textAlign: "center", // Center alignment for small screens (xs and sm)
-        },
+        textAlign: "center",
       },
     },
   });

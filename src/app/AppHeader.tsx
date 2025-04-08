@@ -45,22 +45,13 @@ function AppHeader() {
                 flexGrow: 1,
               }}
             >
-              마르페(Marpe)
+              마르페
             </Typography>
           </Link>
           <AppMenu />
         </Toolbar>
       </AppBar>
     </Box>
-    // <div className="appHeader">
-    //   <Link to="/">
-    //     <div className="link">
-    //       <img alt="Marpe Logo" className="logo" src={marpeLogo} />
-    //       <span className="">마르페(Marpe)</span>
-    //     </div>
-    //   </Link>
-
-    // </div>
   );
 }
 
