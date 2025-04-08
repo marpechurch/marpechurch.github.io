@@ -24,5 +24,5 @@ export default function Denomination() {
     </Typography>
   );
 
-  return <Page content={content} image={denominationImg} title="교단 소개" />;
+  return <Page content={content} imageSrc={denominationImg} title="교단 소개" />;
 }

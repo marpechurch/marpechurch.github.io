@@ -23,5 +23,5 @@ export default function Vision() {
     </Typography>
   );
 
-  return <Page content={content} image={visionImg} title="비전 소개" />;
+  return <Page content={content} imageSrc={visionImg} title="비전 소개" />;
 }

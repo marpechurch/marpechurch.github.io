@@ -16,5 +16,5 @@ export default function Pastor() {
     </Typography>
   );
 
-  return <Page content={content} image={pastorImg} title="목사님 소개" />;
+  return <Page content={content} imageSrc={pastorImg} title="목사님 소개" />;
 }

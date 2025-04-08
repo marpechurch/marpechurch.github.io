@@ -23,5 +23,5 @@ export default function Community() {
     </Typography>
   );
 
-  return <Page content={content} image={communityImg} title="공동체" />;
+  return <Page content={content} imageSrc={communityImg} title="공동체" />;
 }

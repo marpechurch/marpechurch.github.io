@@ -9,5 +9,5 @@ export default function Offering() {
     <Typography>Zelle 온라인 헌금 QR 코드: marpechurch@gmail.com</Typography>
   );
 
-  return <Page content={content} image={zelleImg} title="헌금" />;
+  return <Page content={content} imageSrc={zelleImg} title="헌금" />;
 }
