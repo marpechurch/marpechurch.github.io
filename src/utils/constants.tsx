@@ -10,3 +10,4 @@ export const SERMONS_URL =
   "https://www.youtube.com/embed/videoseries?list=PL6VO8u2Zpfdf_UzfAjmyCaPLCiDK-XviS";
 export const WORSHIP_URL =
   "https://www.youtube.com/embed/videoseries?si=jcbM7u0rPSMCORTw&amp;list=PL6VO8u2Zpfdfs9VLqEHkNvq0ICxdXN3j7";
+export const ZELLE_URL = "https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiTUFSUEUgQ0hVUkNIIiwidG9rZW4iOiJtYXJwZWNodXJjaEBnbWFpbC5jb20ifQ=="
