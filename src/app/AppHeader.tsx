@@ -8,46 +8,57 @@ import AppMenu from "./AppMenu";
 
 function AppHeader() {
   return (
-    <Box sx={{mb: 2}}>
+    <Box sx={{ mb: 2 }}>
       <AppBar position="static">
-        <Toolbar>
-          <Link
-            color="inherit"
-            component={RouterLink}
-            to="/"
-            sx={{
-              alignItems: "center",
-              display: "flex",
-              flex: "auto",
-              gap: "8px",
-              textDecoration: "none", // Ensure no underline
-              "&:visited": {
-                color: "inherit", // Prevent purple color for visited links
-              },
-            }}
-            underline="none"
-          >
-            <Box
-              component="img"
-              alt="Marpe Logo"
-              src={marpeLogo}
+        <Toolbar
+          sx={{
+            alignItems: "center",
+            display: "flex",
+            flex: "auto",
+            gap: "8px",
+            justifyContent: "space-between",
+            textDecoration: "none", // Ensure no underline
+            "&:visited": {
+              color: "inherit", // Prevent purple color for visited links
+            },
+          }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <Link
+              color="inherit"
+              component={RouterLink}
+              to="/"
+              underline="none"
+            >
+              <Box
+                component="img"
+                alt="Marpe Logo"
+                src={marpeLogo}
+                sx={{
+                  height: "auto",
+                  maxHeight: "40px",
+                  maxWidth: "40px",
+                  width: "auto",
+                }}
+              />
+            </Link>
+            <Link
+              color="inherit"
+              component={RouterLink}
+              to="/"
+              underline="none"
               sx={{
-                height: "auto",
-                maxHeight: "40px",
-                maxWidth: "40px",
-                width: "auto",
-              }}
-            />
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{
-                flexGrow: 1,
+                "&:hover": {
+                  color: "inherit", // Prevent color change on hover
+                  textDecoration: "none", // Ensure no underline appears on hover
+                },
               }}
             >
-              마르페
-            </Typography>
-          </Link>
+              <Typography variant="h6" component="div">
+                마르페
+              </Typography>
+            </Link>
+          </Box>
           <AppMenu />
         </Toolbar>
       </AppBar>
