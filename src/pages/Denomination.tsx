@@ -3,8 +3,9 @@ import { Typography } from "@mui/material";
 
 import { DoubleGrid, Page, YouTube } from "../components";
 import {
-  DENOMINATION_ENGLISH_URL,
-  DENOMINATION_KOREAN_URL,
+  CMA_IMAGE,
+  DENOMINATION_ENGLISH,
+  DENOMINATION_KOREAN,
 } from "../utils/constants";
 
 export default function Denomination() {
@@ -31,12 +32,12 @@ export default function Denomination() {
     <DoubleGrid
       firstContent={
         <YouTube
-          src={DENOMINATION_KOREAN_URL}
+          src={DENOMINATION_KOREAN}
           title="C&MA 교단 소개 (한국어)"
         />
       }
       secondContent={
-        <YouTube src={DENOMINATION_ENGLISH_URL} title="C&MA 교단 소개 (영어)" />
+        <YouTube src={DENOMINATION_ENGLISH} title="C&MA 교단 소개 (영어)" />
       }
     />
   );
@@ -45,9 +46,7 @@ export default function Denomination() {
     <Page
       content={content}
       secondaryContent={secondaryContent}
-      imageSrc={
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxJoaUh6_My6t8aHtMTXlY2GvFQuQTKdXHhQ&s"
-      }
+      imageSrc={CMA_IMAGE}
       title="교단 소개"
     />
   );

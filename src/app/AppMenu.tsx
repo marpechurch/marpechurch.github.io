@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   AutoAwesome as VisionIcon,
+  ChildCare as KidsIcon,
   Church as ChurchIcon,
   LocationCity as DenominationIcon,
   Man4 as PastorIcon,
@@ -24,8 +25,6 @@ import {
 } from "@mui/material";
 
 import { Link as RouterLink } from "react-router";
-
-import "./AppMenu.css";
 
 export default function AppMenu() {
   const [open, setOpen] = useState(false);
@@ -73,6 +72,7 @@ export default function AppMenu() {
             icon={<DenominationIcon />}
           />
           <ListItemLink to="vision" primary="비전 소개" icon={<VisionIcon />} />
+          <ListItemLink to="kids" primary="마르페 키즈" icon={<KidsIcon />} />
           <ListItemLink
             to="directions"
             primary="찾아오시는 길"

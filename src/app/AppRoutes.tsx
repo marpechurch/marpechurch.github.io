@@ -6,11 +6,12 @@ import {
   Denomination,
   Directions,
   Home,
-  Social,
+  Kids,
   Offering,
   Pastor,
   Register,
   Sermons,
+  Social,
   Vision,
   Worship,
 } from "../pages/index.tsx";
@@ -23,6 +24,7 @@ function AppHeader() {
       <Route path="pastor" element={<Pastor />} />
       <Route path="denomination" element={<Denomination />} />
       <Route path="vision" element={<Vision />} />
+      <Route path="kids" element={<Kids />} />
       <Route path="directions" element={<Directions />} />
       <Route path="sermons" element={<Sermons />} />
       <Route path="social" element={<Social />} />

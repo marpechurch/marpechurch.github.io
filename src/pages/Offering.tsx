@@ -3,14 +3,14 @@ import { Link, List, ListItem } from "@mui/material";
 
 import zelleImg from "../assets/zelle.png";
 import { Page } from "../components";
-import { ZELLE_URL } from "../utils/constants";
+import { ZELLE } from "../utils/constants";
 
 export default function Offering() {
   const content = (
     <List>
       <ListItem>
         온라인 헌금:&nbsp;
-        <Link href={ZELLE_URL} target="_blank" rel="noopener noreferrer">
+        <Link href={ZELLE} target="_blank" rel="noopener noreferrer">
           Zelle QR 코드
         </Link>
         &nbsp;(marpechurch@gmail.com)
@@ -28,7 +28,7 @@ export default function Offering() {
   return (
     <Page
       content={content}
-      imageLink={ZELLE_URL}
+      imageLink={ZELLE}
       imageSrc={zelleImg}
       title="헌금"
     />

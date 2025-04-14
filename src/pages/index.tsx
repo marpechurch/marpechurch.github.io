@@ -2,6 +2,7 @@ export { default as Church } from "./Church";
 export { default as Denomination } from "./Denomination";
 export { default as Directions } from "./Directions";
 export { default as Home } from "./Home";
+export { default as Kids } from "./Kids";
 export { default as Offering } from "./Offering";
 export { default as Pastor } from "./Pastor";
 export { default as Register } from "./Register";
