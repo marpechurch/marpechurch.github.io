@@ -1,12 +1,16 @@
-import "react";
+import { useEffect, useState } from "react";
 import { Link as RouterLink, useLocation } from "react-router";
+import { Menu as MenuIcon } from "@mui/icons-material";
 import {
+  AppBar,
   Box,
   Breadcrumbs,
-  AppBar,
-  Toolbar,
+  IconButton,
   Link,
+  Toolbar,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 
 import marpeLogo from "../assets/marpe-logo-bw.png";
@@ -19,9 +23,23 @@ function AppHeader() {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMobile && isOpen) {
+      setIsOpen(false);
+    }
+  }, [isMobile, isOpen]);
+
   return (
     <Box sx={{ mb: 2 }}>
-      <AppBar position="fixed">
+      <AppBar
+        position="fixed"
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      >
         <Toolbar
           sx={{
             alignItems: "center",
@@ -63,8 +81,8 @@ function AppHeader() {
               <Typography sx={{ fontSize: 20 }}>마르페</Typography>
             </Link>
             {pathnames.map((_, index) => {
-              const last = index === pathnames.length - 1;
-              const to = `/${pathnames.slice(0, index + 1).join("/")}`;
+              const last: boolean = index === pathnames.length - 1;
+              const to: string = `/${pathnames.slice(0, index + 1).join("/")}`;
 
               return last ? (
                 <Typography
@@ -86,9 +104,19 @@ function AppHeader() {
               );
             })}
           </Breadcrumbs>
-          <AppMenu />
+          {isMobile && (
+            <IconButton
+              aria-label="menu"
+              color="inherit"
+              onClick={() => setIsOpen(!isOpen)}
+              size="large"
+            >
+              <MenuIcon />
+            </IconButton>
+          )}
         </Toolbar>
       </AppBar>
+      <AppMenu isOpen={isOpen} toggleMenu={() => setIsOpen(!isOpen)} />
     </Box>
   );
 }

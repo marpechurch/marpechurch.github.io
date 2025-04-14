@@ -1,6 +1,5 @@
-import { useState } from "react";
+import "react";
 import { Link as RouterLink } from "react-router";
-import { Menu as MenuIcon } from "@mui/icons-material";
 import {
   Box,
   Drawer,
@@ -9,17 +8,20 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  IconButton,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 
 import { urls, urlToIcon, urlToTitle } from "../utils/urlMaps";
 
-export default function AppMenu() {
-  const [open, setOpen] = useState(false);
+interface AppMenuProps {
+  isOpen: boolean;
+  toggleMenu: () => void;
+}
 
-  const toggleDrawer = (newOpen: boolean) => () => {
-    setOpen(newOpen);
-  };
+export default function AppMenu({ isOpen, toggleMenu }: AppMenuProps) {
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
   interface ListItemLinkProps {
     icon?: React.ReactElement<unknown>;
@@ -43,9 +45,12 @@ export default function AppMenu() {
   function DrawerList() {
     return (
       <Box
-        sx={{ width: 200 }}
-        role="presentation"
-        onClick={toggleDrawer(false)}
+        sx={{
+          width: 200,
+          position: { md: "relative" },
+          top: { md: 60 },
+        }}
+        onClick={() => toggleMenu()}
       >
         <List>
           {urls.slice(1).map((url) => (
@@ -61,18 +66,13 @@ export default function AppMenu() {
   }
 
   return (
-    <>
-      <IconButton
-        aria-label="menu"
-        color="inherit"
-        onClick={toggleDrawer(true)}
-        size="large"
-      >
-        <MenuIcon />
-      </IconButton>
-      <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-        <DrawerList />
-      </Drawer>
-    </>
+    <Drawer
+      anchor="right"
+      open={isOpen}
+      onClose={toggleMenu}
+      variant={isDesktop ? "permanent" : "temporary"}
+    >
+      <DrawerList />
+    </Drawer>
   );
 }
