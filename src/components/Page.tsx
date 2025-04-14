@@ -25,6 +25,7 @@ interface PageProps {
   content?: React.ReactNode;
   imageLink?: string;
   imageSrc?: string;
+  secondaryContent?: React.ReactNode;
   title: string;
 }
 
@@ -32,10 +33,11 @@ export default function Page({
   content,
   imageLink,
   imageSrc,
+  secondaryContent,
   title,
 }: PageProps) {
   return (
-    <Box>
+    <Box sx={{ pb: 2, pl: { md: 3, xs: 0 }, pr: { md: 3, xs: 0 } }}>
       <Typography variant="h1" sx={{ paddingBottom: 2 }}>
         {title}
       </Typography>
@@ -59,7 +61,7 @@ export default function Page({
                 src={imageSrc}
                 alt={`${title}`}
                 sx={{
-                  maxHeight: "60vh",
+                  maxHeight: "400px",
                   width: "100%",
                   objectFit: "contain", // Maintain aspect ratio
                 }}
@@ -68,6 +70,7 @@ export default function Page({
           </Grid2>
         )}
       </Grid2>
+      {secondaryContent}
     </Box>
   );
 }
