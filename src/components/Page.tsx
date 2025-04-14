@@ -47,13 +47,14 @@ export default function Page({
         spacing={2}
       >
         {content && (
-          <Grid2 size={{ xs: 12, md: imageSrc ? 8 : 12 }}>{content}</Grid2>
+          <Grid2 size={{ xs: 12, md: imageSrc ? 9 : 12 }}>{content}</Grid2>
         )}
         {imageSrc && (
           <Grid2
             display="flex"
-            justifyContent="center"
-            size={{ xs: 12, md: content ? 4 : 12 }}
+            flexDirection="column"
+            justifyContent="start"
+            size={{ xs: 12, md: content ? 3 : 12 }}
           >
             <ImageWrapper imageLink={imageLink}>
               <Box
@@ -61,7 +62,7 @@ export default function Page({
                 src={imageSrc}
                 alt={`${title}`}
                 sx={{
-                  maxHeight: "400px",
+                  height: "auto",
                   width: "100%",
                   objectFit: "contain", // Maintain aspect ratio
                 }}
