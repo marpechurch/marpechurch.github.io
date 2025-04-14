@@ -19,7 +19,7 @@ export default function Pastor() {
         아이와 함께 믿음의 가정을 세워가고 있습니다.
       </Typography>
       <Typography variant="h6">약력</Typography>
-      <List>
+      <List sx={{ pt: 0 }}>
         <ListItem>
           YWAM(Youth With A Mission) Boston 캠퍼스 사역 디렉터
         </ListItem>
