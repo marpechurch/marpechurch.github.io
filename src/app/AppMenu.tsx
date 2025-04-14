@@ -8,7 +8,6 @@ import {
   MusicNote as WorshipIcon,
   HistoryEdu as RegisterIcon,
   Instagram as SocialIcon,
-  People as CommunityIcon,
   VolunteerActivism as OfferingIcon,
   YouTube as SermonsIcon,
   Menu as MenuIcon,
@@ -74,11 +73,6 @@ export default function AppMenu() {
             icon={<DenominationIcon />}
           />
           <ListItemLink to="vision" primary="비전 소개" icon={<VisionIcon />} />
-          <ListItemLink
-            to="community"
-            primary="공동체"
-            icon={<CommunityIcon />}
-          />
           <ListItemLink
             to="directions"
             primary="찾아오시는 길"

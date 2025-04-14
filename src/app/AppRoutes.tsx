@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router";
 
 import {
   Church,
-  Community,
   Denomination,
   Directions,
   Home,
@@ -24,7 +23,6 @@ function AppHeader() {
       <Route path="pastor" element={<Pastor />} />
       <Route path="denomination" element={<Denomination />} />
       <Route path="vision" element={<Vision />} />
-      <Route path="community" element={<Community />} />
       <Route path="directions" element={<Directions />} />
       <Route path="sermons" element={<Sermons />} />
       <Route path="social" element={<Social />} />
