@@ -90,7 +90,7 @@ export default function AppMenu() {
           />
           <ListItemLink
             to="worship"
-            primary="찬양 리스트"
+            primary="찬양"
             icon={<WorshipIcon />}
           />
           <ListItemLink to="offering" primary="헌금" icon={<OfferingIcon />} />
