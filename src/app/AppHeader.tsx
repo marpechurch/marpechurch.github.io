@@ -29,17 +29,13 @@ function AppHeader() {
               component={RouterLink}
               to="/"
               underline="none"
+              sx={{ display: "flex" }}
             >
               <Box
                 component="img"
                 alt="Marpe Logo"
                 src={marpeLogo}
-                sx={{
-                  height: "auto",
-                  maxHeight: "40px",
-                  maxWidth: "40px",
-                  width: "auto",
-                }}
+                sx={{ height: "40px", width: "auto" }}
               />
             </Link>
             <Link
