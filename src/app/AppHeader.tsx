@@ -9,7 +9,7 @@ import AppMenu from "./AppMenu";
 function AppHeader() {
   return (
     <Box sx={{ mb: 2 }}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar
           sx={{
             alignItems: "center",

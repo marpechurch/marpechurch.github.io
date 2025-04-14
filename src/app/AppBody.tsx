@@ -1,9 +1,8 @@
 import "react";
+import { Container } from "@mui/material";
 
 import AppRoutes from "./AppRoutes.tsx";
 
-import "./AppBody.css";
-import { Container } from "@mui/material";
 
 function AppHeader() {
   return (
@@ -13,7 +12,8 @@ function AppHeader() {
         display: "flex",
         flex: 1,
         flexDirection: "column",
-        paddingBottom: "8px",
+        pb: 2,
+        pt: 8,
       }}
     >
       <AppRoutes />

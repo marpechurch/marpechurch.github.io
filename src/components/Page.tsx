@@ -37,7 +37,7 @@ export default function Page({
   title,
 }: PageProps) {
   return (
-    <Box sx={{ pb: 2, pl: { md: 3, xs: 0 }, pr: { md: 3, xs: 0 } }}>
+    <Box sx={{ pl: { md: 3, xs: 0 }, pr: { md: 3, xs: 0 } }}>
       <Typography variant="h1" sx={{ paddingBottom: 2 }}>
         {title}
       </Typography>
