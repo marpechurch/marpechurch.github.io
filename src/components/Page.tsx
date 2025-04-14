@@ -42,6 +42,8 @@ export default function Page({
   const currentPath = `/${pathnames[pathnames.length - 1] ?? ""}`;
   const currentTitle = urlToTitle(currentPath);
 
+  const isHomePage = currentPath === "/";
+
   return (
     <Box sx={{ pl: { md: 3, xs: 0 }, pr: { md: 3, xs: 0 } }}>
       <Typography variant="h1" sx={{ paddingBottom: 2 }}>
@@ -68,7 +70,7 @@ export default function Page({
                 src={imageSrc}
                 alt={`${currentTitle}`}
                 sx={{
-                  height: "auto",
+                  height: isHomePage ? "60vh" : "auto",
                   width: "100%",
                   objectFit: "contain", // Maintain aspect ratio
                 }}
