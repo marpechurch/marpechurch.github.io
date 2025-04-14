@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link as RouterLink, useLocation } from "react-router";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import {
@@ -27,18 +27,41 @@ function AppHeader() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const [isOpen, setIsOpen] = useState(false);
+  const isResizeTriggered = useRef(false); // Track if the change is due to a resize
 
   useEffect(() => {
-    if (isMobile && isOpen) {
-      setIsOpen(false);
+    if (isResizeTriggered.current && isMobile && isOpen) {
+      setIsOpen(false); // Close the menu only on resize
     }
+    isResizeTriggered.current = false; // Reset the flag after handling
   }, [isMobile, isOpen]);
+
+  const handleToggleMenu = () => {
+    isResizeTriggered.current = false; // Ensure this is not treated as a resize
+    setIsOpen((prev) => !prev);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      isResizeTriggered.current = true; // Mark that a resize occurred
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <Box sx={{ mb: 2 }}>
       <AppBar
         position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{
+          zIndex: (theme) => ({
+            xs: theme.zIndex.drawer - 1, // Lower z-index for mobile
+            md: theme.zIndex.drawer + 1, // Higher z-index for desktop
+          }),
+        }}
       >
         <Toolbar
           sx={{
@@ -47,10 +70,6 @@ function AppHeader() {
             flex: "auto",
             gap: "8px",
             justifyContent: "space-between",
-            textDecoration: "none", // Ensure no underline
-            "&:visited": {
-              color: "inherit", // Prevent purple color for visited links
-            },
           }}
         >
           <Breadcrumbs
@@ -67,8 +86,8 @@ function AppHeader() {
                 display: "flex",
                 gap: 1,
                 "&:hover": {
-                  color: "inherit", // Prevent color change on hover
-                  textDecoration: "none", // Ensure no underline appears on hover
+                  color: "inherit",
+                  textDecoration: "none",
                 },
               }}
             >
@@ -108,7 +127,7 @@ function AppHeader() {
             <IconButton
               aria-label="menu"
               color="inherit"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={handleToggleMenu}
               size="large"
             >
               <MenuIcon />
@@ -116,7 +135,7 @@ function AppHeader() {
           )}
         </Toolbar>
       </AppBar>
-      <AppMenu isOpen={isOpen} toggleMenu={() => setIsOpen(!isOpen)} />
+      <AppMenu isOpen={isOpen} toggleMenu={handleToggleMenu} />
     </Box>
   );
 }
