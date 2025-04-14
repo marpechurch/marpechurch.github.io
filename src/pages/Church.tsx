@@ -10,7 +10,7 @@ export default function Church() {
       <Typography>
         마르페 교회는 2024년 10월 6일 바른 복음, 건강한 교회 라는 비전을 가진
         성도들이 함께 모여 개척한 교회입니다. “마르페”라는 단어는 히브리어로
-        "건강, 치유, 회복"을 뜻합니다. 보스턴에 예수님의 복음과 사랑으로 건강한
+        “건강, 치유, 회복”을 뜻합니다. 보스턴에 예수님의 복음과 사랑으로 건강한
         교회를 세우고 싶은 마음을 담아 성도들과 함께 교회 이름을 지었습니다.
       </Typography>
       <Typography>
@@ -38,5 +38,5 @@ export default function Church() {
     </Box>
   );
 
-  return <Page content={content} imageSrc={churchImg} title="교회 소개" />;
+  return <Page content={content} imageSrc={churchImg} />;
 }

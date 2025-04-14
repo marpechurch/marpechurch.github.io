@@ -23,11 +23,6 @@ export default function Register() {
   );
 
   return (
-    <Page
-      content={content}
-      imageLink={REGISTER_FORM}
-      imageSrc={registerImg}
-      title="교인 등록"
-    />
+    <Page content={content} imageLink={REGISTER_FORM} imageSrc={registerImg} />
   );
 }

@@ -25,12 +25,5 @@ export default function Offering() {
     </List>
   );
 
-  return (
-    <Page
-      content={content}
-      imageLink={ZELLE}
-      imageSrc={zelleImg}
-      title="헌금"
-    />
-  );
+  return <Page content={content} imageLink={ZELLE} imageSrc={zelleImg} />;
 }

@@ -1,18 +1,6 @@
 import { useState } from "react";
-import {
-  AutoAwesome as VisionIcon,
-  ChildCare as KidsIcon,
-  Church as ChurchIcon,
-  LocationCity as DenominationIcon,
-  Man4 as PastorIcon,
-  Map as DirectionsIcon,
-  MusicNote as WorshipIcon,
-  HistoryEdu as RegisterIcon,
-  Instagram as SocialIcon,
-  VolunteerActivism as OfferingIcon,
-  YouTube as SermonsIcon,
-  Menu as MenuIcon,
-} from "@mui/icons-material";
+import { Link as RouterLink } from "react-router";
+import { Menu as MenuIcon } from "@mui/icons-material";
 import {
   Box,
   Drawer,
@@ -24,7 +12,7 @@ import {
   IconButton,
 } from "@mui/material";
 
-import { Link as RouterLink } from "react-router";
+import { urls, urlToIcon, urlToTitle } from "../utils/urlMaps";
 
 export default function AppMenu() {
   const [open, setOpen] = useState(false);
@@ -60,45 +48,13 @@ export default function AppMenu() {
         onClick={toggleDrawer(false)}
       >
         <List>
-          <ListItemLink to="church" primary="교회 소개" icon={<ChurchIcon />} />
-          <ListItemLink
-            to="pastor"
-            primary="목사님 소개"
-            icon={<PastorIcon />}
-          />
-          <ListItemLink
-            to="denomination"
-            primary="교단 소개"
-            icon={<DenominationIcon />}
-          />
-          <ListItemLink to="vision" primary="비전 소개" icon={<VisionIcon />} />
-          <ListItemLink to="kids" primary="마르페 키즈" icon={<KidsIcon />} />
-          <ListItemLink
-            to="directions"
-            primary="찾아오시는 길"
-            icon={<DirectionsIcon />}
-          />
-          <ListItemLink
-            to="sermons"
-            primary="설교 영상"
-            icon={<SermonsIcon />}
-          />
-          <ListItemLink
-            to="Social"
-            primary="인스타그램"
-            icon={<SocialIcon />}
-          />
-          <ListItemLink
-            to="worship"
-            primary="찬양"
-            icon={<WorshipIcon />}
-          />
-          <ListItemLink to="offering" primary="헌금" icon={<OfferingIcon />} />
-          <ListItemLink
-            to="register"
-            primary="교인 등록"
-            icon={<RegisterIcon />}
-          />
+          {urls.slice(1).map((url) => (
+            <ListItemLink
+              to={url}
+              primary={urlToTitle(url)}
+              icon={urlToIcon(url)}
+            />
+          ))}
         </List>
       </Box>
     );

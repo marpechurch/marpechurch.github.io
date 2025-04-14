@@ -2,11 +2,7 @@ import "react";
 import { Link, List, ListItem, Typography } from "@mui/material";
 
 import { GoogleMaps, Page } from "../components";
-import {
-  DIRECTIONS_TO,
-  MARPE_INSTAGRAM,
-  CHURCH_MAP,
-} from "../utils/constants";
+import { DIRECTIONS_TO, MARPE_INSTAGRAM, CHURCH_MAP } from "../utils/constants";
 
 export default function Directions() {
   const content = (
@@ -36,5 +32,5 @@ export default function Directions() {
     </List>
   );
 
-  return <Page content={content} title="찾아오시는 길" />;
+  return <Page content={content} />;
 }

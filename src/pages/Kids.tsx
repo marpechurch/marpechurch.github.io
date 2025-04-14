@@ -17,5 +17,5 @@ export default function Kids() {
     </Typography>
   );
 
-  return <Page content={content} imageSrc={kidsImg} title="마르페 키즈" />;
+  return <Page content={content} imageSrc={kidsImg} />;
 }

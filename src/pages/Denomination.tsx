@@ -47,7 +47,6 @@ export default function Denomination() {
       content={content}
       secondaryContent={secondaryContent}
       imageSrc={CMA_IMAGE}
-      title="교단 소개"
     />
   );
 }
