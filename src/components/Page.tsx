@@ -66,9 +66,10 @@ export default function Page({
           >
             <ImageWrapper imageLink={imageLink}>
               <Box
-                component="img"
-                src={imageSrc}
                 alt={`${currentTitle}`}
+                component="img"
+                loading="lazy"
+                src={imageSrc}
                 sx={{
                   height: isHomePage ? "60vh" : "auto",
                   width: "100%",
