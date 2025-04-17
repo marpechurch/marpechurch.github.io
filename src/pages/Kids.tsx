@@ -12,7 +12,7 @@ export default function Kids() {
           마르페 키즈를 향한 약속의 말씀 ✝️
         </ListItem>
         <ListItem sx={{ pb: 0 }}>로마서12장 2절</ListItem>
-        <ListItem sx={{ pt: 0 }}>
+        <ListItem sx={{ pb: 0, pt: 0 }}>
           <List>
             <ListItem sx={{ fontStyle: "italic" }}>
               너희는 이 세대를 본받지 말고 오직 마음을 새롭게 함으로 변화를 받아
@@ -21,7 +21,7 @@ export default function Kids() {
             </ListItem>
           </List>
         </ListItem>
-        <ListItem sx={{ fontSize: "h6.fontSize", pb: 0 }}>
+        <ListItem sx={{ fontSize: "h6.fontSize", pb: 0, pt: 0 }}>
           마르페 키즈의 꿈 👦🏻🧒🏻
         </ListItem>
         <ListItem sx={{ pt: 0 }}>
