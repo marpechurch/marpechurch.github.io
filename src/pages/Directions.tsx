@@ -1,6 +1,7 @@
 import "react";
 import { Link, List, ListItem, Typography } from "@mui/material";
 
+// import directionsImg from "../assets/directions.webp";
 import { GoogleMaps, Page } from "../components";
 import { DIRECTIONS_TO, MARPE_INSTAGRAM, CHURCH_MAP } from "../utils/constants";
 
@@ -13,11 +14,13 @@ export default function Directions() {
         <GoogleMaps src={CHURCH_MAP} title="Church Location" />
       </ListItem>
       <ListItem>
-        🚘 주차: 주일 교회 주변&nbsp;
-        <Typography component="span" sx={{ fontWeight: "bold" }}>
-          Permit Parking 모두 무료주차
+        <Typography component="span">
+          🚘 주차: 주일 교회 주변&nbsp;
+          <Typography component="span" sx={{ fontWeight: "bold" }}>
+            Permit Parking 모두 무료주차
+          </Typography>
+          입니다. 편하게 주차하시고 오세요.
         </Typography>
-        입니다. 편하게 주차하시고 오세요.
       </ListItem>
       <ListItem>🚆 교통: Gilman Square 역에서 도보 5분</ListItem>
       <ListItem>
