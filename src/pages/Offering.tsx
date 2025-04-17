@@ -1,7 +1,7 @@
 import "react";
 import { Link, List, ListItem, Typography } from "@mui/material";
 
-import zelleImg from "../assets/zelle.png";
+import zelleImg from "../assets/zelle.webp";
 import { Page } from "../components";
 import { ZELLE } from "../utils/constants";
 

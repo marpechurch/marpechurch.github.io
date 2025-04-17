@@ -1,7 +1,7 @@
 import "react";
 import { Link, List, ListItem, Typography } from "@mui/material";
 
-import registerImg from "../assets/register.png";
+import registerImg from "../assets/register.webp";
 import { Page } from "../components";
 import { REGISTER_FORM } from "../utils/constants";
 

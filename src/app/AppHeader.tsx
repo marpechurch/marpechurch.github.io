@@ -13,7 +13,7 @@ import {
   useTheme,
 } from "@mui/material";
 
-import marpeLogo from "../assets/marpe-logo-bw.png";
+import marpeLogo from "../assets/marpe-logo-bw.webp";
 
 import { urlToTitle } from "../utils/urlMaps";
 

@@ -1,7 +1,7 @@
 import "react";
 import { Typography } from "@mui/material";
 
-import kidsImg from "../assets/kids.png";
+import kidsImg from "../assets/kids.webp";
 import { Page } from "../components";
 
 export default function Kids() {

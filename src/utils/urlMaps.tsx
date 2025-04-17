@@ -13,7 +13,7 @@ import {
 } from "@mui/icons-material";
 import { Box } from "@mui/material";
 
-import marpeLogo from "../assets/marpe-logo-bw.png";
+import marpeLogo from "../assets/marpe-logo-bw.webp";
 
 import {
   Church,

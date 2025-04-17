@@ -1,7 +1,7 @@
 import "react";
 import { Box, List, ListItem, Typography } from "@mui/material";
 
-import pastorImg from "../assets/pastor.jpg";
+import pastorImg from "../assets/pastor.webp";
 import { Page } from "../components";
 
 export default function Pastor() {

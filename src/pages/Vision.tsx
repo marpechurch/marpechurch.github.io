@@ -1,7 +1,7 @@
 import "react";
 import { List, ListItem } from "@mui/material";
 
-import visionImg from "../assets/vision.png";
+import visionImg from "../assets/vision.webp";
 import { Page } from "../components";
 
 export default function Vision() {
