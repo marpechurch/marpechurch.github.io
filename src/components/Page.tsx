@@ -55,14 +55,14 @@ export default function Page({
         spacing={2}
       >
         {content && (
-          <Grid2 size={{ xs: 12, md: imageSrc ? 9 : 12 }}>{content}</Grid2>
+          <Grid2 size={{ xs: 12, md: imageSrc ? 8 : 12 }}>{content}</Grid2>
         )}
         {imageSrc && (
           <Grid2
             display="flex"
             flexDirection="column"
             justifyContent="start"
-            size={{ xs: 12, md: content ? 3 : 12 }}
+            size={{ xs: 12, md: content ? 4 : 12 }}
           >
             <ImageWrapper imageLink={imageLink}>
               <Box
@@ -80,7 +80,7 @@ export default function Page({
           </Grid2>
         )}
       </Grid2>
-      {secondaryContent}
+      {secondaryContent && <Box sx={{ pt: 2 }}>{secondaryContent}</Box>}
     </Box>
   );
 }
