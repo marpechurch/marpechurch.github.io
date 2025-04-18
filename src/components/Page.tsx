@@ -45,7 +45,7 @@ export default function Page({
   const isHomePage = currentPath === "/";
 
   return (
-    <Box sx={{ pl: { md: 3, xs: 0 }, pr: { md: 3, xs: 0 } }}>
+    <Box>
       <Typography variant="h1" sx={{ paddingBottom: 2 }}>
         {currentTitle}
       </Typography>
