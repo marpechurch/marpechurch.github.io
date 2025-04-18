@@ -8,12 +8,11 @@ import { ZELLE } from "../utils/constants";
 export default function Offering() {
   const content = (
     <List>
-      <ListItem sx={{ pb: 0 }}>수표 헌금:</ListItem>
+      <ListItem sx={{ pb: 0 }}>온라인 헌금:</ListItem>
       <ListItem sx={{ pt: 0 }}>
         <List>
           <ListItem>
             <Typography>
-              온라인 헌금:&nbsp;
               <Link href={ZELLE} target="_blank" rel="noopener noreferrer">
                 Zelle QR 코드
               </Link>
