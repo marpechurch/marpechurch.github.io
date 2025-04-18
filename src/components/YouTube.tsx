@@ -17,8 +17,7 @@ export default function YouTube({ src, title }: YouTubeProps) {
         src={src}
         sx={{
           border: 0,
-          height: 400,
-          maxWidth: { md: 500 * 16 / 9, xs: "100%" },
+          height: 500,
           width: "100%",
         }}
         title={title}
