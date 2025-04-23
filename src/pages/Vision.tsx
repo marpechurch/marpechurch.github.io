@@ -1,7 +1,6 @@
 import "react";
 import { List, ListItem } from "@mui/material";
 
-import visionImg from "../assets/vision.webp";
 import { Page } from "../components";
 
 export default function Vision() {
@@ -70,5 +69,5 @@ export default function Vision() {
     </List>
   );
 
-  return <Page content={content} imageSrc={visionImg} />;
+  return <Page content={content} />;
 }
