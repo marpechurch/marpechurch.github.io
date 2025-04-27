@@ -15,12 +15,28 @@ export default function App() {
   let theme = createTheme({
     palette: {
       primary: {
-        main: "#4ebb7e",
+        main: "#fdf4b3",
+      },
+      text: {
+        secondary: "#666666", // Define a neutral color for secondary text
       },
     },
     typography: {
       h1: {
         textAlign: "center",
+      },
+    },
+    components: {
+      MuiLink: {
+        styleOverrides: {
+          root: {
+            color: "#51a4d3", // Set a custom color for all links
+            "&:hover": {
+              color: "#66aac2",
+              textDecoration: "underline", // Optional: Add underline on hover
+            },
+          },
+        },
       },
     },
   });
