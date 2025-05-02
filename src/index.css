@@ -51,21 +51,21 @@ button:focus-visible {
 
 @font-face {
   font-family: "Cafe24surround";
-  src: url("../public/fonts/Cafe24Ssurround-v2.0.ttf") format("truetype");
+  src: url("./fonts/Cafe24Ssurround-v2.0.ttf") format("truetype");
   font-weight: 400; /* Regular */
   font-style: normal;
 }
 
 @font-face {
   font-family: "GmarketSansTTFBold";
-  src: url("../public/fonts/GmarketSansTTFBold.ttf") format("truetype");
+  src: url("./fonts/GmarketSansTTFBold.ttf") format("truetype");
   font-weight: 700; /* Bold */
   font-style: normal;
 }
 
 @font-face {
   font-family: "GmarketSansTTFMedium";
-  src: url("../public/fonts/GmarketSansTTFMedium.ttf") format("truetype");
+  src: url("./fonts/GmarketSansTTFMedium.ttf") format("truetype");
   font-weight: 400; /* Regular */
   font-style: normal;
 }
