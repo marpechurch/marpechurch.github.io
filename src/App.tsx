@@ -14,7 +14,6 @@ import "./fonts/GmarketSansTTFBold.ttf";
 import "./fonts/GmarketSansTTFMedium.ttf";
 
 export default function App() {
-  // Create a single theme instance
   let theme = createTheme({
     palette: {
       primary: {
