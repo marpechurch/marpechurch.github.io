@@ -46,7 +46,7 @@ export default function Page({
 
   return (
     <Box>
-      <Typography variant="h1" sx={{ paddingBottom: 2 }}>
+      <Typography variant="h1" sx={{ paddingBottom: 6 }}>
         {currentTitle}
       </Typography>
       <Grid2

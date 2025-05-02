@@ -7,6 +7,15 @@ import { Page } from "../components";
 export default function Church() {
   const content = (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+      <Typography
+        sx={{
+          fontFamily: "'Cafe24surround', Arial, sans-serif",
+          fontWeight: "bold",
+          fontSize: 32,
+        }}
+      >
+        환영합니다!
+      </Typography>
       <Typography>
         마르페 교회는 2024년 10월 6일 바른 복음, 건강한 교회 라는 비전을 가진
         성도들이 함께 모여 개척한 교회입니다. “마르페”라는 단어는 히브리어로

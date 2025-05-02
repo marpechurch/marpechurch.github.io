@@ -55,9 +55,10 @@ export default function AppMenu({ isOpen, toggleMenu }: AppMenuProps) {
         <List>
           {urls.slice(1).map((url) => (
             <ListItemLink
-              to={url}
-              primary={urlToTitle(url)}
               icon={urlToIcon(url)}
+              key={url}
+              primary={urlToTitle(url)}
+              to={url}
             />
           ))}
         </List>

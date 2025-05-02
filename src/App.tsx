@@ -10,6 +10,9 @@ import AppBody from "./app/AppBody";
 import AppFooter from "./app/AppFooter";
 import AppHeader from "./app/AppHeader";
 
+import "./fonts/GmarketSansTTFBold.ttf";
+import "./fonts/GmarketSansTTFMedium.ttf";
+
 export default function App() {
   // Create a single theme instance
   let theme = createTheme({
@@ -22,7 +25,12 @@ export default function App() {
       },
     },
     typography: {
+      fontFamily: "'GmarketSansTTFMedium', Arial, sans-serif", // Use your custom font
+      body1: {
+        lineHeight: 1.8, // Move lineHeight to h1 variant
+      },
       h1: {
+        fontFamily: "'GmarketSansTTFBold', Arial, sans-serif", // Use your custom font
         textAlign: "center",
       },
     },
@@ -31,10 +39,25 @@ export default function App() {
         styleOverrides: {
           root: {
             color: "#51a4d3", // Set a custom color for all links
+            fontFamily: "'GmarketSansTTFMedium', Arial, sans-serif", // Apply font to List
             "&:hover": {
               color: "#66aac2",
               textDecoration: "underline", // Optional: Add underline on hover
             },
+          },
+        },
+      },
+      MuiListItem: {
+        styleOverrides: {
+          root: {
+            fontFamily: "'GmarketSansTTFMedium', Arial, sans-serif", // Apply font to ListItem
+          },
+        },
+      },
+      MuiTouchRipple: {
+        styleOverrides: {
+          root: {
+            color: "#51a4d3", // Custom ripple color
           },
         },
       },
