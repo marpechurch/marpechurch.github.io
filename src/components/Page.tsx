@@ -26,6 +26,7 @@ function ImageWrapper({ children, imageLink }: ImageProps) {
 
 interface PageProps {
   content?: React.ReactNode;
+  iframeSrc?: string;
   imageLink?: string;
   imageSrc?: string;
   secondaryContent?: React.ReactNode;
@@ -33,6 +34,7 @@ interface PageProps {
 
 export default function Page({
   content,
+  iframeSrc,
   imageLink,
   imageSrc,
   secondaryContent,
@@ -56,6 +58,25 @@ export default function Page({
       >
         {content && (
           <Grid2 size={{ xs: 12, md: imageSrc ? 8 : 12 }}>{content}</Grid2>
+        )}
+        {iframeSrc && (
+          <Grid2
+            display="flex"
+            flexDirection="column"
+            justifyContent="start"
+            size={{ xs: 12, md: content ? 4 : 12 }}
+          >
+            <Box
+              component="iframe"
+              loading="lazy"
+              src={iframeSrc}
+              sx={{
+                height: "60vh",
+                width: "100%",
+                objectFit: "contain", // Maintain aspect ratio
+              }}
+            />
+          </Grid2>
         )}
         {imageSrc && (
           <Grid2
