@@ -29,7 +29,7 @@ export default function Offering() {
           헌금 안내
         </Typography>
         <Typography
-          variant="body2"
+          variant="body1"
           sx={{ mb: { xs: 1, md: 2 }, color: "text.secondary" }}
         >
           헌금을 해주실 때 헌금 하시는 성도님들의 이름과, 헌금 종류 또한 아래와
@@ -74,36 +74,59 @@ export default function Offering() {
 
       {/* 온라인 헌금 섹션 */}
       <Paper elevation={1} sx={{ p: { xs: 1.5, md: 3 } }}>
-        <Typography
-          variant="h6"
-          sx={{ mb: { xs: 1, md: 2 }, fontWeight: "bold" }}
-        >
-          온라인 헌금
-        </Typography>
         <Box
           sx={{
             display: "flex",
-            flexDirection: { xs: "column", sm: "row" },
-            alignItems: { xs: "flex-start", sm: "center" },
-            gap: 1,
+            flexDirection: { xs: "column", md: "row" },
+            alignItems: "flex-start",
+            justifyContent: { md: "space-between" },
+            gap: 2,
           }}
         >
-          <Link
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 1, flex: 1 }}>
+            <Typography
+              variant="h6"
+              sx={{ mb: { xs: 1, md: 2 }, fontWeight: "bold" }}
+            >
+              온라인 헌금
+            </Typography>
+            <Link
+              href={ZELLE}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                fontWeight: "bold",
+                textUnderlineOffset: "2px",
+                fontSize: { xs: "1em", md: "1.1em" },
+                mb: { xs: 0.5, sm: 0 },
+              }}
+            >
+              Zelle QR 코드
+            </Link>
+            <Typography variant="body2" sx={{ color: "text.secondary" }}>
+              (marpechurch&#8203;@gmail.com)
+            </Typography>
+          </Box>
+          <Box
+            component="a"
             href={ZELLE}
             target="_blank"
             rel="noopener noreferrer"
-            sx={{
-              fontWeight: "bold",
-              textUnderlineOffset: "2px",
-              fontSize: { xs: "1em", md: "1.1em" },
-              mb: { xs: 0.5, sm: 0 },
-            }}
+            sx={{ display: "inline-block", ml: { md: 2 }, mt: { xs: 1, md: 0 } }}
           >
-            Zelle QR 코드
-          </Link>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            (marpechurch&#8203;@gmail.com)
-          </Typography>
+            <Box
+              component="img"
+              src={zelleImg}
+              alt="Zelle QR 코드"
+              sx={{
+                width: { xs: 180, sm: 200, md: 220 },
+                height: "auto",
+                borderRadius: 2,
+                boxShadow: 2,
+                cursor: "pointer"
+              }}
+            />
+          </Box>
         </Box>
       </Paper>
 
@@ -127,5 +150,5 @@ export default function Offering() {
     </Box>
   );
 
-  return <Page content={content} imageLink={ZELLE} imageSrc={zelleImg} />;
+  return <Page content={content} />;
 }
