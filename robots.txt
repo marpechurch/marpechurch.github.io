@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://github.com/marpechurch/marpechurch.github.io/sitemap.xml
+Sitemap: https://www.marpechurch.org/sitemap.xml

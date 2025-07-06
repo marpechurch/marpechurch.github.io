@@ -15,16 +15,15 @@ export default function Church() {
             fontSize: 32,
           }}
         >
-          환영합니다!
+          보스턴 마르페 교회에 오신 것을 환영합니다!
         </Typography>
         <Typography>
-          마르페 교회는 2024년 10월 6일 바른 복음, 건강한 교회 라는 비전을 가진
-          성도들이 함께 모여 개척한 교회입니다. “마르페”라는 단어는 히브리어로
+          <strong>보스턴 마르페 교회</strong>는 2024년 10월 6일 바른 복음, 건강한 교회 라는 비전을 가진 성도들이 함께 모여 개척한 <strong>보스톤 한인 교회</strong>입니다. "마르페"라는 단어는 히브리어로
           “건강, 치유, 회복”을 뜻합니다. 보스턴에 예수님의 복음과 사랑으로 건강한
           교회를 세우고 싶은 마음을 담아 성도들과 함께 교회 이름을 지었습니다.
         </Typography>
         <Typography>
-          마르페 교회는 기독교 위기의 시대가운데 교회의 본질을 추구하는 하나님이
+          <strong>보스턴 마르페 교회</strong>는 기독교 위기의 시대가운데 교회의 본질을 추구하는 하나님이
           주인이신 교회입니다.
         </Typography>
         <Typography>
@@ -43,7 +42,7 @@ export default function Church() {
           제자를 세우고 훈련하는 제자 교회입니다.
         </Typography>
         <Typography>
-          이것이 우리 마르페 교회가 함께 꿈꾸고, 함께 만들어 가는 교회입니다.
+          이것이 우리 <strong>보스턴 마르페 교회</strong>가 함께 꿈꾸고, 함께 만들어 가는 교회입니다.
         </Typography>
       </Box>
     </Paper>
