@@ -1,10 +1,11 @@
 import "react";
-import { Link, Typography, Box, Paper, Chip } from "@mui/material";
+import { Typography, Box, Paper, Chip } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import zelleImg from "../assets/zelle.webp";
+import tithelyImg from "../assets/tithely.webp";
 import { Page } from "../components";
-import { ZELLE } from "../utils/constants";
+import { ZELLE, TITHELY } from "../utils/constants";
 
 export default function Offering() {
   const theme = useTheme();
@@ -74,58 +75,117 @@ export default function Offering() {
 
       {/* 온라인 헌금 섹션 */}
       <Paper elevation={1} sx={{ p: { xs: 1.5, md: 3 } }}>
+                <Typography
+          variant="h6"
+          sx={{ mb: { xs: 2, md: 3 }, fontWeight: "bold" }}
+        >
+          온라인 헌금
+        </Typography>
+
+        {/* 온라인 헌금 옵션들 - 가로 배치 */}
         <Box
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
-            alignItems: "flex-start",
-            justifyContent: { md: "space-between" },
-            gap: 2,
+            gap: { xs: 3, md: 4 },
+            alignItems: 'stretch',
           }}
         >
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 1, flex: 1 }}>
+          {/* Zelle 서브섹션 */}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              flex: 1,
+              gap: 2,
+            }}
+          >
             <Typography
-              variant="h6"
-              sx={{ mb: { xs: 1, md: 2 }, fontWeight: "bold" }}
+              variant="subtitle1"
+              sx={{ mb: 0, fontWeight: "bold" }}
             >
-              온라인 헌금
+              Zelle
             </Typography>
-            <Link
+            <Typography variant="body2" sx={{ color: "text.secondary" }}>
+              marpechurch&#8203;@gmail.com
+            </Typography>
+            <Box
+              component="a"
               href={ZELLE}
               target="_blank"
               rel="noopener noreferrer"
-              sx={{
-                fontWeight: "bold",
-                textUnderlineOffset: "2px",
-                fontSize: { xs: "1em", md: "1.1em" },
-                mb: { xs: 0.5, sm: 0 },
-              }}
+              sx={{ display: 'flex', justifyContent: 'center' }}
             >
-              Zelle QR 코드
-            </Link>
-            <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              (marpechurch&#8203;@gmail.com)
-            </Typography>
+              <Box
+                component="img"
+                src={zelleImg}
+                alt="Zelle QR 코드"
+                sx={{
+                  width: { xs: 180, sm: 200, md: 220 },
+                  height: "auto",
+                  borderRadius: 2,
+                  boxShadow: 2,
+                  cursor: "pointer",
+                }}
+              />
+            </Box>
           </Box>
+
+          {/* Dynamic Divider */}
           <Box
-            component="a"
-            href={ZELLE}
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{ display: "inline-block", ml: { md: 2 }, mt: { xs: 1, md: 0 } }}
+            sx={{
+              display: { xs: "block", md: "block" },
+              width: { xs: '100%', md: '1px' },
+              minWidth: { xs: 0, md: '1px' },
+              height: { xs: '1px', md: 'auto' },
+              backgroundColor: 'rgba(0,0,0,0.12)',
+              borderRadius: 1,
+              alignSelf: { xs: 'center', md: 'stretch' },
+              my: { xs: 2, md: 0 },
+              mx: { xs: 0, md: 2 },
+            }}
+          />
+
+          {/* Tithe.ly 헌금 서브섹션 */}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              flex: 1,
+              gap: 2,
+              pb: 2,
+            }}
           >
+            <Typography
+              variant="subtitle1"
+              sx={{ mb: 0, fontWeight: "bold" }}
+            >
+              Tithe.ly
+            </Typography>
+            <Typography variant="body2" sx={{ color: "text.secondary" }}>
+              Marpe Church<br />
+              212 School Street, Somerville, MA, 02145
+            </Typography>
             <Box
-              component="img"
-              src={zelleImg}
-              alt="Zelle QR 코드"
-              sx={{
-                width: { xs: 180, sm: 200, md: 220 },
-                height: "auto",
-                borderRadius: 2,
-                boxShadow: 2,
-                cursor: "pointer"
-              }}
-            />
+              component="a"
+              href={TITHELY}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ display: 'flex', justifyContent: 'center' }}
+            >
+              <Box
+                component="img"
+                src={tithelyImg}
+                alt="Tithe.ly QR 코드"
+                sx={{
+                  width: { xs: 180, sm: 200, md: 220 },
+                  height: "auto",
+                  borderRadius: 2,
+                  boxShadow: 2,
+                  cursor: "pointer",
+                }}
+              />
+            </Box>
           </Box>
         </Box>
       </Paper>
@@ -139,11 +199,11 @@ export default function Offering() {
           수표 헌금
         </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-          <Typography variant="body1">
+          <Typography variant="body2" sx={{ color: "text.secondary" }}>
             <strong>Pay to:</strong> Marpe church
           </Typography>
-          <Typography variant="body1">
-            <strong>Address:</strong> 9 Archer Dr. Woburn, MA 01801
+          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+            <strong>Address:</strong> 212 School Street, Somerville, MA, 02145
           </Typography>
         </Box>
       </Paper>

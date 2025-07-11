@@ -14,6 +14,9 @@ export const DIRECTIONS_TO =
 export const CHURCH_MAP =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2946.7414617800787!2d-71.0964414!3d42.39065379999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370d339b6db33%3A0xedddf27973fb9585!2sIgreja%20Presbiteriana%20de%20Boston!5e0!3m2!1sen!2sus!4v1743128655998!5m2!1sen!2sus";
 
+// Tithe.ly Links
+export const TITHELY = "https://give.tithe.ly/?formId=b7322c54-f65f-48c2-9bbf-7cec8fad66f8"
+
 // YouTube Links
 export const DENOMINATION_ENGLISH =
   "https://www.youtube.com/embed/YLOwBeoVTb4?si=D_Iv3TznMbBzXQx9";
