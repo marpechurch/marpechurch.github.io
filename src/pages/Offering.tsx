@@ -13,7 +13,7 @@ export default function Offering() {
     { korean: "주정헌금", english: "Sunday" },
     { korean: "감사헌금", english: "Thanksgiving" },
     { korean: "십일조", english: "Tithe" },
-    { korean: "기부", english: "Donation" },
+    { korean: "선교", english: "Mission" },
     { korean: "기타", english: "Other" },
   ];
 
@@ -40,7 +40,7 @@ export default function Offering() {
           variant="body2"
           sx={{ mb: { xs: 1, md: 2 }, color: "text.secondary" }}
         >
-          (예: "John, Mary: Sunday")
+          (예: "Joseph Kim, Mary Park: Sunday")
         </Typography>
         <Box
           sx={{
@@ -107,6 +107,7 @@ export default function Offering() {
               Zelle
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
+              Marpe Church<br />
               marpechurch&#8203;@gmail.com
             </Typography>
             <Box
