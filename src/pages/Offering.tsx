@@ -165,7 +165,7 @@ export default function Offering() {
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
               Marpe Church<br />
-              212 School Street, Somerville, MA, 02145
+              9 Archer Dr, Woburn, MA, 01801
             </Typography>
             <Box
               component="a"
@@ -204,7 +204,7 @@ export default function Offering() {
             <strong>Pay to:</strong> Marpe church
           </Typography>
           <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            <strong>Address:</strong> 212 School Street, Somerville, MA, 02145
+            <strong>Address:</strong> 9 Archer Dr, Woburn, MA, 01801
           </Typography>
         </Box>
       </Paper>
