@@ -4,7 +4,7 @@ export { default as Directions } from "./Directions";
 export { default as Home } from "./Home";
 export { default as Kids } from "./Kids";
 export { default as Offering } from "./Offering";
-export { default as Pastor } from "./Pastor";
+export { default as Staff } from "./Staff";
 export { default as Program } from "./Program";
 export { default as Register } from "./Register";
 export { default as Sermons } from "./Sermons";

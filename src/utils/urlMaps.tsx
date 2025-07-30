@@ -6,9 +6,9 @@ import {
   HistoryEdu as RegisterIcon,
   Instagram as SocialIcon,
   LocationCity as DenominationIcon,
-  Man4 as PastorIcon,
   Map as DirectionsIcon,
   MusicNote as WorshipIcon,
+  People as StaffIcon,
   VolunteerActivism as OfferingIcon,
   YouTube as SermonsIcon,
 } from "@mui/icons-material";
@@ -23,7 +23,7 @@ import {
   Home,
   Kids,
   Offering,
-  Pastor,
+  Staff,
   Program,
   Register,
   Sermons,
@@ -35,7 +35,7 @@ import {
 export const urls = [
   "/",
   "/church",
-  "/pastor",
+  "/staff",
   "/denomination",
   "/vision",
   "/kids",
@@ -52,7 +52,7 @@ export function urlToComponent(url: string) {
   const urlComponentMap = {
     "/": <Home />,
     "/church": <Church />,
-    "/pastor": <Pastor />,
+    "/staff": <Staff />,
     "/denomination": <Denomination />,
     "/vision": <Vision />,
     "/kids": <Kids />,
@@ -81,7 +81,7 @@ export function urlToIcon(url: string) {
       />
     ),
     "/church": <ChurchIcon />,
-    "/pastor": <PastorIcon />,
+    "/staff": <StaffIcon />,
     "/denomination": <DenominationIcon />,
     "/vision": <VisionIcon />,
     "/kids": <KidsIcon />,
@@ -101,7 +101,7 @@ export function urlToTitle(url: string): string {
   const urlTitleMap = {
     "/": "마르페 교회로 환영합니다!",
     "/church": "교회 소개",
-    "/pastor": "목사님 소개",
+    "/staff": "섬기는 이들",
     "/denomination": "소속 교단",
     "/vision": "비전",
     "/kids": "마르페 키즈",
