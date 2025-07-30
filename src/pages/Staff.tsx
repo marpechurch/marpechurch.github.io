@@ -12,7 +12,7 @@ export default function Staff() {
       <Paper elevation={1} sx={{ p: { xs: 1.5, md: 3 } }}>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-            조정호 담임목사 (Jeong Ho Cho, Main Pastor)
+            조정호 담임목사 (Jeong Ho Cho, Lead Pastor)
           </Typography>
           <Box
             sx={{
@@ -35,7 +35,7 @@ export default function Staff() {
               <Box
                 component="img"
                 src={mainPastorImg}
-                alt="조정호, 담임 목사"
+                alt="조정호 담임목사 (Jeong Ho Cho, Lead Pastor)"
                 sx={{
                   width: "100%",
                   height: "100%",
@@ -107,7 +107,7 @@ export default function Staff() {
               <Box
                 component="img"
                 src={youthEMPastorImg}
-                alt="Roy Jeong, Youth/EM Pastor"
+                alt="정병천 전도사 (Roy Jeong, Youth/EM Pastor)"
                 sx={{
                   width: "100%",
                   height: "100%",
