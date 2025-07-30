@@ -21,8 +21,8 @@ export default function Register() {
         <ListItem>
           <Typography>
             심방 신청을 원하시는 분들은 교회 이메일(
-            <Link href="mailto:marpechurch@gmail.com" underline="hover">
-              marpechurch@gmail.com
+            <Link href="mailto:contact@marpechurch.org" underline="hover">
+              contact@marpechurch.org
             </Link>
             )로 연락주시기 바랍니다.
           </Typography>

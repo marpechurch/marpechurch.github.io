@@ -19,8 +19,8 @@ export default function AppFooter() {
         </ListItem>
         <ListItem sx={{ padding: 0 }}>
           이메일:&nbsp;
-          <Link href="mailto:marpechurch@gmail.com" underline="hover">
-            marpechurch@gmail.com
+          <Link href="mailto:contact@marpechurch.org" underline="hover">
+            contact@marpechurch.org
           </Link>
         </ListItem>
         <ListItem sx={{ padding: 0 }}>
