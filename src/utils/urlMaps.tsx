@@ -1,22 +1,4 @@
 import {
-  AutoAwesome as VisionIcon,
-  ChildCare as KidsIcon,
-  Church as ChurchIcon,
-  FormatListBulleted as ProgramIcon,
-  HistoryEdu as RegisterIcon,
-  Instagram as SocialIcon,
-  LocationCity as DenominationIcon,
-  Map as DirectionsIcon,
-  MusicNote as WorshipIcon,
-  People as StaffIcon,
-  VolunteerActivism as OfferingIcon,
-  YouTube as SermonsIcon,
-} from "@mui/icons-material";
-import { Box } from "@mui/material";
-
-import marpeLogo from "../assets/marpe-logo-bw.webp";
-
-import {
   Church,
   Denomination,
   Directions,
@@ -30,14 +12,17 @@ import {
   Social,
   Vision,
   Worship,
+  Youth,
 } from "../pages/index.tsx";
 
+// Flattened URLs for routing
 export const urls = [
   "/",
   "/church",
   "/staff",
   "/denomination",
   "/vision",
+  "/youth",
   "/kids",
   "/directions",
   "/program",
@@ -55,6 +40,7 @@ export function urlToComponent(url: string) {
     "/staff": <Staff />,
     "/denomination": <Denomination />,
     "/vision": <Vision />,
+    "/youth": <Youth />,
     "/kids": <Kids />,
     "/directions": <Directions />,
     "/sermons": <Sermons />,
@@ -70,33 +56,6 @@ export function urlToComponent(url: string) {
   return component;
 }
 
-export function urlToIcon(url: string) {
-  const urlIconMap = {
-    "/": (
-      <Box
-        component="img"
-        alt="Marpe Logo"
-        src={marpeLogo}
-        sx={{ height: "48px", width: "auto" }}
-      />
-    ),
-    "/church": <ChurchIcon />,
-    "/staff": <StaffIcon />,
-    "/denomination": <DenominationIcon />,
-    "/vision": <VisionIcon />,
-    "/kids": <KidsIcon />,
-    "/directions": <DirectionsIcon />,
-    "/program": <ProgramIcon />,
-    "/sermons": <SermonsIcon />,
-    "/social": <SocialIcon />,
-    "/worship": <WorshipIcon />,
-    "/offering": <OfferingIcon />,
-    "/register": <RegisterIcon />,
-  };
-  const icon = urlIconMap[url as keyof typeof urlIconMap];
-  return icon;
-}
-
 export function urlToTitle(url: string): string {
   const urlTitleMap = {
     "/": "마르페 교회로 환영합니다!",
@@ -104,6 +63,7 @@ export function urlToTitle(url: string): string {
     "/staff": "섬기는 이들",
     "/denomination": "소속 교단",
     "/vision": "비전",
+    "/youth": 'Marpe Youth "LPD"',
     "/kids": "마르페 키즈",
     "/directions": "오시는 길",
     "/program": "주보",

@@ -11,3 +11,4 @@ export { default as Sermons } from "./Sermons";
 export { default as Social } from "./Social";
 export { default as Vision } from "./Vision";
 export { default as Worship } from "./Worship";
+export { default as Youth } from "./Youth";
