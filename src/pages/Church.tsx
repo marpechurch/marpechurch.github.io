@@ -48,5 +48,5 @@ export default function Church() {
     </Paper>
   );
 
-  return <Page content={content} imageSrc={churchImg} />;
+  return <Page title="교회 소개" content={content} imageSrc={churchImg} />;
 }

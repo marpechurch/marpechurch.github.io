@@ -11,5 +11,5 @@ export default function Worship() {
     </Paper>
   );
 
-  return <Page content={content} />;
+  return <Page title="찬양" content={content} />;
 }

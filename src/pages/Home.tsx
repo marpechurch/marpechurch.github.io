@@ -32,5 +32,5 @@ export default function Home() {
     </Paper>
   );
 
-  return <Page secondaryContent={secondaryContent} imageSrc={marpeLogo} />;
+  return <Page title="마르페 교회로 환영합니다!" secondaryContent={secondaryContent} imageSrc={marpeLogo} />;
 }

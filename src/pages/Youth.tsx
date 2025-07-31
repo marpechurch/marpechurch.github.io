@@ -33,5 +33,5 @@ export default function Youth() {
     </Paper>
   );
 
-  return <Page content={content} />;
+  return <Page title='Marpe Youth "LPD"' content={content} />;
 }

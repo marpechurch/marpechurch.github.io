@@ -2,8 +2,6 @@ import "react";
 import { useLocation } from "react-router";
 import { Box, Grid2, Typography, Link } from "@mui/material";
 
-import { urlToTitle } from "../utils/urlMaps";
-
 interface ImageProps {
   children: React.ReactNode;
   imageLink?: string;
@@ -30,6 +28,7 @@ interface PageProps {
   imageLink?: string;
   imageSrc?: string;
   secondaryContent?: React.ReactNode;
+  title?: string;
 }
 
 export default function Page({
@@ -38,11 +37,12 @@ export default function Page({
   imageLink,
   imageSrc,
   secondaryContent,
+  title,
 }: PageProps) {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
   const currentPath = `/${pathnames[pathnames.length - 1] ?? ""}`;
-  const currentTitle = urlToTitle(currentPath);
+  const currentTitle = title || "마르페 교회";
 
   const isHomePage = currentPath === "/";
 

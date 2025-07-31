@@ -42,5 +42,5 @@ export default function Kids() {
     </Paper>
   );
 
-  return <Page content={content} imageSrc={kidsImg} />;
+  return <Page title="마르페 키즈" content={content} imageSrc={kidsImg} />;
 }

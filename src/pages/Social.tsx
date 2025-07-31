@@ -10,5 +10,5 @@ export default function Social() {
     </Paper>
   );
 
-  return <Page content={content} />;
+  return <Page title="인스타그램" content={content} />;
 }

@@ -1,17 +1,42 @@
 import "react";
 import { Routes, Route } from "react-router";
 
-import { urls, urlToComponent } from "../utils/urlMaps";
+import {
+  Church,
+  Denomination,
+  Directions,
+  Home,
+  Kids,
+  Offering,
+  Staff,
+  Program,
+  Register,
+  Sermons,
+  Social,
+  Vision,
+  Worship,
+  Youth,
+} from "../pages/index.tsx";
 
-function AppHeader() {
+function AppRoutes() {
   return (
     <Routes>
-      {urls.map((url) => {
-        const Component = urlToComponent(url);
-        return <Route key={url} path={url} element={Component} />;
-      })}
+      <Route path="/" element={<Home />} />
+      <Route path="/church" element={<Church />} />
+      <Route path="/staff" element={<Staff />} />
+      <Route path="/denomination" element={<Denomination />} />
+      <Route path="/vision" element={<Vision />} />
+      <Route path="/youth" element={<Youth />} />
+      <Route path="/kids" element={<Kids />} />
+      <Route path="/directions" element={<Directions />} />
+      <Route path="/program" element={<Program />} />
+      <Route path="/sermons" element={<Sermons />} />
+      <Route path="/social" element={<Social />} />
+      <Route path="/worship" element={<Worship />} />
+      <Route path="/offering" element={<Offering />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   );
 }
 
-export default AppHeader;
+export default AppRoutes;

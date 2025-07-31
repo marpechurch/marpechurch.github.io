@@ -46,6 +46,7 @@ export default function Denomination() {
 
   return (
     <Page
+      title="소속 교단"
       content={content}
       secondaryContent={secondaryContent}
       imageSrc={CMA_IMAGE}

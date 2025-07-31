@@ -4,7 +4,6 @@ import { Menu as MenuIcon } from "@mui/icons-material";
 import {
   AppBar,
   Box,
-  Breadcrumbs,
   IconButton,
   Link,
   Toolbar,
@@ -15,7 +14,7 @@ import {
 
 import marpeLogo from "../assets/marpe-logo-bw.webp";
 
-import { urlToTitle } from "../utils/urlMaps";
+
 
 import AppMenu from "./AppMenu";
 
@@ -52,6 +51,27 @@ function AppHeader() {
     };
   }, []);
 
+  const currentPath = `/${pathnames[pathnames.length - 1] ?? ""}`;
+  
+  const headerTitleMap = {
+    "/": "마르페 교회",
+    "/church": "교회 소개",
+    "/staff": "섬기는 이들",
+    "/denomination": "소속 교단",
+    "/vision": "비전",
+    "/youth": 'Marpe Youth "LPD"',
+    "/kids": "마르페 키즈",
+    "/directions": "오시는 길",
+    "/program": "주보",
+    "/sermons": "설교 말씀",
+    "/social": "인스타그램",
+    "/worship": "찬양",
+    "/offering": "헌금",
+    "/register": "교인 등록",
+  };
+
+  const currentTitle = headerTitleMap[currentPath as keyof typeof headerTitleMap] || "마르페 교회";
+
   return (
     <Box sx={{ mb: 2 }}>
       <AppBar
@@ -72,10 +92,7 @@ function AppHeader() {
             justifyContent: "space-between",
           }}
         >
-          <Breadcrumbs
-            aria-label="breadcrumb"
-            sx={{ alignItems: "center", display: "flex", fontSize: 20, gap: 1 }}
-          >
+          <Box sx={{ alignItems: "center", display: "flex", gap: 2 }}>
             <Link
               color="inherit"
               component={RouterLink}
@@ -84,7 +101,6 @@ function AppHeader() {
               sx={{
                 alignItems: "center",
                 display: "flex",
-                gap: 1,
                 "&:hover": {
                   color: "inherit",
                   textDecoration: "none",
@@ -97,32 +113,11 @@ function AppHeader() {
                 src={marpeLogo}
                 sx={{ height: "48px", width: "auto" }}
               />
-              <Typography sx={{ fontSize: 20 }}>마르페</Typography>
             </Link>
-            {pathnames.map((_, index) => {
-              const last: boolean = index === pathnames.length - 1;
-              const to: string = `/${pathnames.slice(0, index + 1).join("/")}`;
-
-              return last ? (
-                <Typography
-                  key={to}
-                  sx={{ color: "text.primary", fontSize: 20 }}
-                >
-                  {urlToTitle(to)}
-                </Typography>
-              ) : (
-                <Link
-                  color="inherit"
-                  component={RouterLink}
-                  key={to}
-                  to={to}
-                  underline="hover"
-                >
-                  {urlToTitle(to)}
-                </Link>
-              );
-            })}
-          </Breadcrumbs>
+            <Typography sx={{ fontSize: 20 }}>
+              {currentTitle}
+            </Typography>
+          </Box>
           {isMobile && (
             <IconButton
               aria-label="menu"
