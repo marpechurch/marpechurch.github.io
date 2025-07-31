@@ -75,7 +75,7 @@ export default function AppMenu({ isOpen, toggleMenu }: AppMenuProps) {
 
     return (
       <ListItem disablePadding>
-        <ListItemButton component={RouterLink} to={to}>
+        <ListItemButton component={RouterLink} to={to} onClick={() => toggleMenu()}>
           {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
           <ListItemText primary={primary} />
         </ListItemButton>
@@ -91,7 +91,6 @@ export default function AppMenu({ isOpen, toggleMenu }: AppMenuProps) {
           position: { md: "relative" },
           top: { md: 60 },
         }}
-        onClick={() => toggleMenu()}
       >
         <List>
           {menuStructure.map((item) => {
@@ -120,6 +119,7 @@ export default function AppMenu({ isOpen, toggleMenu }: AppMenuProps) {
                             component={RouterLink}
                             to={subItem.url}
                             sx={{ pl: 4 }}
+                            onClick={() => toggleMenu()}
                           >
                             <ListItemIcon>{subItem.icon}</ListItemIcon>
                             <ListItemText primary={subItem.title} />
