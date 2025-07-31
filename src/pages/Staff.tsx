@@ -64,12 +64,12 @@ export default function Staff() {
                 약력
               </Typography>
               <List sx={{ pt: 0 }}>
+                <ListItem>현) 마르페 교회 담임목사</ListItem>
+                <ListItem>보스턴 온누리 교회 부목사</ListItem>
+                <ListItem>Northeastern University Spiritual Adviser</ListItem>
                 <ListItem>
                   YWAM(Youth With A Mission) Boston 캠퍼스 사역 디렉터
                 </ListItem>
-                <ListItem>Northeastern University Spiritual Adviser</ListItem>
-                <ListItem>보스턴 온누리 교회 부목사</ListItem>
-                <ListItem>현) 마르페 교회 담임목사</ListItem>
               </List>
             </Box>
           </Box>
