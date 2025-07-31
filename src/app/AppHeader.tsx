@@ -59,7 +59,7 @@ function AppHeader() {
     "/staff": "섬기는 이들",
     "/denomination": "소속 교단",
     "/vision": "비전",
-    "/youth": 'Marpe Youth "LPD"',
+    "/youth": 'Marpe Youth',
     "/kids": "마르페 키즈",
     "/directions": "오시는 길",
     "/program": "주보",

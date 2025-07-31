@@ -41,7 +41,7 @@ const menuStructure = [
     title: "다음 세대",
     icon: <NextGenIcon />,
     submenu: [
-      { url: "/youth", title: 'Marpe Youth "LPD"', icon: <YouthIcon /> },
+      { url: "/youth", title: 'Marpe Youth', icon: <YouthIcon /> },
       { url: "/kids", title: "마르페 키즈", icon: <KidsIcon /> },
     ],
   },

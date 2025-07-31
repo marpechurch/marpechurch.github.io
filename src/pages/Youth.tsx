@@ -11,9 +11,6 @@ export default function Youth() {
           Lovely, Pure, Dependable
         </Typography>
         <Typography>
-          Service Time: Every Sunday at 2 PM
-        </Typography>
-        <Typography>
           "LPD" is a wordplay on the Greek word “elpidi”, which means “in hope”.
           Its root form is “elpis” which means “hope” and “faith”.
         </Typography>
@@ -29,9 +26,12 @@ export default function Youth() {
           isn’t in the distant future. We seek to live our day-to-day lives in
           hope and in excitement of what God will show us and do through us.
         </Typography>
+        <Typography>
+          Service Time: Every <Box component="span" sx={{ fontWeight: "bold" }}>Sunday at 2 PM</Box>
+        </Typography>
       </Box>
     </Paper>
   );
 
-  return <Page title='Marpe Youth "LPD"' content={content} />;
+  return <Page title='"LPD"' content={content} />;
 }
