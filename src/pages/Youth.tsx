@@ -11,6 +11,9 @@ export default function Youth() {
           Lovely, Pure, Dependable
         </Typography>
         <Typography>
+          Service Time: Every Sunday at 2 PM
+        </Typography>
+        <Typography>
           "LPD" is a wordplay on the Greek word “elpidi”, which means “in hope”.
           Its root form is “elpis” which means “hope” and “faith”.
         </Typography>
