@@ -15,7 +15,6 @@ import {
 import {
   AutoAwesome as VisionIcon,
   ChildCare as KidsIcon,
-  ChurchOutlined as MarpeChurchIcon,
   DesignServices as YouthIcon,
   ExpandLess,
   ExpandMore,
@@ -35,7 +34,6 @@ const menuStructure = [
   {
     title: "교회 소개",
     submenu: [
-      { url: "/church", title: "마르페 교회", icon: <MarpeChurchIcon /> },
       { url: "/staff", title: "섬기는 이들", icon: <StaffIcon /> },
       { url: "/denomination", title: "소속 교단", icon: <DenominationIcon /> },
       { url: "/vision", title: "비전", icon: <VisionIcon /> },

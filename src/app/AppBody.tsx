@@ -3,7 +3,7 @@ import { Container } from "@mui/material";
 
 import AppRoutes from "./AppRoutes.tsx";
 
-function AppHeader() {
+function AppBody() {
   return (
     <Container
       sx={{
@@ -12,7 +12,7 @@ function AppHeader() {
         flexDirection: "column",
         pb: 2,
         position: "relative",
-        pt: 8,
+        pt: 2, // Consistent padding top and bottom
       }}
     >
       <AppRoutes />
@@ -20,4 +20,4 @@ function AppHeader() {
   );
 }
 
-export default AppHeader;
+export default AppBody;

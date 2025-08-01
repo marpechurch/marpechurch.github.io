@@ -1,4 +1,3 @@
-export { default as Church } from "./Church";
 export { default as Denomination } from "./Denomination";
 export { default as Directions } from "./Directions";
 export { default as Home } from "./Home";

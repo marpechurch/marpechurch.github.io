@@ -5,6 +5,25 @@ import {
   responsiveFontSizes,
   ThemeProvider,
 } from "@mui/material/styles";
+import { useState, useEffect } from "react";
+
+// Extend the theme to include custom header colors
+declare module '@mui/material/styles' {
+  interface Palette {
+    header: {
+      topBar: string;
+      breadcrumbs: string;
+      purple: string;
+    };
+  }
+  interface PaletteOptions {
+    header?: {
+      topBar: string;
+      breadcrumbs: string;
+      purple: string;
+    };
+  }
+}
 
 import AppBody from "./app/AppBody";
 import AppFooter from "./app/AppFooter";
@@ -14,6 +33,20 @@ import "./fonts/GmarketSansTTFBold.ttf";
 import "./fonts/GmarketSansTTFMedium.ttf";
 
 export default function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Check if user prefers dark mode
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDarkMode(mediaQuery.matches);
+
+    // Listen for changes in color scheme preference
+    const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
   let theme = createTheme({
     palette: {
       primary: {
@@ -21,6 +54,12 @@ export default function App() {
       },
       text: {
         secondary: "#666666", // Define a neutral color for secondary text
+      },
+      // Custom colors for header components
+      header: {
+        topBar: isDarkMode ? "#242424" : "#ffffff", // Same as main content background in dark mode, white in light mode
+        breadcrumbs: isDarkMode ? "#a8c3cd" : "#e3f2fd", // Darker blue in dark mode, light blue in light mode
+        purple: "#673ab7", // Purple (original breadcrumbs color)
       },
     },
     typography: {

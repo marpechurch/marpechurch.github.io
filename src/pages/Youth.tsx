@@ -8,7 +8,7 @@ export default function Youth() {
     <Paper elevation={1} sx={{ p: { xs: 1.5, md: 3 } }}>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
         <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
-          Lovely, Pure, Dependable
+          "LPD" - Lovely, Pure, Dependable
         </Typography>
         <Typography>
           "LPD" is a wordplay on the Greek word “elpidi”, which means “in hope”.
@@ -26,9 +26,7 @@ export default function Youth() {
           isn’t in the distant future. We seek to live our day-to-day lives in
           hope and in excitement of what God will show us and do through us.
         </Typography>
-        <Typography>
-          Service Time: Every <Box component="span" sx={{ fontWeight: "bold" }}>Sunday at 2 PM</Box>
-        </Typography>
+        <Typography variant="h6">Service Time: Every Sunday at 2 PM</Typography>
       </Box>
     </Paper>
   );

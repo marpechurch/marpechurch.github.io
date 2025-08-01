@@ -2,7 +2,6 @@ import "react";
 import { Routes, Route } from "react-router";
 
 import {
-  Church,
   Denomination,
   Directions,
   Home,
@@ -22,7 +21,6 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/church" element={<Church />} />
       <Route path="/staff" element={<Staff />} />
       <Route path="/denomination" element={<Denomination />} />
       <Route path="/vision" element={<Vision />} />

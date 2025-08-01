@@ -1,7 +1,7 @@
 import "react";
 import { useLocation } from "react-router";
 import { useState, useEffect } from "react";
-import { Box, Grid2, Typography } from "@mui/material";
+import { Box, Grid2 } from "@mui/material";
 import AnimatedImage from "./AnimatedImage";
 
 interface PageProps {
@@ -29,24 +29,20 @@ export default function Page({
   const isHomePage = currentPath === "/";
   
   // Animation states
-  const [titleVisible, setTitleVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
   const [secondaryVisible, setSecondaryVisible] = useState(false);
 
   // Trigger animations on route change and initial load
   useEffect(() => {
     // Reset animation states
-    setTitleVisible(false);
     setContentVisible(false);
     setSecondaryVisible(false);
 
     // Stagger the animations with shorter delays for faster feel
-    const titleTimer = setTimeout(() => setTitleVisible(true), 200);
-    const contentTimer = setTimeout(() => setContentVisible(true), 500);
-    const secondaryTimer = setTimeout(() => setSecondaryVisible(true), 800);
+    const contentTimer = setTimeout(() => setContentVisible(true), 200);
+    const secondaryTimer = setTimeout(() => setSecondaryVisible(true), 500);
 
     return () => {
-      clearTimeout(titleTimer);
       clearTimeout(contentTimer);
       clearTimeout(secondaryTimer);
     };
@@ -54,23 +50,6 @@ export default function Page({
 
   return (
     <Box>
-      <Box
-        sx={{
-          opacity: titleVisible ? 1 : 0,
-          transform: titleVisible ? 'translateY(0)' : 'translateY(30px)',
-          transition: 'opacity 1s ease-in-out, transform 0.8s ease-out',
-        }}
-      >
-        <Typography 
-          variant="h1" 
-          sx={{ 
-            paddingBottom: 6,
-          }}
-        >
-          {currentTitle}
-        </Typography>
-      </Box>
-      
       <Box
         sx={{
           opacity: contentVisible ? 1 : 0,
