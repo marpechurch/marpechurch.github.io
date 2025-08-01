@@ -97,7 +97,16 @@ function HorizontalMenu() {
   };
 
   return (
-    <Box sx={{ display: "flex", gap: 3, flexWrap: "nowrap", flex: 1, justifyContent: "flex-end", alignItems: "center" }}>
+    <Box
+      sx={{
+        display: "flex",
+        gap: 3,
+        flexWrap: "nowrap",
+        flex: 1,
+        justifyContent: "flex-end",
+        alignItems: "center",
+      }}
+    >
       {menuStructure.map((item) => (
         <Box key={item.title} sx={{ flex: "0 0 auto" }}>
           <Button
@@ -263,16 +272,22 @@ function AppHeader() {
         <Toolbar
           sx={{
             alignItems: "center",
+            boxSizing: "border-box",
             display: "flex",
             gap: "8px",
             justifyContent: "space-between",
-            px: { xs: 2, sm: 3, md: 4, lg: 6, xl: 8 }, // Match container padding
-            width: "100%",
             minWidth: "100%",
-            boxSizing: "border-box",
+            width: "100%",
           }}
         >
-          <Box sx={{ alignItems: "center", display: "flex", gap: 2, flexShrink: 0 }}>
+          <Box
+            sx={{
+              alignItems: "center",
+              display: "flex",
+              gap: 2,
+              flexShrink: 0,
+            }}
+          >
             <Link
               color="inherit"
               component={RouterLink}
