@@ -75,7 +75,7 @@ export default function Offering() {
 
       {/* 온라인 헌금 섹션 */}
       <Paper elevation={1} sx={{ p: { xs: 1.5, md: 3 } }}>
-                <Typography
+        <Typography
           variant="h6"
           sx={{ mb: { xs: 2, md: 3 }, fontWeight: "bold" }}
         >
@@ -88,7 +88,7 @@ export default function Offering() {
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             gap: { xs: 3, md: 4 },
-            alignItems: 'stretch',
+            alignItems: "stretch",
           }}
         >
           {/* Zelle 서브섹션 */}
@@ -100,35 +100,51 @@ export default function Offering() {
               gap: 2,
             }}
           >
-            <Typography
-              variant="subtitle1"
-              sx={{ mb: 0, fontWeight: "bold" }}
-            >
+            <Typography variant="subtitle1" sx={{ mb: 0, fontWeight: "bold" }}>
               Zelle
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Marpe Church<br />
+              Marpe Church
+              <br />
               marpechurch&#8203;@gmail.com
             </Typography>
-            <Box
-              component="a"
-              href={ZELLE}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ display: 'flex', justifyContent: 'center' }}
-            >
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Box
-                component="img"
-                src={zelleImg}
-                alt="Zelle QR 코드"
+                component="a"
+                href={ZELLE}
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
-                  width: { xs: 180, sm: 200, md: 220 },
+                  alignItems: "center",
+                  display: "flex",
+                  flexDirection: "column",
                   height: "auto",
-                  borderRadius: 2,
-                  boxShadow: 2,
-                  cursor: "pointer",
+                  justifyContent: "center",
                 }}
-              />
+              >
+                <Box
+                  component="img"
+                  src={zelleImg}
+                  alt="Zelle QR 코드"
+                  sx={{
+                    borderRadius: 2,
+                    boxShadow: 2,
+                    cursor: "pointer",
+                    height: "auto",
+                    width: { xs: 180, sm: 200, md: 220 },
+                  }}
+                />
+                <Typography
+                  variant="body2"
+                  sx={{
+                    textAlign: "center",
+                    color: "text.secondary",
+                    fontSize: "0.875rem",
+                  }}
+                >
+                  (click me)
+                </Typography>
+              </Box>
             </Box>
           </Box>
 
@@ -136,12 +152,12 @@ export default function Offering() {
           <Box
             sx={{
               display: { xs: "block", md: "block" },
-              width: { xs: '100%', md: '1px' },
-              minWidth: { xs: 0, md: '1px' },
-              height: { xs: '1px', md: 'auto' },
-              backgroundColor: 'rgba(0,0,0,0.12)',
+              width: { xs: "100%", md: "1px" },
+              minWidth: { xs: 0, md: "1px" },
+              height: { xs: "1px", md: "auto" },
+              backgroundColor: "rgba(0,0,0,0.12)",
               borderRadius: 1,
-              alignSelf: { xs: 'center', md: 'stretch' },
+              alignSelf: { xs: "center", md: "stretch" },
               my: { xs: 2, md: 0 },
               mx: { xs: 0, md: 2 },
             }}
@@ -157,35 +173,50 @@ export default function Offering() {
               pb: 2,
             }}
           >
-            <Typography
-              variant="subtitle1"
-              sx={{ mb: 0, fontWeight: "bold" }}
-            >
+            <Typography variant="subtitle1" sx={{ mb: 0, fontWeight: "bold" }}>
               Tithe.ly
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Marpe Church<br />
-              9 Archer Dr, Woburn, MA, 01801
+              Marpe Church
+              <br />9 Archer Dr, Woburn, MA, 01801
             </Typography>
-            <Box
-              component="a"
-              href={TITHELY}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ display: 'flex', justifyContent: 'center' }}
-            >
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Box
-                component="img"
-                src={tithelyImg}
-                alt="Tithe.ly QR 코드"
+                component="a"
+                href={TITHELY}
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
-                  width: { xs: 180, sm: 200, md: 220 },
+                  alignItems: "center",
+                  display: "flex",
+                  flexDirection: "column",
                   height: "auto",
-                  borderRadius: 2,
-                  boxShadow: 2,
-                  cursor: "pointer",
+                  justifyContent: "center",
                 }}
-              />
+              >
+                <Box
+                  component="img"
+                  src={tithelyImg}
+                  alt="Tithe.ly QR 코드"
+                  sx={{
+                    borderRadius: 2,
+                    boxShadow: 2,
+                    cursor: "pointer",
+                    height: "auto",
+                    width: { xs: 180, sm: 200, md: 220 },
+                  }}
+                />
+                <Typography
+                  variant="body2"
+                  sx={{
+                    textAlign: "center",
+                    color: "text.secondary",
+                    fontSize: "0.875rem",
+                  }}
+                >
+                  (click me)
+                </Typography>
+              </Box>
             </Box>
           </Box>
         </Box>
