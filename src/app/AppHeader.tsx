@@ -17,8 +17,8 @@ import {
   useTheme,
 } from "@mui/material";
 
-import marpeLogo from "../assets/marpe-logo-bw.webp";
 import bannerImage from "../assets/banner.webp";
+import marpeLogo from "../assets/marpe-logo-bw.webp";
 
 import AppMenu from "./AppMenu";
 
@@ -322,7 +322,7 @@ function AppHeader() {
           height: { xs: "100px", md: "200px" }, // Smaller height on mobile
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: "cover",
-          backgroundPosition: { xs: "50% 65%", md: "50% 60%" },
+          backgroundPosition: "50% 60%", // Fixed position to show cross consistently
           backgroundRepeat: "no-repeat",
           position: "relative",
           mt: { xs: "56px", md: "64px" }, // Reduced margin for mobile
