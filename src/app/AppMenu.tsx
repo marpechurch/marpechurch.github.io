@@ -132,12 +132,17 @@ export default function AppMenu({ isOpen, toggleMenu }: AppMenuProps) {
     );
   }
 
+  // Only render the drawer on mobile screens
+  if (isDesktop) {
+    return null;
+  }
+
   return (
     <Drawer
       anchor="right"
       open={isOpen}
       onClose={toggleMenu}
-      variant={isDesktop ? "permanent" : "temporary"}
+      variant="temporary"
     >
       <DrawerList />
     </Drawer>

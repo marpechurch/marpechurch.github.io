@@ -13,8 +13,6 @@ function AppHeader() {
         pb: 2,
         position: "relative",
         pt: 8,
-        right: { md: 100, xs: 0 },
-        width: { md: "calc(100% - 200px)", xs: "100%" },
       }}
     >
       <AppRoutes />

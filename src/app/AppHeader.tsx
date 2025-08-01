@@ -4,8 +4,13 @@ import { Menu as MenuIcon } from "@mui/icons-material";
 import {
   AppBar,
   Box,
+  Button,
   IconButton,
   Link,
+  ListItemIcon,
+  ListItemText,
+  Menu,
+  MenuItem,
   Toolbar,
   Typography,
   useMediaQuery,
@@ -15,6 +20,147 @@ import {
 import marpeLogo from "../assets/marpe-logo-bw.webp";
 
 import AppMenu from "./AppMenu";
+
+// Import the same menu structure and icons from AppMenu
+import {
+  AutoAwesome as VisionIcon,
+  ChildCare as KidsIcon,
+  ChurchOutlined as MarpeChurchIcon,
+  DesignServices as YouthIcon,
+  FormatListBulleted as ProgramIcon,
+  HistoryEdu as RegisterIcon,
+  Instagram as SocialIcon,
+  LocationCity as DenominationIcon,
+  Map as DirectionsIcon,
+  MusicNote as WorshipIcon,
+  People as StaffIcon,
+  VolunteerActivism as OfferingIcon,
+  YouTube as SermonsIcon,
+} from "@mui/icons-material";
+
+// Main menu structure with nested submenus (same as AppMenu)
+const menuStructure = [
+  {
+    title: "교회 소개",
+    submenu: [
+      { url: "/church", title: "마르페 교회", icon: <MarpeChurchIcon /> },
+      { url: "/staff", title: "섬기는 이들", icon: <StaffIcon /> },
+      { url: "/denomination", title: "소속 교단", icon: <DenominationIcon /> },
+      { url: "/vision", title: "비전", icon: <VisionIcon /> },
+      { url: "/directions", title: "오시는 길", icon: <DirectionsIcon /> },
+    ],
+  },
+  {
+    title: "예배 설교",
+    submenu: [
+      { url: "/sermons", title: "설교 말씀", icon: <SermonsIcon /> },
+      { url: "/program", title: "주보", icon: <ProgramIcon /> },
+      { url: "/offering", title: "헌금", icon: <OfferingIcon /> },
+      { url: "/worship", title: "찬양", icon: <WorshipIcon /> },
+    ],
+  },
+  {
+    title: "다음 세대",
+    submenu: [
+      { url: "/youth", title: 'Marpe Youth', icon: <YouthIcon /> },
+      { url: "/kids", title: "마르페 키즈", icon: <KidsIcon /> },
+    ],
+  },
+  {
+    title: "교회 소식",
+    submenu: [
+      { url: "/social", title: "인스타그램", icon: <SocialIcon /> },
+      { url: "/register", title: "교인 등록", icon: <RegisterIcon /> },
+    ],
+  },
+];
+
+// Horizontal menu component for desktop
+function HorizontalMenu() {
+  const [anchorEl, setAnchorEl] = useState<{ [key: string]: HTMLElement | null }>({});
+  const location = useLocation();
+
+  const handleMenuOpen = (event: React.MouseEvent<HTMLElement>, title: string) => {
+    setAnchorEl(prev => ({ ...prev, [title]: event.currentTarget }));
+  };
+
+  const handleMenuClose = (title: string) => {
+    setAnchorEl(prev => ({ ...prev, [title]: null }));
+  };
+
+  const isActive = (url: string) => {
+    return location.pathname === url;
+  };
+
+  return (
+    <Box sx={{ display: 'flex', gap: 1 }}>
+      {menuStructure.map((item) => (
+        <Box key={item.title}>
+          <Button
+            color="inherit"
+            onClick={(e) => handleMenuOpen(e, item.title)}
+            sx={{
+              textTransform: 'none',
+              fontSize: '16px',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              },
+            }}
+          >
+            {item.title}
+          </Button>
+          <Menu
+            anchorEl={anchorEl[item.title]}
+            open={Boolean(anchorEl[item.title])}
+            onClose={() => handleMenuClose(item.title)}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            PaperProps={{
+              sx: {
+                mt: 1,
+                minWidth: 200,
+                boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+              },
+            }}
+          >
+            {item.submenu.map((subItem) => (
+              <MenuItem
+                key={subItem.url}
+                component={RouterLink}
+                to={subItem.url}
+                onClick={() => handleMenuClose(item.title)}
+                sx={{
+                  backgroundColor: isActive(subItem.url) ? 'rgba(25, 118, 210, 0.08)' : 'transparent',
+                  '&:hover': {
+                    backgroundColor: 'rgba(25, 118, 210, 0.04)',
+                  },
+                }}
+              >
+                <ListItemIcon sx={{ minWidth: 36 }}>
+                  {subItem.icon}
+                </ListItemIcon>
+                <ListItemText 
+                  primary={subItem.title}
+                  sx={{
+                    '& .MuiTypography-root': {
+                      fontSize: '14px',
+                    },
+                  }}
+                />
+              </MenuItem>
+            ))}
+          </Menu>
+        </Box>
+      ))}
+    </Box>
+  );
+}
 
 function AppHeader() {
   const location = useLocation();
@@ -116,6 +262,11 @@ function AppHeader() {
               {currentTitle}
             </Typography>
           </Box>
+          
+          {/* Desktop horizontal menu */}
+          {!isMobile && <HorizontalMenu />}
+          
+          {/* Mobile menu button */}
           {isMobile && (
             <IconButton
               aria-label="menu"
