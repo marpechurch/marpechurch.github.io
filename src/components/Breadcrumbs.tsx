@@ -72,8 +72,7 @@ function Breadcrumbs({ currentTitle }: BreadcrumbsProps) {
       sx={{
         width: "100%",
         backgroundColor: (theme) => theme.palette.header.breadcrumbs,
-        color: (theme) =>
-          theme.palette.mode === "dark" ? "white" : "black",
+        color: (theme) => (theme.palette.mode === "dark" ? "white" : "black"),
         py: { xs: 0.5, md: 1 },
         px: { xs: 2, md: 3 },
         display: "flex",
@@ -82,28 +81,12 @@ function Breadcrumbs({ currentTitle }: BreadcrumbsProps) {
       }}
     >
       {/* Page title on the left */}
-      <Typography
-        variant="h6"
-        sx={{
-          fontWeight: "bold",
-          fontSize: { xs: "1.25rem", md: "1.5rem" },
-        }}
-      >
-        {currentTitle}
-      </Typography>
+      <Typography variant="h4">{currentTitle}</Typography>
 
       {/* Breadcrumbs on the right */}
-      <Typography
-        variant="body2"
-        sx={{
-          fontWeight: "medium",
-          fontSize: { xs: "0.75rem", md: "0.875rem" },
-        }}
-      >
-        {generateBreadcrumbs()}
-      </Typography>
+      <Typography variant="body2">{generateBreadcrumbs()}</Typography>
     </Box>
   );
 }
 
-export default Breadcrumbs; 
+export default Breadcrumbs;
