@@ -58,6 +58,7 @@ export default function App() {
       },
     },
     palette: {
+      mode: isDarkMode ? "dark" : "light",
       primary: {
         main: "#fdf4b3",
       },

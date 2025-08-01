@@ -263,7 +263,7 @@ function AppHeader() {
           zIndex: (theme) => theme.zIndex.drawer + 1,
           backgroundColor: (theme) => theme.palette.header.topBar,
           color: (theme) =>
-            theme.palette.header.topBar === "#242424" ? "white" : "black",
+            theme.palette.mode === "dark" ? "white" : "black",
           width: "100%",
           left: 0,
           right: 0,
@@ -350,7 +350,7 @@ function AppHeader() {
           width: "100%",
           backgroundColor: (theme) => theme.palette.header.breadcrumbs,
           color: (theme) =>
-            theme.palette.header.breadcrumbs === "#88c3cd" ? "white" : "black",
+            theme.palette.mode === "dark" ? "white" : "black",
           py: { xs: 0.5, md: 1 },
           px: { xs: 2, md: 3 },
           display: "flex",
