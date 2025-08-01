@@ -77,7 +77,7 @@ export default function Page({
                   loading="lazy"
                   src={iframeSrc}
                   sx={{
-                    height: "60vh",
+                    height: "57vh", // fits with Google Drive image height
                     width: "100%",
                     objectFit: "contain", // Maintain aspect ratio
                   }}
