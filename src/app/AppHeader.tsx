@@ -360,7 +360,6 @@ function AppHeader() {
           sx={{
             fontWeight: "medium",
             fontSize: { xs: "0.75rem", md: "0.875rem" },
-            marginRight: "60px",
           }}
         >
           {generateBreadcrumbs()}

@@ -36,9 +36,8 @@ body {
   max-width: 100%;
 }
 
-/* Debug styles to see what's happening */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* fix mobile padding issue */
 }
 
 button {
