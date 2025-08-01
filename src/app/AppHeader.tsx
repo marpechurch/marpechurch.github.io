@@ -221,7 +221,7 @@ function AppHeader() {
     "/denomination": "소속 교단",
     "/vision": "비전",
     "/youth": "Marpe Youth",
-    "/kids": "마르페 키즈",
+    "/kids": "마르페 키즈 (coming soon)",
     "/directions": "오시는 길",
     "/program": "주보",
     "/sermons": "설교 말씀",
