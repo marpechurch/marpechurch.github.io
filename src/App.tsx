@@ -8,7 +8,7 @@ import {
 import { useState, useEffect } from "react";
 
 // Extend the theme to include custom header colors
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
   interface Palette {
     header: {
       topBar: string;
@@ -37,14 +37,14 @@ export default function App() {
 
   useEffect(() => {
     // Check if user prefers dark mode
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     setIsDarkMode(mediaQuery.matches);
 
     // Listen for changes in color scheme preference
     const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
-    mediaQuery.addEventListener('change', handleChange);
+    mediaQuery.addEventListener("change", handleChange);
 
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   let theme = createTheme({
@@ -95,14 +95,6 @@ export default function App() {
           root: {
             marginLeft: 0,
             marginRight: 0,
-            "@media (min-width: 900px)": {
-              marginLeft: 24,
-              marginRight: 24,
-            },
-            "@media (min-width: 1200px)": {
-              marginLeft: 32,
-              marginRight: 32,
-            },
           },
         },
       },
