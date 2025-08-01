@@ -8,7 +8,9 @@ interface YouTubeProps {
 
 export default function YouTube({ src, title }: YouTubeProps) {
   return (
-    <Box sx={{ display: "flex", justifyContent: "center" }}>
+    <Box
+      sx={{ display: "flex", justifyContent: "center", p: { md: 2, xs: 1 } }}
+    >
       <Box
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
@@ -17,8 +19,9 @@ export default function YouTube({ src, title }: YouTubeProps) {
         src={src}
         sx={{
           border: 0,
-          height: 500,
+          height: { md: 600, xs: 200 },
           width: "100%",
+          borderRadius: 1,
         }}
         title={title}
       />
