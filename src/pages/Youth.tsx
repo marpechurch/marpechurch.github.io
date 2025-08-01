@@ -70,5 +70,5 @@ export default function Youth() {
     </Paper>
   );
 
-  return <Page title='"LPD"' content={content} />;
+  return <Page content={content} />;
 }

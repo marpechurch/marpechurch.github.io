@@ -11,5 +11,5 @@ export default function Sermons() {
     </Paper>
   );
 
-  return <Page title="설교 말씀" content={content} />;
+  return <Page content={content} />;
 }

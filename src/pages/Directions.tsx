@@ -33,5 +33,5 @@ export default function Directions() {
     </Paper>
   );
 
-  return <Page title="오시는 길" content={content} />;
+  return <Page content={content} />;
 }

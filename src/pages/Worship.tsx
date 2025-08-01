@@ -1,7 +1,7 @@
 import "react";
+import { Paper } from "@mui/material";
 
 import { Page, YouTube } from "../components";
-import { Paper } from "@mui/material";
 import { WORSHIP_PLAYLIST } from "../utils/constants";
 
 export default function Worship() {
@@ -11,5 +11,5 @@ export default function Worship() {
     </Paper>
   );
 
-  return <Page title="찬양" content={content} />;
+  return <Page content={content} />;
 }

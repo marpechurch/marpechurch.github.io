@@ -66,5 +66,5 @@ export default function Vision() {
     </Paper>
   );
 
-  return <Page title="비전" content={content} />;
+  return <Page content={content} />;
 }

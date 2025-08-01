@@ -8,5 +8,5 @@ export default function Program() {
 
   const iframeUrl = `https://drive.google.com/file/d/${fileId}/preview`;
 
-  return <Page title="주보" iframeSrc={iframeUrl} />;
+  return <Page iframeSrc={iframeUrl} />;
 }

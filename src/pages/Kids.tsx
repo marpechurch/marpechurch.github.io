@@ -79,7 +79,9 @@ export default function Kids() {
                   </List>
                 </ListItem>
                 <ListItem>마르페 키즈로 어린이들을 초대합니다 💒</ListItem>
-                <ListItem sx={{ fontWeight: 700 }}>예배: 주일 오후 2시</ListItem>
+                <ListItem sx={{ fontWeight: 700 }}>
+                  예배: 주일 오후 2시
+                </ListItem>
               </List>
             </Typography>
           </Box>
@@ -88,5 +90,5 @@ export default function Kids() {
     </Paper>
   );
 
-  return <Page title="마르페 키즈" content={content} />;
+  return <Page content={content} />;
 }

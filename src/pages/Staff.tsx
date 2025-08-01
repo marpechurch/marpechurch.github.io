@@ -142,5 +142,5 @@ export default function Staff() {
     </Box>
   );
 
-  return <Page title="섬기는 이들" content={content} />;
+  return <Page content={content} />;
 }

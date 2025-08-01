@@ -79,5 +79,5 @@ export default function Register() {
     </Paper>
   );
 
-  return <Page title="교인 등록" content={content} />;
+  return <Page content={content} />;
 }

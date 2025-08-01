@@ -242,5 +242,5 @@ export default function Offering() {
     </Box>
   );
 
-  return <Page title="헌금" content={content} />;
+  return <Page content={content} />;
 }

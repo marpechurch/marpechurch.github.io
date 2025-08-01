@@ -10,7 +10,6 @@ interface PageProps {
   imageLink?: string;
   imageSrc?: string;
   secondaryContent?: React.ReactNode;
-  title?: string;
 }
 
 export default function Page({
@@ -19,15 +18,32 @@ export default function Page({
   imageLink,
   imageSrc,
   secondaryContent,
-  title,
 }: PageProps) {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
   const currentPath = `/${pathnames[pathnames.length - 1] ?? ""}`;
-  const currentTitle = title || "마르페 교회";
 
+  // Alt text mapping for images based on route
+  const altTextMap = {
+    "/": "마르페 교회",
+    "/staff": "섬기는 이들",
+    "/denomination": "소속 교단",
+    "/vision": "비전",
+    "/youth": "Marpe Youth",
+    "/kids": "마르페 키즈",
+    "/directions": "오시는 길",
+    "/program": "주보",
+    "/sermons": "설교 말씀",
+    "/social": "인스타그램",
+    "/worship": "찬양",
+    "/offering": "헌금",
+    "/register": "교인 등록",
+  };
+
+  const currentAltText =
+    altTextMap[currentPath as keyof typeof altTextMap] || "마르페 교회";
   const isHomePage = currentPath === "/";
-  
+
   // Animation states
   const [contentVisible, setContentVisible] = useState(false);
   const [secondaryVisible, setSecondaryVisible] = useState(false);
@@ -53,8 +69,8 @@ export default function Page({
       <Box
         sx={{
           opacity: contentVisible ? 1 : 0,
-          transform: contentVisible ? 'translateY(0)' : 'translateY(40px)',
-          transition: 'opacity 1s ease-in-out, transform 0.8s ease-out',
+          transform: contentVisible ? "translateY(0)" : "translateY(40px)",
+          transition: "opacity 1s ease-in-out, transform 0.8s ease-out",
         }}
       >
         <Grid2
@@ -62,56 +78,56 @@ export default function Page({
           direction={{ md: "row", xs: content ? "column-reverse" : "row" }}
           spacing={2}
         >
-            {content && (
-              <Grid2 size={{ xs: 12, md: imageSrc ? 8 : 12 }}>{content}</Grid2>
-            )}
-            {iframeSrc && (
-              <Grid2
-                display="flex"
-                flexDirection="column"
-                justifyContent="start"
-                size={{ xs: 12, md: content ? 4 : 12 }}
-              >
-                <Box
-                  component="iframe"
-                  loading="lazy"
-                  src={iframeSrc}
-                  sx={{
-                    height: "57vh", // fits with Google Drive image height
-                    width: "100%",
-                    objectFit: "contain", // Maintain aspect ratio
-                  }}
-                />
-              </Grid2>
-            )}
-            {imageSrc && (
-              <Grid2
-                display="flex"
-                flexDirection="column"
-                justifyContent="start"
-                size={{ xs: 12, md: content ? 4 : 12 }}
-              >
-                <AnimatedImage
-                  src={imageSrc}
-                  alt={`${currentTitle}`}
-                  imageLink={imageLink}
-                  sx={{
-                    height: isHomePage ? "60vh" : "auto",
-                    width: "100%",
-                    objectFit: "contain", // Maintain aspect ratio
-                  }}
-                />
-              </Grid2>
-            )}
-          </Grid2>
-        </Box>
-      
+          {content && (
+            <Grid2 size={{ xs: 12, md: imageSrc ? 8 : 12 }}>{content}</Grid2>
+          )}
+          {iframeSrc && (
+            <Grid2
+              display="flex"
+              flexDirection="column"
+              justifyContent="start"
+              size={{ xs: 12, md: content ? 4 : 12 }}
+            >
+              <Box
+                component="iframe"
+                loading="lazy"
+                src={iframeSrc}
+                sx={{
+                  height: "57vh", // fits with Google Drive image height
+                  width: "100%",
+                  objectFit: "contain", // Maintain aspect ratio
+                }}
+              />
+            </Grid2>
+          )}
+          {imageSrc && (
+            <Grid2
+              display="flex"
+              flexDirection="column"
+              justifyContent="start"
+              size={{ xs: 12, md: content ? 4 : 12 }}
+            >
+              <AnimatedImage
+                src={imageSrc}
+                alt={`${currentAltText}`}
+                imageLink={imageLink}
+                sx={{
+                  height: isHomePage ? "60vh" : "auto",
+                  width: "100%",
+                  objectFit: "contain", // Maintain aspect ratio
+                }}
+              />
+            </Grid2>
+          )}
+        </Grid2>
+      </Box>
+
       {secondaryContent && (
         <Box
           sx={{
             opacity: secondaryVisible ? 1 : 0,
-            transform: secondaryVisible ? 'translateY(0)' : 'translateY(50px)',
-            transition: 'opacity 1s ease-in-out, transform 0.8s ease-out',
+            transform: secondaryVisible ? "translateY(0)" : "translateY(50px)",
+            transition: "opacity 1s ease-in-out, transform 0.8s ease-out",
             pt: 2,
           }}
         >
