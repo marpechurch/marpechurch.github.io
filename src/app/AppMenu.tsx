@@ -15,9 +15,8 @@ import {
 import {
   AutoAwesome as VisionIcon,
   ChildCare as KidsIcon,
-  Church as ChurchIcon,
+  ChurchOutlined as MarpeChurchIcon,
   DesignServices as YouthIcon,
-  Diversity3 as NextGenIcon,
   ExpandLess,
   ExpandMore,
   FormatListBulleted as ProgramIcon,
@@ -33,25 +32,39 @@ import {
 
 // Main menu structure with nested submenus
 const menuStructure = [
-  { url: "/church", title: "교회 소개", icon: <ChurchIcon /> },
-  { url: "/staff", title: "섬기는 이들", icon: <StaffIcon /> },
-  { url: "/denomination", title: "소속 교단", icon: <DenominationIcon /> },
-  { url: "/vision", title: "비전", icon: <VisionIcon /> },
+  {
+    title: "교회 소개",
+    submenu: [
+      { url: "/church", title: "마르페 교회", icon: <MarpeChurchIcon /> },
+      { url: "/staff", title: "섬기는 이들", icon: <StaffIcon /> },
+      { url: "/denomination", title: "소속 교단", icon: <DenominationIcon /> },
+      { url: "/vision", title: "비전", icon: <VisionIcon /> },
+      { url: "/directions", title: "오시는 길", icon: <DirectionsIcon /> },
+    ],
+  },
+  {
+    title: "예배 설교",
+    submenu: [
+      { url: "/sermons", title: "설교 말씀", icon: <SermonsIcon /> },
+      { url: "/program", title: "주보", icon: <ProgramIcon /> },
+      { url: "/offering", title: "헌금", icon: <OfferingIcon /> },
+      { url: "/worship", title: "찬양", icon: <WorshipIcon /> },
+    ],
+  },
   {
     title: "다음 세대",
-    icon: <NextGenIcon />,
     submenu: [
       { url: "/youth", title: 'Marpe Youth', icon: <YouthIcon /> },
       { url: "/kids", title: "마르페 키즈", icon: <KidsIcon /> },
     ],
   },
-  { url: "/directions", title: "오시는 길", icon: <DirectionsIcon /> },
-  { url: "/program", title: "주보", icon: <ProgramIcon /> },
-  { url: "/sermons", title: "설교 말씀", icon: <SermonsIcon /> },
-  { url: "/social", title: "인스타그램", icon: <SocialIcon /> },
-  { url: "/worship", title: "찬양", icon: <WorshipIcon /> },
-  { url: "/offering", title: "헌금", icon: <OfferingIcon /> },
-  { url: "/register", title: "교인 등록", icon: <RegisterIcon /> },
+  {
+    title: "교회 소식",
+    submenu: [
+      { url: "/social", title: "인스타그램", icon: <SocialIcon /> },
+      { url: "/register", title: "교인 등록", icon: <RegisterIcon /> },
+    ],
+  },
 ];
 
 interface AppMenuProps {
@@ -64,24 +77,7 @@ export default function AppMenu({ isOpen, toggleMenu }: AppMenuProps) {
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
-  interface ListItemLinkProps {
-    icon?: React.ReactElement<unknown>;
-    primary: string;
-    to: string;
-  }
 
-  function ListItemLink(props: ListItemLinkProps) {
-    const { icon, primary, to } = props;
-
-    return (
-      <ListItem disablePadding>
-        <ListItemButton component={RouterLink} to={to} onClick={() => toggleMenu()}>
-          {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
-          <ListItemText primary={primary} />
-        </ListItemButton>
-      </ListItem>
-    );
-  }
 
   function DrawerList() {
     return (
@@ -106,7 +102,6 @@ export default function AppMenu({ isOpen, toggleMenu }: AppMenuProps) {
                         setOpenSubmenu(isOpen ? null : item.title);
                       }}
                     >
-                      <ListItemIcon>{item.icon}</ListItemIcon>
                       <ListItemText primary={item.title} />
                       {isOpen ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
@@ -129,16 +124,6 @@ export default function AppMenu({ isOpen, toggleMenu }: AppMenuProps) {
                     </List>
                   </Collapse>
                 </Box>
-              );
-            } else {
-              // Regular menu item
-              return (
-                <ListItemLink
-                  key={item.url}
-                  icon={item.icon}
-                  primary={item.title}
-                  to={item.url}
-                />
               );
             }
           })}

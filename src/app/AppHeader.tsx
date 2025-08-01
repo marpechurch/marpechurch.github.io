@@ -14,8 +14,6 @@ import {
 
 import marpeLogo from "../assets/marpe-logo-bw.webp";
 
-
-
 import AppMenu from "./AppMenu";
 
 function AppHeader() {
