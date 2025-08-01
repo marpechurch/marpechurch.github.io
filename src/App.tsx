@@ -29,9 +29,6 @@ import AppBody from "./app/AppBody";
 import AppFooter from "./app/AppFooter";
 import AppHeader from "./app/AppHeader";
 
-import "./fonts/GmarketSansTTFBold.ttf";
-import "./fonts/GmarketSansTTFMedium.ttf";
-
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -73,12 +70,14 @@ export default function App() {
       },
     },
     typography: {
-      fontFamily: "'GmarketSansTTFMedium', Arial, sans-serif", // Use your custom font
+      fontFamily: "'GmarketSans', Arial, sans-serif", // Use unified font family
       body1: {
         lineHeight: 1.8, // Move lineHeight to h1 variant
+        fontWeight: 400, // Medium weight for body text
       },
       h1: {
-        fontFamily: "'GmarketSansTTFBold', Arial, sans-serif", // Use your custom font
+        fontFamily: "'GmarketSans', Arial, sans-serif", // Use unified font family
+        fontWeight: 700, // Bold weight for headings
         textAlign: "center",
       },
     },
@@ -103,7 +102,8 @@ export default function App() {
         styleOverrides: {
           root: {
             color: "#51a4d3", // Set a custom color for all links
-            fontFamily: "'GmarketSansTTFMedium', Arial, sans-serif", // Apply font to List
+            fontFamily: "'GmarketSans', Arial, sans-serif", // Apply font to List
+            fontWeight: 400, // Medium weight for links
             "&:hover": {
               color: "#66aac2",
               textDecoration: "underline", // Optional: Add underline on hover
@@ -114,7 +114,8 @@ export default function App() {
       MuiListItem: {
         styleOverrides: {
           root: {
-            fontFamily: "'GmarketSansTTFMedium', Arial, sans-serif", // Apply font to ListItem
+            fontFamily: "'GmarketSans', Arial, sans-serif", // Apply font to ListItem
+            fontWeight: 400, // Medium weight for list items
           },
         },
       },

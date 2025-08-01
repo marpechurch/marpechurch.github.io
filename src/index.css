@@ -67,16 +67,23 @@ button:focus-visible {
 }
 
 @font-face {
-  font-family: "GmarketSansTTFBold";
-  src: url("./fonts/GmarketSansTTFBold.ttf") format("truetype");
-  font-weight: 700; /* Bold */
+  font-family: "GmarketSans";
+  src: url("./fonts/GmarketSansTTFLight.ttf") format("truetype");
+  font-weight: 300; /* Light */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "GmarketSansTTFMedium";
+  font-family: "GmarketSans";
   src: url("./fonts/GmarketSansTTFMedium.ttf") format("truetype");
-  font-weight: 400; /* Regular */
+  font-weight: 400; /* Regular/Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSans";
+  src: url("./fonts/GmarketSansTTFBold.ttf") format("truetype");
+  font-weight: 700; /* Bold */
   font-style: normal;
 }
 
