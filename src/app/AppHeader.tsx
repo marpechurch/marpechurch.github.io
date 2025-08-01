@@ -17,10 +17,12 @@ import {
   useTheme,
 } from "@mui/material";
 
+import AppMenu from "./AppMenu";
+
 import bannerImage from "../assets/banner.webp";
 import marpeLogo from "../assets/marpe-logo-bw.webp";
 
-import AppMenu from "./AppMenu";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 // Import the same menu structure and icons from AppMenu
 import {
@@ -182,8 +184,6 @@ function HorizontalMenu() {
 
 function AppHeader() {
   const location = useLocation();
-  const pathnames = location.pathname.split("/").filter((x) => x);
-
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -213,7 +213,7 @@ function AppHeader() {
     };
   }, []);
 
-  const currentPath = `/${pathnames[pathnames.length - 1] ?? ""}`;
+  const currentPath = location.pathname;
 
   const headerTitleMap = {
     "/": "마르페 교회",
@@ -233,27 +233,6 @@ function AppHeader() {
 
   const currentTitle =
     headerTitleMap[currentPath as keyof typeof headerTitleMap] || "마르페 교회";
-
-  // Generate breadcrumbs based on current path
-  const generateBreadcrumbs = () => {
-    const breadcrumbs = ["HOME"];
-
-    if (pathnames.length > 0) {
-      // Add the main category based on current path
-      const mainCategory = menuStructure.find((item) =>
-        item.submenu.some((subItem) => subItem.url === currentPath)
-      );
-
-      if (mainCategory) {
-        breadcrumbs.push(mainCategory.title);
-      }
-
-      // Add the current page title
-      breadcrumbs.push(currentTitle);
-    }
-
-    return breadcrumbs.join(" / ");
-  };
 
   return (
     <Box sx={{ mb: 2 }}>
@@ -345,41 +324,7 @@ function AppHeader() {
       />
 
       {/* Breadcrumbs Section - Show on both desktop and mobile */}
-      <Box
-        sx={{
-          width: "100%",
-          backgroundColor: (theme) => theme.palette.header.breadcrumbs,
-          color: (theme) =>
-            theme.palette.mode === "dark" ? "white" : "black",
-          py: { xs: 0.5, md: 1 },
-          px: { xs: 2, md: 3 },
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        {/* Page title on the left */}
-        <Typography
-          variant="h6"
-          sx={{
-            fontWeight: "bold",
-            fontSize: { xs: "1.25rem", md: "1.5rem" },
-          }}
-        >
-          {currentTitle}
-        </Typography>
-
-        {/* Breadcrumbs on the right */}
-        <Typography
-          variant="body2"
-          sx={{
-            fontWeight: "medium",
-            fontSize: { xs: "0.75rem", md: "0.875rem" },
-          }}
-        >
-          {generateBreadcrumbs()}
-        </Typography>
-      </Box>
+      <Breadcrumbs currentTitle={currentTitle} />
 
       <AppMenu isOpen={isOpen} toggleMenu={handleToggleMenu} />
     </Box>
