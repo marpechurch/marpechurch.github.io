@@ -30,6 +30,17 @@ body {
   width: 100%;
 }
 
+#root {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+/* Debug styles to see what's happening */
+* {
+  box-sizing: border-box;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

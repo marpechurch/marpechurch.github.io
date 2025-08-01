@@ -1,5 +1,5 @@
 import "react";
-import { Container } from "@mui/material";
+import { Box } from "@mui/material";
 import {
   createTheme,
   responsiveFontSizes,
@@ -48,6 +48,15 @@ export default function App() {
   }, []);
 
   let theme = createTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536,
+      },
+    },
     palette: {
       primary: {
         main: "#fdf4b3",
@@ -73,6 +82,30 @@ export default function App() {
       },
     },
     components: {
+      MuiContainer: {
+        styleOverrides: {
+          root: {
+            width: "100%",
+            maxWidth: "100% !important",
+          },
+        },
+      },
+      MuiPaper: {
+        styleOverrides: {
+          root: {
+            marginLeft: 0,
+            marginRight: 0,
+            "@media (min-width: 900px)": {
+              marginLeft: 24,
+              marginRight: 24,
+            },
+            "@media (min-width: 1200px)": {
+              marginLeft: 32,
+              marginRight: 32,
+            },
+          },
+        },
+      },
       MuiLink: {
         styleOverrides: {
           root: {
@@ -106,14 +139,12 @@ export default function App() {
   theme = responsiveFontSizes(theme);
 
   return (
-    <Container
-      disableGutters
-      maxWidth={false}
+    <Box
       sx={{
         display: "flex",
         flexDirection: "column",
         height: "100vh",
-        minWidth: "100vw",
+        width: "100%",
         wordBreak: "keep-all",
       }}
     >
@@ -122,6 +153,6 @@ export default function App() {
         <AppBody />
         <AppFooter />
       </ThemeProvider>
-    </Container>
+    </Box>
   );
 }

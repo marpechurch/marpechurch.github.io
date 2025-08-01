@@ -97,15 +97,18 @@ function HorizontalMenu() {
   };
 
   return (
-    <Box sx={{ display: "flex", gap: 3 }}>
+    <Box sx={{ display: "flex", gap: 3, flexWrap: "nowrap", flex: 1, justifyContent: "flex-end", alignItems: "center" }}>
       {menuStructure.map((item) => (
-        <Box key={item.title}>
+        <Box key={item.title} sx={{ flex: "0 0 auto" }}>
           <Button
             color="inherit"
             onClick={(e) => handleMenuOpen(e, item.title)}
             sx={{
               textTransform: "none",
               fontSize: "16px",
+              whiteSpace: "nowrap",
+              minWidth: "fit-content",
+              px: 2,
               "&:hover": {
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
               },
@@ -248,25 +251,28 @@ function AppHeader() {
       <AppBar
         position="fixed"
         sx={{
-          zIndex: (theme) => ({
-            xs: theme.zIndex.drawer - 1, // Lower z-index for mobile
-            md: theme.zIndex.drawer + 1, // Higher z-index for desktop
-          }),
+          zIndex: (theme) => theme.zIndex.drawer + 1,
           backgroundColor: (theme) => theme.palette.header.topBar,
           color: (theme) =>
             theme.palette.header.topBar === "#242424" ? "white" : "black",
+          width: "100%",
+          left: 0,
+          right: 0,
         }}
       >
         <Toolbar
           sx={{
             alignItems: "center",
             display: "flex",
-            flex: "auto",
             gap: "8px",
             justifyContent: "space-between",
+            px: { xs: 2, sm: 3, md: 4, lg: 6, xl: 8 }, // Match container padding
+            width: "100%",
+            minWidth: "100%",
+            boxSizing: "border-box",
           }}
         >
-          <Box sx={{ alignItems: "center", display: "flex", gap: 2 }}>
+          <Box sx={{ alignItems: "center", display: "flex", gap: 2, flexShrink: 0 }}>
             <Link
               color="inherit"
               component={RouterLink}

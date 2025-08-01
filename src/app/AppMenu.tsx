@@ -141,6 +141,16 @@ export default function AppMenu({ isOpen, toggleMenu }: AppMenuProps) {
       open={isOpen}
       onClose={toggleMenu}
       variant="temporary"
+      sx={{
+        zIndex: (theme) => theme.zIndex.drawer + 2,
+        "& .MuiDrawer-paper": {
+          width: 220,
+          boxSizing: "border-box",
+          backgroundColor: (theme) => theme.palette.background.paper,
+          borderLeft: "1px solid",
+          borderColor: "divider",
+        },
+      }}
     >
       <DrawerList />
     </Drawer>
