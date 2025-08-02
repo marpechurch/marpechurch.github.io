@@ -28,16 +28,50 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding: 0;
   width: 100%;
+  /* Ensure proper mobile viewport handling */
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  /* Add bottom padding to prevent content from being cut off by mobile browser UI */
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 #root {
   width: 100%;
   min-width: 100%;
   max-width: 100%;
+  /* Ensure root element takes full height */
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  /* Add bottom padding for mobile browser UI */
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 * {
   box-sizing: border-box; /* fix mobile padding issue */
+}
+
+/* Mobile-specific adjustments for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  body {
+    min-height: -webkit-fill-available;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 60px); /* Extra space for browser UI */
+  }
+  
+  #root {
+    min-height: -webkit-fill-available;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 60px); /* Extra space for browser UI */
+  }
+}
+
+/* Additional mobile browser UI protection */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 80px);
+  }
+  
+  #root {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 80px);
+  }
 }
 
 button {

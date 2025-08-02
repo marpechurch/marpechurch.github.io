@@ -8,6 +8,16 @@ export default function AppFooter() {
         borderTop: "1px solid #ccc",
         fontSize: 12,
         padding: 1,
+        // Add substantial bottom padding only for mobile devices to prevent footer from being cut off by mobile browser UI
+        paddingBottom: { xs: 8, sm: 6, md: 1 }, // Extra padding on mobile, normal padding on desktop
+        // Alternative approach using safe-area-inset for iOS devices (mobile only)
+        "@supports (padding-bottom: env(safe-area-inset-bottom))": {
+          paddingBottom: { xs: "calc(2rem + env(safe-area-inset-bottom))", sm: "calc(1.5rem + env(safe-area-inset-bottom))", md: 1 },
+        },
+        // Additional mobile-specific adjustments (only for small screens)
+        "@media (max-width: 600px)": {
+          paddingBottom: "calc(3rem + env(safe-area-inset-bottom))",
+        },
       }}
     >
       <List sx={{ padding: 0 }}>
