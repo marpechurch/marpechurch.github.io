@@ -42,7 +42,7 @@ export default function Kids() {
           <Box
             sx={{ display: "flex", flexDirection: "column", gap: 1, flex: 1 }}
           >
-            <Typography>
+            <Typography component="div">
               <List>
                 <ListItem sx={{ fontSize: "h6.fontSize" }}>
                   마르페 키즈를 향한 약속의 말씀 ✝️
