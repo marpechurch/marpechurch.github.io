@@ -44,27 +44,25 @@ interface BreadcrumbsProps {
 function Breadcrumbs({ currentTitle }: BreadcrumbsProps) {
   const location = useLocation();
   const currentPath = location.pathname;
-  const pathnames = currentPath.split("/").filter((x) => x);
 
   // Generate breadcrumbs based on current path
   const generateBreadcrumbs = () => {
-    const breadcrumbs = ["HOME"];
-
-    if (pathnames.length > 0) {
-      // Add the main category based on current path
-      const mainCategory = menuStructure.find((item) =>
-        item.submenu.some((subItem) => subItem.url === currentPath)
-      );
-
-      if (mainCategory) {
-        breadcrumbs.push(mainCategory.title);
-      }
-
-      // Add the current page title
-      breadcrumbs.push(currentTitle);
+    // If we're on the home page, don't show any breadcrumbs
+    if (currentPath === "/") {
+      return "";
     }
 
-    return breadcrumbs.join(" / ");
+    // For other pages, find the main category and show "Category / Page Title"
+    const mainCategory = menuStructure.find((item) =>
+      item.submenu.some((subItem) => subItem.url === currentPath)
+    );
+
+    if (mainCategory) {
+      return `${mainCategory.title} / ${currentTitle}`;
+    }
+
+    // Fallback: just show the current title
+    return currentTitle;
   };
 
   return (
