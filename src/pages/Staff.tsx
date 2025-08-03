@@ -5,6 +5,14 @@ import mainPastorImg from "../assets/main-pastor.webp";
 import youthEMPastorImg from "../assets/youth-em-pastor.webp";
 import { Page } from "../components";
 
+const IMAGE_STYLE = {
+  borderRadius: "8px",
+  flexShrink: 0,
+  height: { xs: "375px", md: "500px" },
+  overflow: "hidden",
+  width: { xs: "300px", md: "400px" },
+};
+
 export default function Staff() {
   const content = (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
@@ -23,15 +31,7 @@ export default function Staff() {
             }}
           >
             {/* 목사님 사진 */}
-            <Box
-              sx={{
-                flexShrink: 0,
-                width: { xs: "400px", md: "500px" },
-                height: { xs: "400px", md: "500px" },
-                borderRadius: "8px",
-                overflow: "hidden",
-              }}
-            >
+            <Box sx={IMAGE_STYLE}>
               <Box
                 component="img"
                 src={mainPastorImg}
@@ -91,19 +91,7 @@ export default function Staff() {
             }}
           >
             {/* 전도사님 사진 */}
-            <Box
-              sx={{
-                flexShrink: 0,
-                width: { xs: "400px", md: "500px" },
-                height: { xs: "400px", md: "500px" },
-                borderRadius: "8px",
-                overflow: "hidden",
-                backgroundColor: "#f5f5f5",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+            <Box sx={IMAGE_STYLE}>
               <Box
                 component="img"
                 src={youthEMPastorImg}
