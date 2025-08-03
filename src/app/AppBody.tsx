@@ -11,10 +11,10 @@ function AppBody() {
         display: "flex",
         flex: 1,
         flexDirection: "column",
-        pb: { xs: 4, sm: 2 }, // Increased bottom padding on mobile
+        pb: 2,
         position: "relative",
         pt: 2, // Consistent padding top and bottom
-        px: { xs: 2, sm: 3, md: 4, lg: 8, xl: 12 }, // Responsive horizontal padding
+        px: { xs: 2, sm: 3, md: 5, lg: 10, xl: 20 }, // Responsive horizontal padding
       }}
     >
       <AppRoutes />
