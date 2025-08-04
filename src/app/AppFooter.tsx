@@ -1,15 +1,17 @@
 import "react";
 import { Box, Link, List, ListItem } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 export default function AppFooter() {
+  const theme = useTheme();
+  
   return (
     <Box
       sx={{
-        borderTop: "1px solid #ccc",
+        borderTop: `1px solid ${theme.palette.borders.light}`,
         fontSize: 12,
         padding: 1,
-        // Add substantial bottom padding only for mobile devices to prevent footer from being cut off by mobile browser UI
-        pb: { xs: 8, md: 1 }, // Extra padding on mobile, normal padding on desktop
+        pb: 1
       }}
     >
       <List sx={{ padding: 0 }}>

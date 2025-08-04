@@ -58,7 +58,7 @@ export default function Offering() {
               size="small"
               sx={{
                 backgroundColor: theme.palette.primary.dark,
-                color: "#fff",
+                color: theme.palette.backgrounds.white,
                 fontWeight: 700,
                 boxShadow: 1,
                 border: `1px solid ${theme.palette.primary.dark}`,
@@ -155,7 +155,7 @@ export default function Offering() {
               width: { xs: "100%", md: "1px" },
               minWidth: { xs: 0, md: "1px" },
               height: { xs: "1px", md: "auto" },
-              backgroundColor: "rgba(0,0,0,0.12)",
+              backgroundColor: theme.palette.borders.divider,
               borderRadius: 1,
               alignSelf: { xs: "center", md: "stretch" },
               my: { xs: 2, md: 0 },

@@ -121,7 +121,7 @@ function HorizontalMenu() {
               minWidth: "fit-content",
               px: 2,
               "&:hover": {
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                backgroundColor: theme.palette.backgrounds.hover,
               },
             }}
           >
@@ -143,7 +143,7 @@ function HorizontalMenu() {
               sx: {
                 mt: 1,
                 minWidth: 200,
-                boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
+                boxShadow: theme.palette.shadows.dark,
               },
             }}
           >
@@ -155,10 +155,10 @@ function HorizontalMenu() {
                 onClick={() => handleMenuClose(item.title)}
                 sx={{
                   backgroundColor: isActive(subItem.url)
-                    ? "rgba(25, 118, 210, 0.08)"
+                    ? theme.palette.backgrounds.menuActive
                     : "transparent",
                   "&:hover": {
-                    backgroundColor: "rgba(25, 118, 210, 0.04)",
+                    backgroundColor: theme.palette.backgrounds.menuHover,
                   },
                 }}
               >

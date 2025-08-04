@@ -7,7 +7,7 @@ import {
 } from "@mui/material/styles";
 import { useState, useEffect } from "react";
 
-// Extend the theme to include custom header colors
+// Extend the theme to include custom colors
 declare module "@mui/material/styles" {
   interface Palette {
     header: {
@@ -15,12 +15,52 @@ declare module "@mui/material/styles" {
       breadcrumbs: string;
       purple: string;
     };
+    borders: {
+      light: string;
+      divider: string;
+    };
+    backgrounds: {
+      white: string;
+      hover: string;
+      menuActive: string;
+      menuHover: string;
+    };
+    shadows: {
+      light: string;
+      medium: string;
+      dark: string;
+    };
+    custom: {
+      instagram: {
+        linkColor: string;
+      };
+    };
   }
   interface PaletteOptions {
     header?: {
       topBar: string;
       breadcrumbs: string;
       purple: string;
+    };
+    borders?: {
+      light: string;
+      divider: string;
+    };
+    backgrounds?: {
+      white: string;
+      hover: string;
+      menuActive: string;
+      menuHover: string;
+    };
+    shadows?: {
+      light: string;
+      medium: string;
+      dark: string;
+    };
+    custom?: {
+      instagram: {
+        linkColor: string;
+      };
     };
   }
 }
@@ -67,6 +107,30 @@ export default function App() {
         topBar: isDarkMode ? "#242424" : "#ffffff", // Same as main content background in dark mode, white in light mode
         breadcrumbs: isDarkMode ? "#a8c3cd" : "#e3f2fd", // Darker blue in dark mode, light blue in light mode
         purple: "#673ab7", // Purple (original breadcrumbs color)
+      },
+      // Border colors
+      borders: {
+        light: "#ccc", // Light gray border (used in footer)
+        divider: "rgba(0,0,0,0.12)", // Subtle divider color
+      },
+      // Background colors
+      backgrounds: {
+        white: "#ffffff", // Pure white background
+        hover: "rgba(255, 255, 255, 0.1)", // Light hover background
+        menuActive: "rgba(25, 118, 210, 0.08)", // Active menu item background
+        menuHover: "rgba(25, 118, 210, 0.04)", // Hover menu item background
+      },
+      // Shadow colors
+      shadows: {
+        light: "rgba(0,0,0,0.15)", // Light shadow
+        medium: "rgba(0,0,0,0.5)", // Medium shadow
+        dark: "0 4px 20px rgba(0,0,0,0.15)", // Full shadow definition
+      },
+      // Custom component colors
+      custom: {
+        instagram: {
+          linkColor: "#c9c8cd", // Instagram link color
+        },
       },
     },
     typography: {

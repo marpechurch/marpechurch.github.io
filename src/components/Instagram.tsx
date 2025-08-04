@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Box } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 // Extend the Window interface to include the 'instgrm' property
 declare global {
@@ -17,6 +18,8 @@ interface InstagramProps {
 }
 
 export default function Instagram({ url }: InstagramProps) {
+  const theme = useTheme();
+  
   useEffect(() => {
     // Dynamically load the Instagram embed script
     const script = document.createElement("script");
@@ -43,9 +46,9 @@ export default function Instagram({ url }: InstagramProps) {
         alignItems: "center",
         gap: 2,
         padding: 2,
-        backgroundColor: "#FFF",
+        backgroundColor: theme.palette.backgrounds.white,
         borderRadius: 2,
-        boxShadow: "0 0 1px rgba(0,0,0,0.5), 0 1px 10px rgba(0,0,0,0.15)",
+        boxShadow: `0 0 1px ${theme.palette.shadows.medium}, 0 1px 10px ${theme.palette.shadows.light}`,
         maxWidth: 500,
         margin: "0 auto",
       }}
@@ -55,10 +58,10 @@ export default function Instagram({ url }: InstagramProps) {
         data-instgrm-permalink={url}
         data-instgrm-version="14"
         style={{
-          background: "#FFF",
+          background: theme.palette.backgrounds.white,
           border: "0",
           borderRadius: "3px",
-          boxShadow: "0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)",
+          boxShadow: `0 0 1px 0 ${theme.palette.shadows.medium}, 0 1px 10px 0 ${theme.palette.shadows.light}`,
           margin: "1px",
           maxWidth: "540px",
           minWidth: "326px",
@@ -71,7 +74,7 @@ export default function Instagram({ url }: InstagramProps) {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            color: "#c9c8cd",
+            color: theme.palette.custom.instagram.linkColor,
             textDecoration: "none",
           }}
         >
