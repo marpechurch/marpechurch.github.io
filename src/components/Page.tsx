@@ -30,7 +30,7 @@ export default function Page({
     "/denomination": "소속 교단",
     "/vision": "비전",
     "/youth": "Marpe Youth",
-    "/kids": "마르페 키즈",
+    "/kids": "Marpe Kids",
     "/directions": "오시는 길",
     "/program": "주보",
     "/sermons": "설교 말씀",

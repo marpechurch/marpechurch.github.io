@@ -25,7 +25,7 @@ const menuStructure = [
     title: "다음 세대",
     submenu: [
       { url: "/youth", title: "Marpe Youth" },
-      { url: "/kids", title: "마르페 키즈" },
+      { url: "/kids", title: "Marpe Kids" },
     ],
   },
   {

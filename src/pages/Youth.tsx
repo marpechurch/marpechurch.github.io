@@ -8,8 +8,19 @@ export default function Youth() {
   const content = (
     <Paper elevation={1} sx={{ p: { xs: 1.5, md: 3 } }}>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-        <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
-          "LPD" - Lovely, Pure, Dependable
+        <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+          Marpe Youth "LPD"
+        </Typography>
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            mb: 2, 
+            fontFamily: "Arial, sans-serif",
+            fontStyle: "italic",
+            fontWeight: "normal"
+          }}
+        >
+          Lovely, Pure, Dependable
         </Typography>
 
         <Box

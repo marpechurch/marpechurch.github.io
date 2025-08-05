@@ -29,7 +29,7 @@ export default function Kids() {
             <Box
               component="img"
               src={kidsImg}
-              alt="마르페 키즈"
+              alt="Marpe Kids"
               sx={{
                 width: "100%",
                 height: "100%",
@@ -44,6 +44,15 @@ export default function Kids() {
           >
             <Typography component="div">
               <List>
+                <ListItem
+                  sx={{
+                    fontFamily: "Arial, sans-serif",
+                    fontStyle: "italic",
+                    fontWeight: "normal",
+                  }}
+                >
+                  Marpe Kids (coming soon)
+                </ListItem>
                 <ListItem sx={{ fontSize: "h6.fontSize" }}>
                   마르페 키즈를 향한 약속의 말씀 ✝️
                 </ListItem>
@@ -79,9 +88,6 @@ export default function Kids() {
                   </List>
                 </ListItem>
                 <ListItem>마르페 키즈로 어린이들을 초대합니다 💒</ListItem>
-                <ListItem sx={{ fontWeight: 700 }}>
-                  예배: 주일 오후 2시
-                </ListItem>
               </List>
             </Typography>
           </Box>

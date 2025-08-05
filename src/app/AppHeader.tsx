@@ -64,7 +64,7 @@ const menuStructure = [
     title: "다음 세대",
     submenu: [
       { url: "/youth", title: "Marpe Youth", icon: <YouthIcon /> },
-      { url: "/kids", title: "마르페 키즈", icon: <KidsIcon /> },
+      { url: "/kids", title: "Marpe Kids", icon: <KidsIcon /> },
     ],
   },
   {
@@ -78,6 +78,7 @@ const menuStructure = [
 
 // Horizontal menu component for desktop
 function HorizontalMenu() {
+  const theme = useTheme();
   const [anchorEl, setAnchorEl] = useState<{
     [key: string]: HTMLElement | null;
   }>({});
@@ -221,7 +222,7 @@ function AppHeader() {
     "/denomination": "소속 교단",
     "/vision": "비전",
     "/youth": "Marpe Youth",
-    "/kids": "마르페 키즈 (coming soon)",
+    "/kids": "Marpe Kids",
     "/directions": "오시는 길",
     "/program": "주보",
     "/sermons": "설교 말씀",
