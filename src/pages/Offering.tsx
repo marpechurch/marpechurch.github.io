@@ -31,14 +31,14 @@ export default function Offering() {
         </Typography>
         <Typography
           variant="body1"
-          sx={{ mb: { xs: 1, md: 2 }, color: "text.secondary" }}
+          sx={{ mb: { xs: 1, md: 2 } }}
         >
           헌금을 해주실 때 헌금 하시는 성도님들의 이름과, 헌금 종류 또한 아래와
           같이 적어주시면 감사하겠습니다.
         </Typography>
         <Typography
           variant="body2"
-          sx={{ mb: { xs: 1, md: 2 }, color: "text.secondary" }}
+          sx={{ mb: { xs: 1, md: 2 } }}
         >
           (예: "Joseph Kim, Mary Park: Sunday")
         </Typography>
@@ -103,7 +103,7 @@ export default function Offering() {
             <Typography variant="subtitle1" sx={{ mb: 0, fontWeight: "bold" }}>
               Zelle
             </Typography>
-            <Typography variant="body2" sx={{ color: "text.secondary" }}>
+            <Typography variant="body2">
               Marpe Church
               <br />
               marpechurch&#8203;@gmail.com
@@ -138,7 +138,7 @@ export default function Offering() {
                   variant="body2"
                   sx={{
                     textAlign: "center",
-                    color: "text.secondary",
+
                     fontSize: "0.875rem",
                   }}
                 >
@@ -176,7 +176,7 @@ export default function Offering() {
             <Typography variant="subtitle1" sx={{ mb: 0, fontWeight: "bold" }}>
               Tithe.ly
             </Typography>
-            <Typography variant="body2" sx={{ color: "text.secondary" }}>
+            <Typography variant="body2">
               Marpe Church
               <br />9 Archer Dr, Woburn, MA, 01801
             </Typography>
@@ -210,7 +210,7 @@ export default function Offering() {
                   variant="body2"
                   sx={{
                     textAlign: "center",
-                    color: "text.secondary",
+
                     fontSize: "0.875rem",
                   }}
                 >
@@ -231,10 +231,10 @@ export default function Offering() {
           수표 헌금
         </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          <Typography variant="body2">
             <strong>Pay to:</strong> Marpe church
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          <Typography variant="body2">
             <strong>Address:</strong> 9 Archer Dr, Woburn, MA, 01801
           </Typography>
         </Box>
