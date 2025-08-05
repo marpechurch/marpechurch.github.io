@@ -4,14 +4,7 @@ import { Box, List, ListItem, Typography, Paper } from "@mui/material";
 import mainPastorImg from "../assets/main-pastor.webp";
 import youthEMPastorImg from "../assets/youth-em-pastor.webp";
 import { Page } from "../components";
-
-const IMAGE_STYLE = {
-  borderRadius: "8px",
-  flexShrink: 0,
-  height: { xs: "375px", md: "500px" },
-  overflow: "hidden",
-  width: { xs: "300px", md: "400px" },
-};
+import { RECTANGLE_IMAGE_STYLE } from "../utils/constants";
 
 export default function Staff() {
   const content = (
@@ -31,7 +24,7 @@ export default function Staff() {
             }}
           >
             {/* 목사님 사진 */}
-            <Box sx={IMAGE_STYLE}>
+            <Box sx={RECTANGLE_IMAGE_STYLE}>
               <Box
                 component="img"
                 src={mainPastorImg}
@@ -91,7 +84,7 @@ export default function Staff() {
             }}
           >
             {/* 전도사님 사진 */}
-            <Box sx={IMAGE_STYLE}>
+            <Box sx={RECTANGLE_IMAGE_STYLE}>
               <Box
                 component="img"
                 src={youthEMPastorImg}

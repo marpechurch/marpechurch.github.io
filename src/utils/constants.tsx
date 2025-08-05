@@ -30,3 +30,20 @@ export const WORSHIP_PLAYLIST =
 // Zelle Links
 export const ZELLE =
   "https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiTUFSUEUgQ0hVUkNIIiwidG9rZW4iOiJtYXJwZWNodXJjaEBnbWFpbC5jb20ifQ==";
+
+// Image styling constants
+export const RECTANGLE_IMAGE_STYLE = {
+  borderRadius: "8px",
+  flexShrink: 0,
+  height: { xs: "375px", md: "500px" },
+  overflow: "hidden",
+  width: { xs: "300px", md: "400px" },
+};
+
+export const SQUARE_IMAGE_STYLE = {
+  borderRadius: "8px",
+  flexShrink: 0,
+  height: { xs: "300px", md: "400px" },
+  overflow: "hidden",
+  width: { xs: "300px", md: "400px" },
+};

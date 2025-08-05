@@ -3,6 +3,7 @@ import { Box, Link, Typography, Paper } from "@mui/material";
 
 import churchImg from "../assets/church.webp";
 import { Page } from "../components";
+import { SQUARE_IMAGE_STYLE } from "../utils/constants";
 
 export default function Home() {
   const content = (
@@ -30,15 +31,7 @@ export default function Home() {
             }}
           >
             {/* 교회 사진 */}
-            <Box
-              sx={{
-                flexShrink: 0,
-                width: { xs: "300px", md: "400px" },
-                height: { xs: "300px", md: "400px" },
-                borderRadius: "8px",
-                overflow: "hidden",
-              }}
-            >
+            <Box sx={SQUARE_IMAGE_STYLE}>
               <Box
                 component="img"
                 src={churchImg}

@@ -6,6 +6,7 @@ import {
   CMA_IMAGE,
   DENOMINATION_ENGLISH,
   DENOMINATION_KOREAN,
+  SQUARE_IMAGE_STYLE,
 } from "../utils/constants";
 
 export default function Denomination() {
@@ -21,15 +22,7 @@ export default function Denomination() {
           }}
         >
           {/* C&MA 교단 이미지 */}
-          <Box
-            sx={{
-              flexShrink: 0,
-              width: { xs: "400px", md: "500px" },
-              height: { xs: "400px", md: "500px" },
-              borderRadius: "8px",
-              overflow: "hidden",
-            }}
-          >
+          <Box sx={SQUARE_IMAGE_STYLE}>
             <Box
               component="img"
               src={CMA_IMAGE}

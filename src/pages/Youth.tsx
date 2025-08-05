@@ -3,6 +3,7 @@ import { Box, Typography, Paper } from "@mui/material";
 
 import lpdImg from "../assets/lpd.webp";
 import { Page } from "../components";
+import { RECTANGLE_IMAGE_STYLE } from "../utils/constants";
 
 export default function Youth() {
   const content = (
@@ -11,13 +12,13 @@ export default function Youth() {
         <Typography variant="h4" sx={{ fontWeight: "bold" }}>
           Marpe Youth "LPD"
         </Typography>
-        <Typography 
-          variant="h6" 
-          sx={{ 
-            mb: 2, 
+        <Typography
+          variant="h6"
+          sx={{
+            mb: 2,
             fontFamily: "Arial, sans-serif",
             fontStyle: "italic",
-            fontWeight: "normal"
+            fontWeight: "normal",
           }}
         >
           Lovely, Pure, Dependable
@@ -32,22 +33,15 @@ export default function Youth() {
           }}
         >
           {/* LPD 이미지 */}
-          <Box
-            sx={{
-              flexShrink: 0,
-              width: { xs: "300px", md: "400px" },
-              borderRadius: "8px",
-              overflow: "hidden",
-            }}
-          >
+          <Box sx={RECTANGLE_IMAGE_STYLE}>
             <Box
               component="img"
               src={lpdImg}
               alt="LPD - Lovely, Pure, Dependable"
               sx={{
                 width: "100%",
-                height: "auto",
-                display: "block",
+                height: "100%",
+                objectFit: "cover",
               }}
             />
           </Box>
