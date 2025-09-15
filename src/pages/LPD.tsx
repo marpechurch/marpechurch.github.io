@@ -5,12 +5,12 @@ import lpdImg from "../assets/lpd.webp";
 import { Page } from "../components";
 import { RECTANGLE_IMAGE_STYLE } from "../utils/constants";
 
-export default function Youth() {
+export default function LPD() {
   const content = (
     <Paper elevation={1} sx={{ p: { xs: 1.5, md: 3 } }}>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
         <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-          Marpe Youth "LPD"
+          LPD
         </Typography>
         <Typography
           variant="h6"

@@ -14,8 +14,7 @@ import {
 } from "@mui/material";
 import {
   AutoAwesome as VisionIcon,
-  ChildCare as KidsIcon,
-  DesignServices as YouthIcon,
+  DesignServices as LPDIcon,
   ExpandLess,
   ExpandMore,
   FormatListBulleted as ProgramIcon,
@@ -50,10 +49,9 @@ const menuStructure = [
     ],
   },
   {
-    title: "다음 세대",
+    title: "English Ministry",
     submenu: [
-      { url: "/youth", title: 'Marpe Youth', icon: <YouthIcon /> },
-      { url: "/kids", title: "Marpe Kids", icon: <KidsIcon /> },
+      { url: "/lpd", title: 'LPD', icon: <LPDIcon /> },
     ],
   },
   {

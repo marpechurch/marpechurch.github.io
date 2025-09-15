@@ -2,7 +2,7 @@ import "react";
 import { Box, List, ListItem, Typography, Paper } from "@mui/material";
 
 import mainPastorImg from "../assets/main-pastor.webp";
-import youthEMPastorImg from "../assets/youth-em-pastor.webp";
+import emPastorImg from "../assets/em-pastor.webp";
 import { Page } from "../components";
 import { RECTANGLE_IMAGE_STYLE } from "../utils/constants";
 
@@ -73,7 +73,7 @@ export default function Staff() {
       <Paper elevation={1} sx={{ p: { xs: 1.5, md: 3 } }}>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-            정병천 전도사 (Roy Jeong, Youth/EM Pastor)
+            정병천 전도사 (Roy Jeong, EM Pastor)
           </Typography>
           <Box
             sx={{
@@ -87,8 +87,8 @@ export default function Staff() {
             <Box sx={RECTANGLE_IMAGE_STYLE}>
               <Box
                 component="img"
-                src={youthEMPastorImg}
-                alt="정병천 전도사 (Roy Jeong, Youth/EM Pastor)"
+                src={emPastorImg}
+                alt="정병천 전도사 (Roy Jeong, EM Pastor)"
                 sx={{
                   width: "100%",
                   height: "100%",
@@ -101,6 +101,7 @@ export default function Staff() {
             <Box
               sx={{ display: "flex", flexDirection: "column", gap: 1, flex: 1 }}
             >
+              {/* TODO: 전도사님 소개글 업뎃하기 */}
               <Typography>
                 Hello! My name is Roy Jeong, and I serve as the youth pastor at
                 Marpe Church. Our Youth Group is called “LPD” which stands for

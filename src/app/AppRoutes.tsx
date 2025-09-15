@@ -5,7 +5,7 @@ import {
   Denomination,
   Directions,
   Home,
-  Kids,
+  LPD,
   Offering,
   Staff,
   Program,
@@ -14,7 +14,6 @@ import {
   Social,
   Vision,
   Worship,
-  Youth,
 } from "../pages/index.tsx";
 
 function AppRoutes() {
@@ -24,8 +23,7 @@ function AppRoutes() {
       <Route path="/staff" element={<Staff />} />
       <Route path="/denomination" element={<Denomination />} />
       <Route path="/vision" element={<Vision />} />
-      <Route path="/youth" element={<Youth />} />
-      <Route path="/kids" element={<Kids />} />
+      <Route path="/lpd" element={<LPD />} />
       <Route path="/directions" element={<Directions />} />
       <Route path="/program" element={<Program />} />
       <Route path="/sermons" element={<Sermons />} />

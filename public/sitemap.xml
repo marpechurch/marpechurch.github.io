@@ -22,12 +22,7 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.marpechurch.org/#/youth</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.marpechurch.org/#/kids</loc>
+      <loc>https://www.marpechurch.org/#/lpd</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>

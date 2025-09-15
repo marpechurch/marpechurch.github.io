@@ -27,8 +27,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 // Import the same menu structure and icons from AppMenu
 import {
   AutoAwesome as VisionIcon,
-  ChildCare as KidsIcon,
-  DesignServices as YouthIcon,
+  DesignServices as LPDIcon,
   FormatListBulleted as ProgramIcon,
   HistoryEdu as RegisterIcon,
   Instagram as SocialIcon,
@@ -61,10 +60,9 @@ const menuStructure = [
     ],
   },
   {
-    title: "다음 세대",
+    title: "English Ministry",
     submenu: [
-      { url: "/youth", title: "Marpe Youth", icon: <YouthIcon /> },
-      { url: "/kids", title: "Marpe Kids", icon: <KidsIcon /> },
+      { url: "/lpd", title: "LPD", icon: <LPDIcon /> },
     ],
   },
   {
@@ -221,8 +219,7 @@ function AppHeader() {
     "/staff": "섬기는 이들",
     "/denomination": "소속 교단",
     "/vision": "비전",
-    "/youth": "Marpe Youth",
-    "/kids": "Marpe Kids",
+    "/lpd": "LPD",
     "/directions": "오시는 길",
     "/program": "주보",
     "/sermons": "설교 말씀",

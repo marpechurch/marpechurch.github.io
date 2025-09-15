@@ -1,13 +1,12 @@
 export { default as Denomination } from "./Denomination";
 export { default as Directions } from "./Directions";
 export { default as Home } from "./Home";
-export { default as Kids } from "./Kids";
+export { default as LPD } from "./LPD";
 export { default as Offering } from "./Offering";
-export { default as Staff } from "./Staff";
 export { default as Program } from "./Program";
 export { default as Register } from "./Register";
 export { default as Sermons } from "./Sermons";
 export { default as Social } from "./Social";
+export { default as Staff } from "./Staff";
 export { default as Vision } from "./Vision";
 export { default as Worship } from "./Worship";
-export { default as Youth } from "./Youth";

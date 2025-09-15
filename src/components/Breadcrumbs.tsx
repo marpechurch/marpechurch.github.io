@@ -22,10 +22,9 @@ const menuStructure = [
     ],
   },
   {
-    title: "다음 세대",
+    title: "English Ministry",
     submenu: [
-      { url: "/youth", title: "Marpe Youth" },
-      { url: "/kids", title: "Marpe Kids" },
+      { url: "/lpd", title: "LPD" },
     ],
   },
   {
