@@ -103,8 +103,8 @@ export default function Staff() {
             >
               {/* TODO: 전도사님 소개글 업뎃하기 */}
               <Typography>
-                Hello! My name is Roy Jeong, and I serve as the youth pastor at
-                Marpe Church. Our Youth Group is called “LPD” which stands for
+                Hello! My name is Roy Jeong, and I serve as the English Ministry pastor at
+                Marpe Church. Our English Ministry is called “LPD” which stands for
                 the things we as a body of Christ seek to be - lovely, pure, and
                 dependable for one another. I’d love to get to know you, worship
                 with you, and talk about how God is so great and so good to us!
