@@ -1,37 +1,38 @@
 import { Box, Typography } from "@mui/material";
 import { useLocation } from "react-router";
+import { useTranslation } from "react-i18next";
 
 // Main menu structure with nested submenus (same as AppMenu)
-const menuStructure = [
+const getMenuStructure = (t: (key: string) => string) => [
   {
-    title: "교회 소개",
+    title: t("navigation.introduction"),
     submenu: [
-      { url: "/staff", title: "섬기는 이들" },
-      { url: "/denomination", title: "소속 교단" },
-      { url: "/vision", title: "비전" },
-      { url: "/directions", title: "오시는 길" },
+      { url: "/staff", title: t("navigation.staff") },
+      { url: "/denomination", title: t("navigation.denomination") },
+      { url: "/vision", title: t("navigation.vision") },
+      { url: "/directions", title: t("navigation.directions") },
     ],
   },
   {
-    title: "예배 설교",
+    title: t("navigation.service"),
     submenu: [
-      { url: "/sermons", title: "설교 말씀" },
-      { url: "/program", title: "주보" },
-      { url: "/offering", title: "헌금" },
-      { url: "/worship", title: "찬양" },
+      { url: "/sermons", title: t("navigation.sermons") },
+      { url: "/program", title: t("navigation.worshipBulletin") },
+      { url: "/offering", title: t("navigation.offering") },
+      { url: "/worship", title: t("navigation.sundayPlaylist") },
     ],
   },
   {
-    title: "English Ministry",
+    title: t("navigation.englishMinistry"),
     submenu: [
-      { url: "/lpd", title: "LPD" },
+      { url: "/lpd", title: t("navigation.lpd") },
     ],
   },
   {
-    title: "교회 소식",
+    title: t("navigation.news"),
     submenu: [
-      { url: "/social", title: "인스타그램" },
-      { url: "/register", title: "교인 등록" },
+      { url: "/social", title: t("navigation.social") },
+      { url: "/register", title: t("navigation.register") },
     ],
   },
 ];
@@ -42,7 +43,9 @@ interface BreadcrumbsProps {
 
 function Breadcrumbs({ currentTitle }: BreadcrumbsProps) {
   const location = useLocation();
+  const { t } = useTranslation();
   const currentPath = location.pathname;
+  const menuStructure = getMenuStructure(t);
 
   // Generate breadcrumbs based on current path
   const generateBreadcrumbs = () => {

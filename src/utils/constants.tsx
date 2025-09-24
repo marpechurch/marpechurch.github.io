@@ -47,3 +47,6 @@ export const SQUARE_IMAGE_STYLE = {
   overflow: "hidden",
   width: { xs: "300px", md: "400px" },
 };
+
+// Menu styling constants
+export const MENU_WIDTH = 150;

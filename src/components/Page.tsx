@@ -92,9 +92,17 @@ export default function Page({
                 loading="lazy"
                 src={iframeSrc}
                 sx={{
-                  height: "57vh", // fits with Google Drive image height
+                  height: { 
+                    xs: "50vh", 
+                    sm: "60vh", 
+                    md: "70vh", 
+                    lg: "75vh" 
+                  },
                   width: "100%",
-                  objectFit: "contain", // Maintain aspect ratio
+                  border: 0,
+                  borderRadius: 1,
+                  minHeight: "400px",
+                  maxHeight: "90vh",
                 }}
               />
             </Grid2>

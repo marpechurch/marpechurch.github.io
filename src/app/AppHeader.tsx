@@ -16,6 +16,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 import AppMenu from "./AppMenu";
 
@@ -23,6 +24,8 @@ import bannerImage from "../assets/banner.webp";
 import marpeLogo from "../assets/marpe-logo-bw.webp";
 
 import Breadcrumbs from "../components/Breadcrumbs";
+import LanguageSwitcher from "../components/LanguageSwitcher";
+import { MENU_WIDTH } from "../utils/constants";
 
 // Import the same menu structure and icons from AppMenu
 import {
@@ -40,36 +43,36 @@ import {
 } from "@mui/icons-material";
 
 // Main menu structure with nested submenus (same as AppMenu)
-const menuStructure = [
+const getMenuStructure = (t: (key: string) => string) => [
   {
-    title: "교회 소개",
+    title: t("navigation.introduction"),
     submenu: [
-      { url: "/staff", title: "섬기는 이들", icon: <StaffIcon /> },
-      { url: "/denomination", title: "소속 교단", icon: <DenominationIcon /> },
-      { url: "/vision", title: "비전", icon: <VisionIcon /> },
-      { url: "/directions", title: "오시는 길", icon: <DirectionsIcon /> },
+      { url: "/staff", title: t("navigation.staff"), icon: <StaffIcon /> },
+      { url: "/denomination", title: t("navigation.denomination"), icon: <DenominationIcon /> },
+      { url: "/vision", title: t("navigation.vision"), icon: <VisionIcon /> },
+      { url: "/directions", title: t("navigation.directions"), icon: <DirectionsIcon /> },
     ],
   },
   {
-    title: "예배 설교",
+    title: t("navigation.service"),
     submenu: [
-      { url: "/sermons", title: "설교 말씀", icon: <SermonsIcon /> },
-      { url: "/program", title: "주보", icon: <ProgramIcon /> },
-      { url: "/offering", title: "헌금", icon: <OfferingIcon /> },
-      { url: "/worship", title: "찬양", icon: <WorshipIcon /> },
+      { url: "/sermons", title: t("navigation.sermons"), icon: <SermonsIcon /> },
+      { url: "/program", title: t("navigation.worshipBulletin"), icon: <ProgramIcon /> },
+      { url: "/offering", title: t("navigation.offering"), icon: <OfferingIcon /> },
+      { url: "/worship", title: t("navigation.sundayPlaylist"), icon: <WorshipIcon /> },
     ],
   },
   {
-    title: "English Ministry",
+    title: t("navigation.englishMinistry"),
     submenu: [
-      { url: "/lpd", title: "LPD", icon: <LPDIcon /> },
+      { url: "/lpd", title: t("navigation.lpd"), icon: <LPDIcon /> },
     ],
   },
   {
-    title: "교회 소식",
+    title: t("navigation.news"),
     submenu: [
-      { url: "/social", title: "인스타그램", icon: <SocialIcon /> },
-      { url: "/register", title: "교인 등록", icon: <RegisterIcon /> },
+      { url: "/social", title: t("navigation.social"), icon: <SocialIcon /> },
+      { url: "/register", title: t("navigation.register"), icon: <RegisterIcon /> },
     ],
   },
 ];
@@ -77,10 +80,13 @@ const menuStructure = [
 // Horizontal menu component for desktop
 function HorizontalMenu() {
   const theme = useTheme();
+  const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<{
     [key: string]: HTMLElement | null;
   }>({});
   const location = useLocation();
+  
+  const menuStructure = getMenuStructure(t);
 
   const handleMenuOpen = (
     event: React.MouseEvent<HTMLElement>,
@@ -101,7 +107,7 @@ function HorizontalMenu() {
     <Box
       sx={{
         display: "flex",
-        gap: 3,
+        gap: 1.5,
         flexWrap: "nowrap",
         flex: 1,
         justifyContent: "flex-end",
@@ -138,11 +144,13 @@ function HorizontalMenu() {
               vertical: "top",
               horizontal: "left",
             }}
-            PaperProps={{
-              sx: {
-                mt: 1,
-                minWidth: 200,
-                boxShadow: theme.palette.shadows.dark,
+            slotProps={{
+              paper: {
+                sx: {
+                  mt: 1,
+                  minWidth: MENU_WIDTH,
+                  boxShadow: theme.palette.shadows.dark,
+                },
               },
             }}
           >
@@ -184,6 +192,7 @@ function HorizontalMenu() {
 function AppHeader() {
   const location = useLocation();
   const theme = useTheme();
+  const { t } = useTranslation();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const [isOpen, setIsOpen] = useState(false);
@@ -215,22 +224,22 @@ function AppHeader() {
   const currentPath = location.pathname;
 
   const headerTitleMap = {
-    "/": "마르페 교회",
-    "/staff": "섬기는 이들",
-    "/denomination": "소속 교단",
-    "/vision": "비전",
-    "/lpd": "LPD",
-    "/directions": "오시는 길",
-    "/program": "주보",
-    "/sermons": "설교 말씀",
-    "/social": "인스타그램",
-    "/worship": "찬양",
-    "/offering": "헌금",
-    "/register": "교인 등록",
+    "/": t("common.churchName"),
+    "/staff": t("navigation.staff"),
+    "/denomination": t("navigation.denomination"),
+    "/vision": t("navigation.vision"),
+    "/lpd": t("navigation.lpd"),
+    "/directions": t("navigation.directions"),
+    "/program": t("navigation.worshipBulletin"),
+    "/sermons": t("navigation.sermons"),
+    "/social": t("navigation.social"),
+    "/worship": t("navigation.sundayPlaylist"),
+    "/offering": t("navigation.offering"),
+    "/register": t("navigation.register"),
   };
 
   const currentTitle =
-    headerTitleMap[currentPath as keyof typeof headerTitleMap] || "마르페 교회";
+    headerTitleMap[currentPath as keyof typeof headerTitleMap] || t("common.churchName");
 
   return (
     <Box sx={{ mb: 2 }}>
@@ -286,24 +295,27 @@ function AppHeader() {
                 src={marpeLogo}
                 sx={{ height: "48px", width: "auto" }}
               />
-              <Typography sx={{ fontSize: 20 }}>마르페 교회</Typography>
+              <Typography sx={{ fontSize: 20 }}>{t("common.churchName")}</Typography>
             </Link>
           </Box>
 
           {/* Desktop horizontal menu */}
           {!isMobile && <HorizontalMenu />}
 
-          {/* Mobile menu button */}
-          {isMobile && (
-            <IconButton
-              aria-label="menu"
-              color="inherit"
-              onClick={handleToggleMenu}
-              size="large"
-            >
-              <MenuIcon />
-            </IconButton>
-          )}
+          {/* Language switcher and mobile menu grouped together */}
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <LanguageSwitcher />
+            {isMobile && (
+              <IconButton
+                aria-label="menu"
+                color="inherit"
+                onClick={handleToggleMenu}
+                size="large"
+              >
+                <MenuIcon />
+              </IconButton>
+            )}
+          </Box>
         </Toolbar>
       </AppBar>
 

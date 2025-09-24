@@ -1,6 +1,7 @@
 import "react";
 import { Typography, Box, Paper, Chip } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { useTranslation } from "react-i18next";
 
 import zelleImg from "../assets/zelle.webp";
 import tithelyImg from "../assets/tithely.webp";
@@ -9,6 +10,8 @@ import { ZELLE, TITHELY } from "../utils/constants";
 
 export default function Offering() {
   const theme = useTheme();
+  const { t } = useTranslation();
+  
   const offeringTypes = [
     { korean: "주정헌금", english: "Sunday" },
     { korean: "감사헌금", english: "Thanksgiving" },
@@ -27,20 +30,19 @@ export default function Offering() {
           variant="h6"
           sx={{ mb: { xs: 1, md: 2 }, fontWeight: "bold" }}
         >
-          헌금 안내
+          {t("offering.title")}
         </Typography>
         <Typography
           variant="body1"
           sx={{ mb: { xs: 1, md: 2 } }}
         >
-          헌금을 해주실 때 헌금 하시는 성도님들의 이름과, 헌금 종류 또한 아래와
-          같이 적어주시면 감사하겠습니다.
+          {t("offering.description")}
         </Typography>
         <Typography
           variant="body2"
           sx={{ mb: { xs: 1, md: 2 } }}
         >
-          (예: "Joseph Kim, Mary Park: Sunday")
+          {t("offering.example")}
         </Typography>
         <Box
           sx={{
@@ -79,7 +81,7 @@ export default function Offering() {
           variant="h6"
           sx={{ mb: { xs: 2, md: 3 }, fontWeight: "bold" }}
         >
-          온라인 헌금
+          {t("offering.onlineTitle")}
         </Typography>
 
         {/* 온라인 헌금 옵션들 - 가로 배치 */}
@@ -101,12 +103,12 @@ export default function Offering() {
             }}
           >
             <Typography variant="subtitle1" sx={{ mb: 0, fontWeight: "bold" }}>
-              Zelle
+              {t("offering.zelle")}
             </Typography>
             <Typography variant="body2">
               Marpe Church
               <br />
-              marpechurch&#8203;@gmail.com
+              {t("offering.zelleEmail")}
             </Typography>
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Box
@@ -142,7 +144,7 @@ export default function Offering() {
                     fontSize: "0.875rem",
                   }}
                 >
-                  (click me)
+                  {t("offering.clickMe")}
                 </Typography>
               </Box>
             </Box>
@@ -174,11 +176,11 @@ export default function Offering() {
             }}
           >
             <Typography variant="subtitle1" sx={{ mb: 0, fontWeight: "bold" }}>
-              Tithe.ly
+              {t("offering.tithely")}
             </Typography>
             <Typography variant="body2">
               Marpe Church
-              <br />9 Archer Dr, Woburn, MA, 01801
+              <br />{t("offering.tithelyAddress")}
             </Typography>
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Box
@@ -214,7 +216,7 @@ export default function Offering() {
                     fontSize: "0.875rem",
                   }}
                 >
-                  (click me)
+                  {t("offering.clickMe")}
                 </Typography>
               </Box>
             </Box>
@@ -228,14 +230,14 @@ export default function Offering() {
           variant="h6"
           sx={{ mb: { xs: 1, md: 2 }, fontWeight: "bold" }}
         >
-          수표 헌금
+          {t("offering.checkTitle")}
         </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
           <Typography variant="body2">
-            <strong>Pay to:</strong> Marpe church
+            <strong>{t("offering.payTo")}</strong> Marpe church
           </Typography>
           <Typography variant="body2">
-            <strong>Address:</strong> 9 Archer Dr, Woburn, MA, 01801
+            <strong>{t("offering.address")}</strong> {t("offering.tithelyAddress")}
           </Typography>
         </Box>
       </Paper>

@@ -1,0 +1,161 @@
+{
+  "common": {
+    "churchName": "Marpe Church",
+    "welcome": "Welcome",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "language": "Language"
+  },
+  "navigation": {
+    "introduction": "About Us",
+    "service": "Service",
+    "englishMinistry": "English Ministry",
+    "news": "News",
+    "staff": "Staff",
+    "denomination": "Denomination",
+    "vision": "Vision",
+    "directions": "Directions",
+    "sermons": "Sermons",
+    "worshipBulletin": "Worship Bulletin",
+    "offering": "Offering",
+    "sundayPlaylist": "Sunday Playlist",
+    "lpd": "LPD",
+    "social": "Instagram",
+    "register": "Registration"
+  },
+  "home": {
+    "title": "Welcome to Marpe Church Boston!",
+    "intro": {
+      "paragraph1": "Marpe Church Boston is a Korean church in Boston that was planted on October 6, 2024, by believers who share the vision of 'right gospel, healthy church.' The word 'Marpe' means 'health, healing, and restoration' in Hebrew. We named our church together with the congregation, carrying the heart to build a healthy church in Boston with Jesus' gospel and love.",
+      "paragraph2": "Marpe Church Boston is a church where God is the master, pursuing the essence of the church in this era of Christian crisis.",
+      "paragraph3": "It is a communal church built together with the saints and a missional church that flows the values and life of God's kingdom into the world.",
+      "paragraph4": "It is a visionary church with the vision to disciple and nurture young people and children, who are the future and hope of the church.",
+      "paragraph5": "It is a church of restoration that restores and heals the families that God has established.",
+      "paragraph6": "It is a church of discipleship that raises and trains true disciples of Christ who transform the world with the gospel, not just nominal Christians.",
+      "paragraph7": "This is the church that we, Marpe Church Boston, dream together and build together."
+    },
+    "marpeMeaning": {
+      "title": "What is Marpe?",
+      "description": "The Hebrew word for 'health' used in Proverbs 4:22 is 'Marpe.' Meditation, meaning contemplation, and Medicine, meaning remedy, both originate from the same root word Marpe (מרפ). In the Old Testament, health refers to a peaceful state as God's gift. We hope to become a community of God where both spirit and body are healthy."
+    }
+  },
+  "staff": {
+    "leadPastor": {
+      "name": "Jeong Ho Cho, Lead Pastor",
+      "bio": "Pastor Jeong Ho Cho served as a campus missionary in Boston for 10 years from 2010, spreading the gospel. He led international students who didn't know the gospel to Jesus and connected them to local church communities. In 2016, while serving, he entered Gordon-Conwell Theological Seminary and received a Master of Divinity and a Master of Theological Studies in Missional Church. Afterward, he served as a youth pastor in a local church, discipling young people and young couples. As a pastor affiliated with C&MA (The Alliance), an American evangelical denomination, he dreams of a healthy community living together with the right gospel and planted Marpe Church together with the congregation. He is also building a family of faith with his wife Kim Pil-young, who majored in special education, and their three children: Hye-seong, Hye-na, and Yu-na.",
+      "experience": "Background",
+      "experienceList": [
+        "Current) Lead Pastor of Marpe Church",
+        "Associate Pastor of Boston Onnuri Church",
+        "Northeastern University Spiritual Adviser",
+        "YWAM (Youth With A Mission) Boston Campus Ministry Director"
+      ]
+    },
+    "emPastor": {
+      "name": "Roy Jeong, EM Pastor",
+      "bio": "Hello! My name is Roy Jeong, and I serve as the English Ministry pastor at Marpe Church. Our English Ministry is called \"LPD\" which stands for the things we as a body of Christ seek to be - lovely, pure, and dependable for one another. I'd love to get to know you, worship with you, and talk about how God is so great and so good to us!",
+      "bio2": "A little bit about myself - I am currently attending Gordon-Conwell Theological Seminary in South Hamilton (not too far from Crane Beach and Rockport!). I'm married to my lovely wife Sarah, and we just had a baby girl, Lily, in May 2025. In our down time, we like to go on walks with our golden retriever Somi."
+    }
+  },
+  "vision": {
+    "mission": {
+      "title": "1. Mission",
+      "description": "Boston is the best strategic mission field. Every year, international students who don't know the gospel come from all over the world, and famous universities are abundant. Campus ministry is Boston's missional need. The church must understand this need and present and lead missions accordingly. We have a vision to spread the gospel to overflowing international students and send them back to all nations as missionaries."
+    },
+    "youth": {
+      "title": "2. Youth",
+      "description": "In this era of crisis where young people are disappearing from the church, the church must train young people as disciples of Christ and establish them as the main players of the church. As young people directly participate in church operations and make new attempts to build a healthy church, young people grow and the church changes dynamically. Marpe Church is a church that trains and grows young people as disciples of Christ."
+    },
+    "churchSchool": {
+      "title": "3. Church School & Family",
+      "description": "Church school is a ministry that builds the next generation. It is important for families and churches to work together to nurture children in faith, for parents and teachers to pray together for children, and to show examples of faith. Marpe Church is a church where families and churches work together to build the next generation."
+    },
+    "worship": {
+      "title": "4. Worship",
+      "description": "We pursue worship that is not bound by form or trapped in frameworks, but worship with freedom in the Spirit, deep worship where we can experience the presence of the Spirit, and ultimately worship that can lead to life worship. Above all, Marpe Church presents a vision to establish worship in the workplace and campus. We want the saints to create worship meetings in the workplace and on campus themselves, so that God's name may be exalted throughout the earth. Furthermore, we hope to establish worship in the media world, which is the greatest mission field of this era, so that lost souls and wandering souls can worship God."
+    }
+  },
+  "denomination": {
+    "title": "C&MA Denomination Introduction",
+    "description": "C&MA stands for The Christian And Missionary Alliance, and together with 25,000 churches in 90 countries worldwide, 1,200 missionaries, and 7 million faithful believers, we are working together for the evangelization of the world. The Christian And Missionary Alliance (C&MA) began in 1887 when Pastor A. B. Simpson and seven people gathered to worship in Manhattan, New York City. From there, the gospel began to spread to Africa, China, and throughout the world. When other denominations were sending missionaries to Korea, C&MA did not send missionaries to Korea, where many denominations were already working, but instead sent theological schools and missionaries to Japan, establishing a theological school called 'Oriental Mission' in Japan. The Korean pastor who studied theology there returned to Korea and established the Holiness denomination. The mother body of Korea's Holiness denomination is the C&MA denomination. Pastor A.W. Tozer and Pastor Billy Graham, who are well-known in Korea, were also pastors from the C&MA denomination. The C&MA denomination is still doing its best for the evangelization of the world as a representative evangelical denomination.",
+    "videoKorean": "C&MA Denomination Introduction (Korean)",
+    "videoEnglish": "C&MA Denomination Introduction (English)"
+  },
+  "directions": {
+    "worshipTimeLabel": "⏰ Worship Time",
+    "worshipTimeText": "Sunday 2:00 PM",
+    "locationLabel": "📍 Worship Location",
+    "locationText": "Igreja Presbiteriana de Boston",
+    "parkingLabel": "🚘 Parking",
+    "parkingText": "Around the church on Sundays",
+    "parkingFree": "All Permit Parking is FREE",
+    "parkingNote": ". Please feel free to park and come.",
+    "transportationLabel": "🚆 Transportation",
+    "transportationText": "5-minute walk from Gilman Square Station",
+    "churchLocation": "Church Location",
+    "directionsFrom": "From Gilman Square to Church"
+  },
+  "lpd": {
+    "title": "LPD",
+    "subtitle": "Lovely, Pure, Dependable",
+    "description1": "\"LPD\" is a wordplay on the Greek word \"elpidi\", which means \"in hope\". Its root form is \"elpis\" which means \"hope\" and \"faith\".",
+    "description2": "\"Elpis\" - hope, faith; we look forward to the spiritual revival within individuals, within Marpe Church, among the city of Somerville and Greater Boston Area, and among the multicultural population in Massachusetts. Jesus is the only hope and in whom the next generation that is surrounded by sin and temptation will find a solid foundation.",
+    "description3": "\"Elpidi\" - in hope, in excited expectation; our hope isn't past, it isn't in the distant future. We seek to live our day-to-day lives in hope and in excitement of what God will show us and do through us.",
+    "serviceTime": "Service Time: Every Sunday at 2 PM"
+  },
+  "offering": {
+    "title": "Offering Information",
+    "description": "When making an offering, please write the names of the members making the offering and the type of offering as shown below.",
+    "example": "(e.g., \"Joseph Kim, Mary Park: Sunday\")",
+    "types": {
+      "sunday": "Sunday",
+      "thanksgiving": "Thanksgiving", 
+      "tithe": "Tithe",
+      "mission": "Mission",
+      "other": "Other"
+    },
+    "onlineTitle": "Online Offering",
+    "zelle": "Zelle",
+    "zelleEmail": "marpechurch@gmail.com",
+    "clickMe": "(click me)",
+    "tithely": "Tithe.ly",
+    "tithelyAddress": "9 Archer Dr, Woburn, MA, 01801",
+    "checkTitle": "Check Offering",
+    "payTo": "Pay to:",
+    "address": "Address:"
+  },
+  "register": {
+    "description1": "Those who wish to register with this church, please fill out the form using this",
+    "qrCode": "QR code",
+    "description2": ".",
+    "description3": "Those who wish to request a home visit, please contact the church email (",
+    "email": "contact@marpechurch.org",
+    "description4": ").",
+    "clickMe": "(click me)"
+  },
+  "sermons": {
+    "title": "Sermon Videos"
+  },
+  "worship": {
+    "title": "Marpe Sunday Worship Playlist"
+  },
+  "footer": {
+    "address": "Address:",
+    "email": "Email:",
+    "copyright": "ⓒMarpe Church. All Rights Reserved."
+  },
+  "pageTitles": {
+    "home": "Marpe Church",
+    "staff": "Staff",
+    "denomination": "Denomination",
+    "vision": "Vision",
+    "lpd": "LPD",
+    "directions": "Directions",
+    "program": "Program",
+    "sermons": "Sermons",
+    "social": "Instagram",
+    "worship": "Worship",
+    "offering": "Offering",
+    "register": "Register"
+  }
+}

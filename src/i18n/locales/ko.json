@@ -1,0 +1,161 @@
+{
+  "common": {
+    "churchName": "마르페 교회",
+    "welcome": "환영합니다",
+    "readMore": "더 읽기",
+    "learnMore": "더 알아보기",
+    "language": "언어"
+  },
+  "navigation": {
+    "introduction": "교회 소개",
+    "service": "예배 말씀",
+    "englishMinistry": "English Ministry",
+    "news": "교회 소식",
+    "staff": "섬기는 이들",
+    "denomination": "소속 교단",
+    "vision": "비전",
+    "directions": "오시는 길",
+    "sermons": "설교 말씀",
+    "worshipBulletin": "예배 주보",
+    "offering": "헌금",
+    "sundayPlaylist": "주일 찬양",
+    "lpd": "LPD",
+    "social": "인스타그램",
+    "register": "교인 등록"
+  },
+  "home": {
+    "title": "보스턴 마르페 교회에 오신 것을 환영합니다!",
+    "intro": {
+      "paragraph1": "보스턴 마르페 교회는 2024년 10월 6일 바른 복음, 건강한 교회 라는 비전을 가진 성도들이 함께 모여 개척한 보스톤 한인 교회입니다. \"마르페\"라는 단어는 히브리어로 \"건강, 치유, 회복\"을 뜻합니다. 보스턴에 예수님의 복음과 사랑으로 건강한 교회를 세우고 싶은 마음을 담아 성도들과 함께 교회 이름을 지었습니다.",
+      "paragraph2": "보스턴 마르페 교회는 기독교 위기의 시대가운데 교회의 본질을 추구하는 하나님이 주인이신 교회입니다.",
+      "paragraph3": "성도들과 함께 세워가는 공동체적 교회이자 하나님 나라의 가치와 생명을 세상에 흘려보내는 선교적 교회입니다.",
+      "paragraph4": "교회의 미래이자 소망인 청년들과 아이들을 제자로 양육하는 비전을 가진 비전의 교회입니다.",
+      "paragraph5": "하나님께서 세우신 가정을 회복하고 치유하는 회복의 교회입니다.",
+      "paragraph6": "이름만 그리스도인이 아닌 복음으로 세상을 변화시키는 진짜 그리스도의 제자를 세우고 훈련하는 제자 교회입니다.",
+      "paragraph7": "이것이 우리 보스턴 마르페 교회가 함께 꿈꾸고, 함께 만들어 가는 교회입니다."
+    },
+    "marpeMeaning": {
+      "title": "마르페란?",
+      "description": "잠언 4:22에서 사용한 '건강'의 히브리어는 '마르페'입니다. 묵상을 의미하는 Meditation 과 약을 뜻하는 Medicine 은 같은 어원의 마르페 Marpe(מרפ)에서 출발합니다. 구약에서 건강은 하나님의 선물로 평안한 상태를 지칭합니다. 영과 육이 모두 건강한 하나님의 공동체가 되길 바랍니다."
+    }
+  },
+  "staff": {
+    "leadPastor": {
+      "name": "조정호 담임목사 (Jeong Ho Cho, Lead Pastor)",
+      "bio": "조정호 담임 목사님은 2010년부터 10년동안 보스턴에서 캠퍼스 선교사로 복음을 전했습니다. 복음을 모르는 열방의 유학생들을 예수님께 인도하고 지역 교회 공동체로 연결하는 사역을 했습니다. 2016년, 사역을 하며 고든콘웰 신학교에 들어가 목회학석사와 선교적 교회로 신학석사를 받았습니다. 이후 지역교회 청년부를 담당하며 청년들과 젊은 부부들을 제자화 하는 사역을 했습니다. 미국 복음주의 교단인 C&MA(The Alliance) 교단 소속 목사로 바른 복음으로 더불어 살아내는 건강한 공동체를 꿈꾸며, 성도들과 함께 마르페 교회를 개척했습니다. 또한 특수교육을 전공한 김필영 사모와 혜성, 혜나, 유나 세 아이와 함께 믿음의 가정을 세워가고 있습니다.",
+      "experience": "약력",
+      "experienceList": [
+        "현) 마르페 교회 담임목사",
+        "보스턴 온누리 교회 부목사",
+        "Northeastern University Spiritual Adviser",
+        "YWAM(Youth With A Mission) Boston 캠퍼스 사역 디렉터"
+      ]
+    },
+    "emPastor": {
+      "name": "정병천 전도사 (Roy Jeong, EM Pastor)",
+      "bio": "Hello! My name is Roy Jeong, and I serve as the English Ministry pastor at Marpe Church. Our English Ministry is called \"LPD\" which stands for the things we as a body of Christ seek to be - lovely, pure, and dependable for one another. I'd love to get to know you, worship with you, and talk about how God is so great and so good to us!",
+      "bio2": "A little bit about myself - I am currently attending Gordon-Conwell Theological Seminary in South Hamilton (not too far from Crane Beach and Rockport!). I'm married to my lovely wife Sarah, and we just had a baby girl, Lily, in May 2025. In our down time, we like to go on walks with our golden retriever Somi."
+    }
+  },
+  "vision": {
+    "mission": {
+      "title": "1. 선교",
+      "description": "보스턴은 최고의 전략적 선교지입니다. 매년 전세계에서 복음을 모르는 유학생들이 들어오고 있고, 유명 대학들이 즐비합니다. 캠퍼스 선교는 보스턴의 선교적 필요입니다. 이 필요를 이해하고 그에 맞는 선교를 교회가 제시하고 주도해야 합니다. 넘쳐나는 유학생들에게 복음을 전하고, 그들을 다시 온 열방에 선교사로 파송하는 비전을 품고 있습니다."
+    },
+    "youth": {
+      "title": "2. 청년",
+      "description": "청년들이 교회에서 사라지고 있는 이 위기의 시대 가운데 교회는 청년들을 그리스도의 제자로 훈련하고, 그들을 교회의 주역으로 세워주어야 합니다. 청년들이 교회운영에 직접 참여하고 건강한 교회를 세워가는 새로운 시도를 하면서, 청년들은 성장하고 교회는 역동적으로 변화됩니다. 마르페 교회는 청년들을 그리스도의 제자로 훈련하고 성장시키는 교회입니다."
+    },
+    "churchSchool": {
+      "title": "3. 교회학교 & 가정",
+      "description": "교회학교는 다음세대를 세우는 사역입니다. 가정과 교회가 함께 협력하여 자녀들을 신앙으로 양육하고, 부모와 교사가 함께 자녀들을 위해 기도하며, 신앙의 본을 보이는 것이 중요합니다. 마르페 교회는 가정과 교회가 협력하여 다음세대를 세우는 교회입니다."
+    },
+    "worship": {
+      "title": "4. 예배",
+      "description": "형식에 얽매이고, 틀에 갇힌 예배가 아니라 성령안에 자유함이 있는 예배, 성령의 임재를 경험할 수 있는 깊이 있는 예배, 그리고 궁극적으로 삶의 예배로 이어질 수 있는 예배를 추구합니다. 무엇보다 마르페 교회는 직장과 캠퍼스안에 예배를 세우기 위해 비전을 제시합니다. 성도들이 스스로 직장안에서 예배모임을 만들고, 캠퍼스에서 예배모임을 만들어, 온 땅가운데 하나님의 이름이 높아지도록 예배를 세워가기를 원합니다. 나아가 이 시대의 가장 큰 선교지인 미디어 세상가운데 예배를 세워 잃어버린 영혼들이, 방황하는 영혼들이 하나님을 예배할 수 있기를 소망합니다."
+    }
+  },
+  "denomination": {
+    "title": "C&MA 교단 소개",
+    "description": "C&MA는 The Christian And Missionary Alliance의 약자이며 세계의 복음화를 위해 전 세계 90개 국가의 2만 5천여 교회, 1천200명의 선교사와 7백만의 신실한 신자들이 함께 동역하고 있습니다. The Christian And Missionary Alliance (C&MA)는 1887년에 심슨(A. B. Simpson) 목사님을 중심으로 뉴욕시의 맨하탄에서 7명이 예배 드리는 것으로 시작되었습니다. 거기서부터 복음이 아프리카로, 중국으로, 그리고 전 세계로 전파되기 시작했습니다. C&MA 교단은 다른 교단들이 한국에 선교사를 보낼 때 이미 많은 교단들이 들어가서 선교사역을 하고 있는 한국에 선교사를 파송하지 않았으며, 대신 일본에는 신학교 및 선교사를 파송했었고 일본에 '동양선교회'라는 신학교를 세웠습니다. 그곳에서 신학을 공부했던 한국인 목사님이 한국으로 돌아가 세운 교단이 성결교단입니다. 한국의 성결 교단의 모체가 바로 C&MA 교단입니다. 한국에 많이 알려진 A.W. 토저 목사님과 빌리 그래함 목사님도 C&MA 교단 출신 목사님이셨습니다. C&MA 교단은 현재도 전세계 복음화를 위해 최선을 다하고 있는 대표적 복음주의 교단입니다.",
+    "videoKorean": "C&MA 교단 소개 (한국어)",
+    "videoEnglish": "C&MA 교단 소개 (영어)"
+  },
+  "directions": {
+    "worshipTimeLabel": "⏰ 예배시간",
+    "worshipTimeText": "주일 오후 2:00PM",
+    "locationLabel": "📍 예배장소",
+    "locationText": "Igreja Presbiteriana de Boston",
+    "parkingLabel": "🚘 주차",
+    "parkingText": "주일 교회 주변",
+    "parkingFree": "Permit Parking 모두 무료주차",
+    "parkingNote": "입니다. 편하게 주차하시고 오세요.",
+    "transportationLabel": "🚆 교통",
+    "transportationText": "Gilman Square 역에서 도보 5분",
+    "churchLocation": "Church Location",
+    "directionsFrom": "From Gilman Square to Church"
+  },
+  "lpd": {
+    "title": "LPD",
+    "subtitle": "Lovely, Pure, Dependable",
+    "description1": "\"LPD\" is a wordplay on the Greek word \"elpidi\", which means \"in hope\". Its root form is \"elpis\" which means \"hope\" and \"faith\".",
+    "description2": "\"Elpis\" - hope, faith; we look forward to the spiritual revival within individuals, within Marpe Church, among the city of Somerville and Greater Boston Area, and among the multicultural population in Massachusetts. Jesus is the only hope and in whom the next generation that is surrounded by sin and temptation will find a solid foundation.",
+    "description3": "\"Elpidi\" - in hope, in excited expectation; our hope isn't past, it isn't in the distant future. We seek to live our day-to-day lives in hope and in excitement of what God will show us and do through us.",
+    "serviceTime": "Service Time: Every Sunday at 2 PM"
+  },
+  "offering": {
+    "title": "헌금 안내",
+    "description": "헌금을 해주실 때 헌금 하시는 성도님들의 이름과, 헌금 종류 또한 아래와 같이 적어주시면 감사하겠습니다.",
+    "example": "(예: \"Joseph Kim, Mary Park: Sunday\")",
+    "types": {
+      "sunday": "주정헌금",
+      "thanksgiving": "감사헌금",
+      "tithe": "십일조",
+      "mission": "선교",
+      "other": "기타"
+    },
+    "onlineTitle": "온라인 헌금",
+    "zelle": "Zelle",
+    "zelleEmail": "marpechurch@gmail.com",
+    "clickMe": "(click me)",
+    "tithely": "Tithe.ly",
+    "tithelyAddress": "9 Archer Dr, Woburn, MA, 01801",
+    "checkTitle": "수표 헌금",
+    "payTo": "Pay to:",
+    "address": "Address:"
+  },
+  "register": {
+    "description1": "본 교회에 등록을 원하시는 분들은 이",
+    "qrCode": "QR 코드",
+    "description2": "로 작성해 주시기 바랍니다.",
+    "description3": "심방 신청을 원하시는 분들은 교회 이메일(",
+    "email": "contact@marpechurch.org",
+    "description4": ")로 연락주시기 바랍니다.",
+    "clickMe": "(click me)"
+  },
+  "sermons": {
+    "title": "설교 영상"
+  },
+  "worship": {
+    "title": "마르페 주일 찬양 플레이리스트"
+  },
+  "footer": {
+    "address": "주소:",
+    "email": "이메일:",
+    "copyright": "ⓒMarpe Church. All Rights Reserved."
+  },
+  "pageTitles": {
+    "home": "마르페 교회",
+    "staff": "섬기는 이들",
+    "denomination": "소속 교단",
+    "vision": "비전",
+    "lpd": "LPD",
+    "directions": "오시는 길",
+    "program": "주보",
+    "sermons": "설교 말씀",
+    "social": "인스타그램",
+    "worship": "찬양",
+    "offering": "헌금",
+    "register": "교인 등록"
+  }
+}

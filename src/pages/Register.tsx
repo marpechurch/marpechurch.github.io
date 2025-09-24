@@ -1,11 +1,14 @@
 import "react";
 import { Box, Link, List, ListItem, Typography, Paper } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 import registerImg from "../assets/register.webp";
 import { Page } from "../components";
 import { REGISTER_FORM } from "../utils/constants";
 
 export default function Register() {
+  const { t } = useTranslation();
+  
   const content = (
     <Paper elevation={1} sx={{ p: { xs: 1.5, md: 3 } }}>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
@@ -14,24 +17,24 @@ export default function Register() {
           <List>
             <ListItem>
               <Typography>
-                본 교회에 등록을 원하시는 분들은 이&nbsp;
+                {t("register.description1")}&nbsp;
                 <Link
                   href={REGISTER_FORM}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  QR 코드
+                  {t("register.qrCode")}
                 </Link>
-                로 작성해 주시기 바랍니다.
+                {t("register.description2")}
               </Typography>
             </ListItem>
             <ListItem>
               <Typography>
-                심방 신청을 원하시는 분들은 교회 이메일(
+                {t("register.description3")}
                 <Link href="mailto:contact@marpechurch.org" underline="hover">
-                  contact@marpechurch.org
+                  {t("register.email")}
                 </Link>
-                )로 연락주시기 바랍니다.
+                {t("register.description4")}
               </Typography>
             </ListItem>
           </List>
@@ -71,7 +74,7 @@ export default function Register() {
                 fontSize: "0.875rem",
               }}
             >
-              (click me)
+              {t("register.clickMe")}
             </Typography>
           </Box>
         </Box>

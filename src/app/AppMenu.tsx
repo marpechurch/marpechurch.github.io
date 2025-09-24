@@ -12,6 +12,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import {
   AutoAwesome as VisionIcon,
   DesignServices as LPDIcon,
@@ -29,36 +30,36 @@ import {
 } from "@mui/icons-material";
 
 // Main menu structure with nested submenus
-const menuStructure = [
+const getMenuStructure = (t: (key: string) => string) => [
   {
-    title: "교회 소개",
+    title: t("navigation.introduction"),
     submenu: [
-      { url: "/staff", title: "섬기는 이들", icon: <StaffIcon /> },
-      { url: "/denomination", title: "소속 교단", icon: <DenominationIcon /> },
-      { url: "/vision", title: "비전", icon: <VisionIcon /> },
-      { url: "/directions", title: "오시는 길", icon: <DirectionsIcon /> },
+      { url: "/staff", title: t("navigation.staff"), icon: <StaffIcon /> },
+      { url: "/denomination", title: t("navigation.denomination"), icon: <DenominationIcon /> },
+      { url: "/vision", title: t("navigation.vision"), icon: <VisionIcon /> },
+      { url: "/directions", title: t("navigation.directions"), icon: <DirectionsIcon /> },
     ],
   },
   {
-    title: "예배 설교",
+    title: t("navigation.service"),
     submenu: [
-      { url: "/sermons", title: "설교 말씀", icon: <SermonsIcon /> },
-      { url: "/program", title: "주보", icon: <ProgramIcon /> },
-      { url: "/offering", title: "헌금", icon: <OfferingIcon /> },
-      { url: "/worship", title: "찬양", icon: <WorshipIcon /> },
+      { url: "/sermons", title: t("navigation.sermons"), icon: <SermonsIcon /> },
+      { url: "/program", title: t("navigation.worshipBulletin"), icon: <ProgramIcon /> },
+      { url: "/offering", title: t("navigation.offering"), icon: <OfferingIcon /> },
+      { url: "/worship", title: t("navigation.sundayPlaylist"), icon: <WorshipIcon /> },
     ],
   },
   {
-    title: "English Ministry",
+    title: t("navigation.englishMinistry"),
     submenu: [
-      { url: "/lpd", title: 'LPD', icon: <LPDIcon /> },
+      { url: "/lpd", title: t("navigation.lpd"), icon: <LPDIcon /> },
     ],
   },
   {
-    title: "교회 소식",
+    title: t("navigation.news"),
     submenu: [
-      { url: "/social", title: "인스타그램", icon: <SocialIcon /> },
-      { url: "/register", title: "교인 등록", icon: <RegisterIcon /> },
+      { url: "/social", title: t("navigation.social"), icon: <SocialIcon /> },
+      { url: "/register", title: t("navigation.register"), icon: <RegisterIcon /> },
     ],
   },
 ];
@@ -70,10 +71,11 @@ interface AppMenuProps {
 
 export default function AppMenu({ isOpen, toggleMenu }: AppMenuProps) {
   const theme = useTheme();
+  const { t } = useTranslation();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
-
+  const menuStructure = getMenuStructure(t);
 
   function DrawerList() {
     return (
