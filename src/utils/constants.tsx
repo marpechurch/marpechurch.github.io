@@ -6,7 +6,7 @@ export const MARPE_INSTAGRAM = "https://www.instagram.com/marpechurch/";
 
 // Google Docs Links
 export const REGISTER_FORM =
-  "https://docs.google.com/forms/d/e/1FAIpQLSciNIjbvmrianqw_RWjd6NC3w2vrgPC4Oq9WbAZ01JbVI8PZA/viewform";
+  "https://docs.google.com/forms/d/e/1FAIpQLSdgy2QRRzxQgmR7wtZmwRTF-OreAUMSWy0u5AnzQl45uwdGCw/viewform";
 
 // Google Maps Links
 export const DIRECTIONS_TO =

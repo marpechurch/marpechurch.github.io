@@ -2,7 +2,7 @@ import "react";
 import { Box, Link, List, ListItem, Typography, Paper } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-import registerImg from "../assets/register.webp";
+import registerImg from "../assets/register.png";
 import { Page } from "../components";
 import { REGISTER_FORM } from "../utils/constants";
 
