@@ -30,7 +30,7 @@ import { MENU_WIDTH } from "../utils/constants";
 // Import the same menu structure and icons from AppMenu
 import {
   AutoAwesome as VisionIcon,
-  DesignServices as LPDIcon,
+  // DesignServices as LPDIcon,
   FormatListBulleted as ProgramIcon,
   HistoryEdu as RegisterIcon,
   Instagram as SocialIcon,
