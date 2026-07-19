@@ -62,12 +62,12 @@ const getMenuStructure = (t: (key: string) => string) => [
       { url: "/worship", title: t("navigation.sundayPlaylist"), icon: <WorshipIcon /> },
     ],
   },
-  {
-    title: t("navigation.englishMinistry"),
-    submenu: [
-      { url: "/lpd", title: t("navigation.lpd"), icon: <LPDIcon /> },
-    ],
-  },
+  // {
+  //   title: t("navigation.englishMinistry"),
+  //   submenu: [
+  //     { url: "/lpd", title: t("navigation.lpd"), icon: <LPDIcon /> },
+  //   ],
+  // },
   {
     title: t("navigation.news"),
     submenu: [
