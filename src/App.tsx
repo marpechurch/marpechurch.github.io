@@ -201,7 +201,7 @@ export default function App() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        height: "100vh",
+        minHeight: "100dvh",
         width: "100%",
         wordBreak: "keep-all",
       }}

@@ -6,14 +6,14 @@ import { useTheme } from "@mui/material/styles";
 export default function AppFooter() {
   const theme = useTheme();
   const { t } = useTranslation();
-  
+
   return (
     <Box
       sx={{
         borderTop: `1px solid ${theme.palette.borders.light}`,
         fontSize: 12,
         padding: 1,
-        pb: 1
+        pb: 1,
       }}
     >
       <List sx={{ padding: 0 }}>
@@ -29,9 +29,7 @@ export default function AppFooter() {
             contact@marpechurch.org
           </Link>
         </ListItem>
-        <ListItem sx={{ padding: 0 }}>
-          {t("footer.copyright")}
-        </ListItem>
+        <ListItem sx={{ padding: 0 }}>{t("footer.copyright")}</ListItem>
       </List>
     </Box>
   );

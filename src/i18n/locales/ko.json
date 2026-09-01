@@ -83,7 +83,7 @@
   },
   "directions": {
     "worshipTimeLabel": "⏰ 예배시간",
-    "worshipTimeText": "주일 오후 2:00PM",
+    "worshipTimeText": "주일 오후 2:30 PM",
     "locationLabel": "📍 예배장소",
     "locationText": "Igreja Presbiteriana de Boston",
     "parkingLabel": "🚘 주차",
@@ -101,7 +101,7 @@
     "description1": "\"LPD\" is a wordplay on the Greek word \"elpidi\", which means \"in hope\". Its root form is \"elpis\" which means \"hope\" and \"faith\".",
     "description2": "\"Elpis\" - hope, faith; we look forward to the spiritual revival within individuals, within Marpe Church, among the city of Somerville and Greater Boston Area, and among the multicultural population in Massachusetts. Jesus is the only hope and in whom the next generation that is surrounded by sin and temptation will find a solid foundation.",
     "description3": "\"Elpidi\" - in hope, in excited expectation; our hope isn't past, it isn't in the distant future. We seek to live our day-to-day lives in hope and in excitement of what God will show us and do through us.",
-    "serviceTime": "Service Time: Every Sunday at 2 PM"
+    "serviceTime": "Service Time: Every Sunday at 2:30 PM"
   },
   "offering": {
     "title": "헌금 안내",

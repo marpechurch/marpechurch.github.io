@@ -47,19 +47,51 @@ const getMenuStructure = (t: (key: string) => string) => [
   {
     title: t("navigation.introduction"),
     submenu: [
-      { url: "/staff", title: t("navigation.staff"), icon: <StaffIcon /> },
-      { url: "/denomination", title: t("navigation.denomination"), icon: <DenominationIcon /> },
-      { url: "/vision", title: t("navigation.vision"), icon: <VisionIcon /> },
-      { url: "/directions", title: t("navigation.directions"), icon: <DirectionsIcon /> },
+      {
+        url: "/staff",
+        title: t("navigation.staff"),
+        icon: <StaffIcon />,
+      },
+      {
+        url: "/denomination",
+        title: t("navigation.denomination"),
+        icon: <DenominationIcon />,
+      },
+      {
+        url: "/vision",
+        title: t("navigation.vision"),
+        icon: <VisionIcon />,
+      },
+      {
+        url: "/directions",
+        title: t("navigation.directions"),
+        icon: <DirectionsIcon />,
+      },
     ],
   },
   {
     title: t("navigation.service"),
     submenu: [
-      { url: "/sermons", title: t("navigation.sermons"), icon: <SermonsIcon /> },
-      { url: "/program", title: t("navigation.worshipBulletin"), icon: <ProgramIcon /> },
-      { url: "/offering", title: t("navigation.offering"), icon: <OfferingIcon /> },
-      { url: "/worship", title: t("navigation.sundayPlaylist"), icon: <WorshipIcon /> },
+      {
+        url: "/sermons",
+        title: t("navigation.sermons"),
+        icon: <SermonsIcon />,
+      },
+      {
+        url: "/program",
+        title: t("navigation.worshipBulletin"),
+        icon: <ProgramIcon />,
+      },
+      {
+        url: "/offering",
+        title: t("navigation.offering"),
+        icon: <OfferingIcon />,
+      },
+      {
+        url: "/worship",
+        title: t("navigation.sundayPlaylist"),
+        icon: <WorshipIcon />,
+      },
     ],
   },
   // {
@@ -71,8 +103,16 @@ const getMenuStructure = (t: (key: string) => string) => [
   {
     title: t("navigation.news"),
     submenu: [
-      { url: "/social", title: t("navigation.social"), icon: <SocialIcon /> },
-      { url: "/register", title: t("navigation.register"), icon: <RegisterIcon /> },
+      {
+        url: "/social",
+        title: t("navigation.social"),
+        icon: <SocialIcon />,
+      },
+      {
+        url: "/register",
+        title: t("navigation.register"),
+        icon: <RegisterIcon />,
+      },
     ],
   },
 ];
@@ -85,12 +125,12 @@ function HorizontalMenu() {
     [key: string]: HTMLElement | null;
   }>({});
   const location = useLocation();
-  
+
   const menuStructure = getMenuStructure(t);
 
   const handleMenuOpen = (
     event: React.MouseEvent<HTMLElement>,
-    title: string
+    title: string,
   ) => {
     setAnchorEl((prev) => ({ ...prev, [title]: event.currentTarget }));
   };
@@ -239,7 +279,8 @@ function AppHeader() {
   };
 
   const currentTitle =
-    headerTitleMap[currentPath as keyof typeof headerTitleMap] || t("common.churchName");
+    headerTitleMap[currentPath as keyof typeof headerTitleMap] ||
+    t("common.churchName");
 
   return (
     <Box sx={{ mb: 2 }}>
@@ -248,8 +289,7 @@ function AppHeader() {
         sx={{
           zIndex: (theme) => theme.zIndex.drawer + 1,
           backgroundColor: (theme) => theme.palette.header.topBar,
-          color: (theme) =>
-            theme.palette.mode === "dark" ? "white" : "black",
+          color: (theme) => (theme.palette.mode === "dark" ? "white" : "black"),
           width: "100%",
           left: 0,
           right: 0,
@@ -295,7 +335,9 @@ function AppHeader() {
                 src={marpeLogo}
                 sx={{ height: "48px", width: "auto" }}
               />
-              <Typography sx={{ fontSize: 20 }}>{t("common.churchName")}</Typography>
+              <Typography sx={{ fontSize: 20 }}>
+                {t("common.churchName")}
+              </Typography>
             </Link>
           </Box>
 
